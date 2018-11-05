@@ -1,5 +1,11 @@
 # JavaScript高级程序设计 - 第三版
 
+---
+title: JavaScript高级程序设计 - 打卡第一天
+date: 2018-11-05 20:56:05
+tags: 打卡第一天、读至第四章完
+---
+
 ## Chapter Two
 
 ### `script` 元素属性
