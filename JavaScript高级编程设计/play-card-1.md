@@ -430,3 +430,73 @@ ECMAScript 函数不介意传递进来多少个参数，也不在乎传进来的
 如果person是按引用传递的，那么person就会自动被修改指向其name为'PDK'的新对象，但是，在访问person.name的时候，显示的值仍是"彭道宽", 说明<strong>即使在函数内部修改了参数的值，但原始的引用仍然保持不变</strong>, 实际上，在函数内部重写obj，这个变量引用的就是一个局部对象了，而这个局部对象在函数执行完了之后，就会立即被销毁。
 
 
+#### 检测类型
+虽然说在检测基本数据类型时，`typeof`可以说是得力助手了，但是我们在检测引用类型的值时，我们并不是想知道某个值是对象，而是想知道，它是什么类型的对象的对象。
+
+如果变量是给定引用类型的实例，那么`instanceof`操作符返回true～
+
+根据规定，<strong>所有引用类型的值都是Object的实例</strong>，因此，在检测一个引用类型和Object构造函数时，instanceof操作符始终会返回true，如果使用instanceof操作符检测基本类型的值，则始终会返回false，因为基本类型不是对象
+
+```javascript
+  var arr = [1, 2, 3]
+  var obj = { name: '彭道宽' }
+
+  console.log(arr instanceof Array)  // true
+  console.log(obj instanceof Object) // true
+
+```
+
+### 执行环境及作用域
+> 执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为
+
+在Web浏览器中，全局执行环境被认为是`window`对象，因此所有全局变量和函数都是作为window对象的属性和方法创建的。某个执行环境中的所有代码执行完毕后，该环境被销毁，保存在其中的所有变量和函数定义也都会被销毁，全局执行环境在应用程序退出之后才会被销毁
+
+每个函数都有自己的执行环境，当执行流进入一个函数时，函数的环境就会被推入到一个`环境栈`中，而在函数执行之后，栈将其环境弹出，将控制权返回给之前的执行环境。
+
+当代码在一个环境中执行时，会创建变量对象的一个`作用域链`。作用域链的用途是: <strong>保证对执行环境有权访问的所有变量和函数的有序访问</strong>。作用域链的前端，始终都是当前执行的代码所在环境的变量对象。如果这个环境是函数，则将其`活动对象`作为变量对象，活动对象在一开始时只包含一个对象，即`arguments`对象(这个对象在全局作用域下是不存在的)。作用域连中的下一个变量对象来自外部环境，而再下一个变量对象则来自下一个包含对象。这样一直延续到全局执行环境；<strong>全局执行环境的变量对象始终都是作用域链中的最后一个对象</strong>
+
+> 局部作用域中定义的变量可以在局部环境中与全局环境互换使用
+
+```javascript
+  var color = 'blue'
+
+  function changeColor () {
+    var colorOne = 'red'
+
+    function swapColor () {
+      var colorTwo = colorOne
+      colorOne = color
+      color = colorTwo
+
+      // swapColor中，可以访问到 color、 colorOne、 colorTwo
+    }
+
+    swapColor()
+    // changeColor中，可以访问到 color、 colorOne
+  }
+
+  // 这里只能访问到 color
+  changeColor()
+```
+上诉代码中共涉及三个执行环境： window全局环境、 changeColor()的局部环境 和 swapColor()的局部环境
+
+- 全局环境中有一个变量color和一个函数changeColor()
+- changeColor()局部环境中有一个变量colorOne和一个函数swapColor()
+- swapColor()局部环境中有一个变量colorTwo
+```
+window
+  │ 
+  ├── color
+  │ 
+  ├── changeColor()             
+  │   │         
+  │   ├── colorOne
+  │   │         
+  │   ├── swapColor()
+  │   │    │ 
+  │   │    ├─colorTwo        
+  │   │                        
+  │                   
+  └─
+```
+<strong>内部环境可以通过作用域链访问到所有到外部环境，但外部环境不能访问到内部环境的任何变量和函数</strong>，每个环境都可以向上搜索作用域链，以查询变量和函数名，例如寻找color变量，在局部环境开始时，会现在自己的环境对象中搜索color这个变量，如果找不到color变量，继续往上找，找到了changeColor环境，发现还是找不到color，又接着往上找，找到window，发现window环境对象中有该变量，可以访问得到，所以在swapColor中，color = 'blue'，但是一直往上找，直到直到window全局环境，还是找不到color，说明该变量color未被定义。
