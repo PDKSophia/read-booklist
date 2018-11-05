@@ -116,7 +116,7 @@ ECMAScript 中有5种简单的基本数据类型: `Undefined`、`Null`、`Boolea
   typeof {};           // object
 ```
 
-##### Undefined 类型
+#### Undefined 类型
 Undefined类型只有一个值，那就是 `undefined`，在使用 `var` 声明一个变量但未对其加以初始化时，这个值就是undefined
 
 
@@ -133,7 +133,7 @@ Undefined类型只有一个值，那就是 `undefined`，在使用 `var` 声明�
 
 也就是说: <strong>包含undefined值的变量和尚未定义的变量还是不一样的</strong>，对于尚未声明过的变量，只能执行一项操作，即使用 typeof 操作符检测其数据类型
 
-##### Null 类型
+#### Null 类型
 一个经典的操作， <strong>`typeof null = object`</strong>，null表示的是一个空对象指针，而这也就是使用typeof操作符检测null值时会返回object的原因
 
 如果定义的变量，在将来用于保存对象，那么最好将变量初始化为null而不是其他值。这样我们只要直接检查null值，就可以知道相应的变量是否已经保存了一个对象的引用。例如下边例子: 
@@ -148,7 +148,7 @@ Undefined类型只有一个值，那就是 `undefined`，在使用 `var` 声明�
   console.log(undefined === null) // false
 ```
 
-##### Boolean 类型
+#### Boolean 类型
 该类型只有两个字面值: `true` 和 `false`, 这两个值与数字值不是一个回事，因此 true 不一定等于1，而 false 也不一定等于0
 
 值得注意的是: <strong>字面值true和false是区分大小写的！！</strong>, 也就是说，True 和 False 都不是Boolean值，只是标识符
@@ -163,7 +163,7 @@ Undefined类型只有一个值，那就是 `undefined`，在使用 `var` 声明�
 | Object | 任何对象 |  null | 
 | Undefined | 不适用 |  undefined | 
 
-##### Number 类型
+#### Number 类型
 使用 IEEE 754 格式来表示整数和浮点数值
 
 浮点数值说明: 如果浮点数，小数点后面没有跟任何数字，那么会作为整数值来保存。浮点数的最高精度是17位小数，但在算数技术时，精确度远远不如整数，最常见的就是 `0.1 + 0.2 != 0.3`
@@ -173,7 +173,7 @@ Undefined类型只有一个值，那就是 `undefined`，在使用 `var` 声明�
 
 JS是不区分整数和浮点数的，JS 中采用 IEEE 754 64位浮点格式来表示数字，并且只要采用 IEEE 754 的语言都有该问题。
 
-0.1二进制表示为: 1.10011(0011) * 2^-4
+0.1二进制表示为: 1.10011(0011) * 2^-4
 
 0.2二进制表示为: 1.10011(0011) * 2^-3
 
@@ -187,7 +187,7 @@ IEEE 754 双精度。六十四位中符号位占一位，整数位占十一位�
 
 ```
 
-##### String 类型
+#### String 类型
 将一个数值转换成一个字符串，可以使用几乎每个值都有的 `toString()` 方法，数值、布尔值、对象、字符串值都有一个 toString 方法，但是 undefined 和 null 无此方法
 
 ```javascript
@@ -200,7 +200,7 @@ IEEE 754 双精度。六十四位中符号位占一位，整数位占十一位�
 
 ```
 
-##### Object 类型
+#### Object 类型
 ` var tick = new Object()`
 
 `Object`每个实例都具有下列属性和方法
