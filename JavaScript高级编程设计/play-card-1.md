@@ -2,7 +2,7 @@
 
 ## Chapter Two
 
-#### `script` 元素属性
+### `script` 元素属性
 - `async`: 可选，表示应该 <em>立即下载脚本</em>，不妨碍页面中的其他操作，只对外部脚本文件有效
 - `defer`: 可选，表示脚本可以 <em>延迟</em> 到文档完全被解析和显示之后再执行，只对外部脚本文件有效
 - `language`: 已废弃
@@ -10,7 +10,7 @@
 - `type`: 可选，不指定这个属性，则默认 text/javascript
 - `charset`: 可选，表示通过src属性指定的代码的字符集
 
-#### 标签位置
+### 标签位置
 在传统做法中，所有的script元素都放在页面的<head>元素中，例如: 
 ```html
   <!DOCTYPE html>
@@ -44,7 +44,7 @@
   </html>
 ```
 
-#### 延迟 defer 和 异步 async
+### 延迟 defer 和 异步 async
 `defer`， 表明脚本在执行时不会影响页面的构造，脚本被延迟到整个页面都解析完后才执行，并且会按照`script`的属性执行，也就是main.js 会有限 base.js 执行。
 
 ```html
@@ -79,11 +79,55 @@
 
 面试过程中，常问: [页面加载太久，如何进行性能优化?](https://github.com/PDKSophia/blog.io/blob/master/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-HTML%E7%AF%87.md#%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96) [JS异步加载，defer和async的区别?](https://github.com/PDKSophia/blog.io/blob/master/JavaScript%E7%AF%87-%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BDjs%2C%20async%E5%92%8Cdefer.md)
 
-#### 文档模式
+### 文档模式
 [DOCTYPE作用 ？ 标准模式（严格模式）和 兼容模式（混杂模式）有什么区别？](https://github.com/PDKSophia/blog.io/blob/master/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-HTML%E7%AF%87.md#doctype%E4%BD%9C%E7%94%A8--%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E5%92%8C-%E5%85%BC%E5%AE%B9%E6%A8%A1%E5%BC%8F%E6%B7%B7%E6%9D%82%E6%A8%A1%E5%BC%8F%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
 
-#### noscript 元素
+### noscript 元素
 早期浏览器不支持JavaScript时，如何让浏览器平稳的退化，解决办法就是 `<noscript>` 元素，用以在不支持 JavaScript 的浏览器中显示替代的内容。
 
 ------------
 
+## Chapter Three
+
+### 数据类型
+ECMAScript 中有5种简单的基本数据类型: `Undefined`、`Null`、`Boolean`、`String`、`Number`，还有一种复杂数据类型`Object`，在ES6中，还多出一种`Symbol`基本类型。
+
+基本数据类型
+- Undefined
+- Null
+- Boolean
+- String
+- Number
+- Symbol （ES6中新增）
+
+复杂数据类型
+- Object （使用过程中会遇到浅拷贝和深拷贝的问题）
+
+### typeof 操作符
+先看一段代码，再继续进行说明～
+```javascript
+  typeof undefined;    // undefined
+  typeof 1;            // number
+  typeof '1';          // string
+  typeof true;         // boolean
+  typeof text;         // text没有被声明，但是还是会显示underfined
+  typeof null;         // object
+  typeof [];           // object
+  typeof {};           // object
+```
+
+##### Undefined 类型
+Undefined类型只有一个值，那就是 `undefined`，在使用 `var` 声明一个变量但未对其加以初始化时，这个值就是undefined
+
+
+```javascript
+  var message 
+  alert(message) // 出现弹窗, undefined
+
+  alert(text) // 报错： Uncaught ReferenceError: text is not defined
+```
+这只是声明了message，但是没有进行初始化, 所以是undefined，而text这个变量并没有被声明
+
+也就是说: <strong>包含undefined值的变量和尚未定义的变量还是不一样的</strong>，对于尚未声明过的变量，只能执行一项操作，即使用 typeof 操作符检测其数据类型
+
+##### Null 类型
