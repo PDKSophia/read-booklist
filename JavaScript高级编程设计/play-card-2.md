@@ -204,3 +204,82 @@ tags: card-2、基本概念、操作符、变量、作用域、内存问题...
 - `reduce()`: 迭代数组的所有项，构建一个最终返回的值，从数组的第一项开始，遍历到最后
 
 - `reduceRight()`: 迭代数组的所有项，构建一个最终返回的值，从数组的最后一项开始，遍历到第一项
+
+### Date类型
+常用的组件方法， 其余的请自己去 [API](http://www.w3school.com.cn/js/jsref_obj_date.asp) 查找下哈～
+| 方法 | 说明 |
+| :------: | :------: |
+| getTime() | 返回日期的毫秒数 |
+| getFullYear()| 取得四位数的年份 |
+| getMonth() | 返回日期中的月份，0表示一月，11表示十二月|
+| getDate() | 返回日期月份中的天数(1-31) |
+| getDay() | 返回日期中星期的星期几(0代表星期日，6代表星期六) |
+| getHours() | 返回日期中的小时数(0-23) |
+| getMinutes() | 返回日期中的分钟数(0-59) |
+| getSeconds() | 返回日期中的秒数(0-59) |
+
+### RegExp 类型
+[RegExp类型，请移步到我这里，有详细说明]()
+
+### Function 类型
+函数实际上是对象。每个对象都是 `Function` 类型的实例，而且都与其他引用类型一样具有属性和方法。<strong>函数是对象，函数名是一个指向函数对象的指针</strong>
+
+由于函数名仅仅是指向函数的指针，因此函数名与包含对象指针的其他变量没有什么不同。换句话说，一个函数可能有多个名字
+
+```javascript
+  function sum (a, b) {
+    return a + b
+  }
+  console.log(sum(10, 20)) // 30
+
+  var anotherSum = sum  // 注意，这里是访问函数指针，而非调用函数, 如果写成 var anotherSum = sum() ，那么anotherSum就等于sum的返回结果了
+  console.log(anotherSum(10, 10)) // 20
+
+  sum = null
+  console.log(anotherSum(10, 10)) // 20
+
+```
+上述代码中，anotherSum 和 sum 都指向同一个函数，因此anotherSum() 也可以被调用并返回结果，即使将sum置为null，让它与函数“断绝关系”，但仍然可以正常访问anotherSum()
+
+#### 函数声明与函数表达式
+解析器在向执行环境加载数据时，会率先读取函数声明，并使其在执行任何代码之前可用(变量提升、函数提升)；至于函数表达式，必须等到解析器执行到它所在的代码行，才能真正被解释执行
+
+```javascript
+  alert(sum(10, 10)) // 20， 可以正常访问
+  function sum(a, b) {
+    return a + b
+  }
+
+  alert(sum(10, 10)) // 不可访问
+  var sum = function (a, b) {
+    return a + b
+  }
+```
+第一个之所以能正常访问是因为: 在代码开始执行之前，解析器就已经通过一个名为`函数声明提升`的过程，读取并将函数声明添加到<strong>`执行环境`</strong>中，即使声明函数的代码在调用它的后面，JavaScript引擎也能把函数声明提升到顶部
+
+第二个不能访问是因为: 函数位于一个初始化语句中，而不是一个函数声明。换句换说，能执行到函数所在的语句之前，变量sum中不会保存有对函数的引用
+
+> 除了什么时候可以通过变量访问函数这一点外，函数声明和函数表达式的语法其实是等价的
+
+#### 函数内部属性
+在函数内部，有两个特殊的对象: `arguments` 和 `this`，arguments的主要用途是保存函数参数，但这个对象它还有一个 `callee` 得属性，该属性是一个指针，指向拥有这个arguments对象的函数。
+
+```javascript
+  function factorial (num) {
+    if (num <= 1) {
+      return 1;
+    } else {
+      return num * factorial(num-1)
+    }
+  }
+```
+上述代码存在一个问题，就是: 函数到执行与函数名factorial紧紧耦合在了一起，可以使用 `arguments.callee()` 解除这个问题
+```javascript
+  function factorial (num) {
+    if (num <= 1) {
+      return 1;
+    } else {
+      return num * arguments.callee(num-1)
+    }
+  } 
+```
