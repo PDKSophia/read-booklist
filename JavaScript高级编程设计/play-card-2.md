@@ -207,6 +207,7 @@ tags: card-2、基本概念、操作符、变量、作用域、内存问题...
 
 ### Date类型
 常用的组件方法， 其余的请自己去 [API](http://www.w3school.com.cn/js/jsref_obj_date.asp) 查找下哈～
+
 | 方法 | 说明 |
 | :------: | :------: |
 | getTime() | 返回日期的毫秒数 |
