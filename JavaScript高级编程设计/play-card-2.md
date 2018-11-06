@@ -284,3 +284,51 @@ tags: card-2、基本概念、操作符、变量、作用域、内存问题...
     }
   } 
 ```
+函数内部的另一个特殊对象是 `this`，this 引用的是函数执行的环境对象。(全局作用域下，this指向window)
+
+```javascript
+  window.color = 'red'
+  var o = {
+    color: 'blue'
+  }
+
+  function sayColor() {
+    console.log(this.color)
+  }
+
+  sayColor() // red
+
+  o.sayColor = sayColor
+  o.sayColor() // blue
+```
+
+> 记住，函数的名字仅仅是一个包含指针的变量而已，因此，即使是在不同的环境中执行，全局的sayColor()函数与o.sayColor()指向的仍然是同一个函数
+
+ES5 规范了另一个函数对象的属性: `caller`， 这个属性中保存着`调用当前函数的函数的引用`
+
+```javascript
+  function outer() {
+    console.log('测试')
+    inner()
+  }
+
+  function inner() {
+    console.log(inner.caller)
+  }
+
+  outer()
+```
+以上代码会在终端或者浏览器中，中显示 outer() 的源代码。因为 outer() 调用了 inner()， 所以 inner.caller() 指向outer()。为了实现更松散的耦合，可以使用 `arguments.callee.caller` 来访问相同的信息
+
+```javascript
+  function outer() {
+    inner()
+  }
+
+  function inner() {
+    alert(arguments.callee.caller)
+  }
+
+  outer()
+```
+<strong>严格模式下，不能为函数的caller属性复制，否则会报错</strong>
