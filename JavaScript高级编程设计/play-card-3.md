@@ -57,4 +57,40 @@ tags: card-3
   })
 
 ```
-大部分情况下，<strong>通过对象字面量创建的实例， configurable、enumerable、writable都是true的。</strong>
+大部分情况下，<strong>通过对象字面量创建的实例， configurable、enumerable、writable都是true的。</strong> ，戳这里: [Vue数据双向绑定原理](https://github.com/PDKSophia/blog.io/blob/master/Vue%E7%AF%87-%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86.md)
+
+#### 访问器属性
+访问器属性不包含数据值；它们有一对: getter和setter(不是必需的), 在读取访问器属性时，会调用getter函数，负责返回有效的值； 在写入访问器属性时，会调用setter函数并传入新值。
+
+- [[ Configurable ]] : 能否通过delete删除属性从而重新定义属性，能否修改属性的特性，默认false
+
+- [[ Enumerable ]] : 是否能通过 for-in 循环返回属性，也就是能否枚举，默认false
+
+- [[ Get ]] : 在读取属性时调用的函数，默认值为 undefined
+
+- [[ Set ]] : 在写入属性时调用的函数，默认值为 undefined
+
+```javascript
+  // 来个代码例子
+  var tick = {
+    _address: 305,
+    developer: 'PDK'
+  }
+
+  Object.defineProperty(tick, 'address', {
+    get: function () {
+      return this._address
+    },
+    set: function (newAddress) {
+      if (newAddress > this._address) {
+        this._address = newAddress
+        this.developer = '彭道宽'
+      }
+    }
+  })
+
+  tick.address = 308
+  console.log(tick) // { _address: 308, developer: '彭道宽' }
+
+```
+以上代码创建了一个tick对象，并给它定义了两个默认的属性 : _address和developer，_address前面的下划线是一种常见的记号，<strong>用于表示只能通过对象方法访问的属性</strong>，而访问器的属性address则包含getter函数和setter函数。getter函数返回_address的值，setter函数通过判断来确定正确的版本。
