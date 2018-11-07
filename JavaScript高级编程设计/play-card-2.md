@@ -331,7 +331,7 @@ ES5 规范了另一个函数对象的属性: `caller`， 这个属性中保存�
 
   outer()
 ```
-<strong>严格模式下，不能为函数的caller属性复制，否则会报错</strong>
+<strong>严格模式下，不能为函数的caller属性赋值，否则会报错</strong>
 
 #### 函数属性和方法
 每个函数都有 `length` 和 `prototype` (只有函数才有prototype对象属性)，其中，length 属性表示函数希望接受的命名参数的个数
@@ -358,7 +358,7 @@ ES5 规范了另一个函数对象的属性: `caller`， 这个属性中保存�
 
 - apply: 接收两个参数，一个是在其中运行函数的作用域，一个是`参数数组`, 第二个参数可以是Array的实例，要可以是arguments对象
 
-- call: 接收两个参数，一个是在其中运行函数的作用域，其余参数都直接传递给函数，传递给函数的参数必须逐个列举出来
+- call: 接收两个参数，一个是在其中运行函数的作用域，其余参数都直接传递给函数，传递给函数的参数必须逐个列举出来
 
 ```javascript
   // apply 的使用
@@ -412,6 +412,7 @@ apply() 和 call() 真正牛逼的是: <strong>扩展函数赖以运行的作用
   var objectColor = sayColor.bind(obj) // obj的this会被绑定给objectColor
   objectColor() // blue
 ```
+你可能想看: [面试之-apply和call的考察](https://github.com/PDKSophia/blog.io/blob/master/JavaScript%E7%AF%87-apply%E5%92%8Ccall.md)
 
 ### 基本包装类型
 引用类型与基本包装类型的主要区别就是: <strong>对象的生存期</strong>，使用new操作符创建的引用类型的实例，在执行流离开当前作用域之前都一直保存在内存中。而`自动创建`的基本包装类型的对象，则只存在于一行代码的执行瞬间。然后`立即被销毁`，这意味着我们不能在运行时为基本类型值添加属性和方法。
