@@ -1,7 +1,7 @@
 ---
 title: JavaScript高级程序设计 - 打卡第三天
 date: 2018-11-07 10:43:52
-tags: card-3
+tags: card-3、数据属性、访问器属性、原型链继承、构造函数继承、组合继承、寄生式继承、原型式继承
 
 ---
 
@@ -99,7 +99,7 @@ tags: card-3
 通过 `Object.defineProperties()` 方法可以通过描述符一次定义多个属性。第一个参数是要添加和修改的对象，第二个是对象的属性与第一个对象中要添加或者修改的属性一一对应, 具体代码看下边的例子。
 
 #### 读取属性的特性
-使用 `Object.getOwnPropertyDescriptor()` 方法可以取得给定属性的描述符，接收两个参数： 属性所在的对象和描述符的属性名称，返回的是一个对象，如果是数据属性，这个对象的属性有: configurable、enumerable、writable、value； 如果是访问器属性，这个对象的属性有: configurable、enumerable、get、set
+使用 `Object.getOwnPropertyDescriptor()` 方法可以取得给定属性的描述符，接收两个参数： 属性所在的对象和描述符的属性名称，返回的是一个对象，如果是数据属性，这个对象的属性有: configurable、enumerable、writable、value； 如果是访问器属性，这个对象的属性有: configurable、enumerable、get、set
 
 ```javascript
   var tick = {}
@@ -175,7 +175,7 @@ tags: card-3
 
 在上述代码中，没有使用 SubType 默认提供的原型，而是给它换了一个新的原型: 这个原型就是 SuperType的实例。于是，新原型不仅作为一个SuperType的实例所拥有的全部属性和方法，而且其内部还有一个指针，指向了 SuperType的原型，最终结果是这样的 : `intance 指向 SubType的原型，SubType的原型指向SuperType的原型。getSuperValue() 方法仍然在SuperType.prototype上，但是property位于SubType.prototype中。`这是因为property是一个实例属性，而getSuperValue()是一个原型方法。
 
-SubType.prototype是SuperType的实例，那么property就存在于该实例中了。注意: <strong>instance.constructor现在不是指向SubType，而是指向SuperType</strong>，这是因为SubType.prototype被重写的缘故。实际上，不是SubType的原型的constructor属性被重写，而是SubType的原型指向了另一个对象——SuperType的原型，而这个原型对象的constructor属性指向的是SuperType
+SubType.prototype是SuperType的实例，那么property就存在于该实例中了。注意: <strong>instance.constructor现在不是指向SubType，而是指向SuperType</strong>，这是因为SubType.prototype被重写的缘故。实际上，不是SubType的原型的constructor属性被重写，而是SubType的原型指向了另一个对象——SuperType的原型，而这个原型对象的constructor属性指向的是SuperType
 
 #### 借用构造函数
 由于原型链存在着一些问题： 什么问题呢？就是`包含引用类型值的原型`。之前说过，包含引用类型值的原型属性会被所有实例共享，比如下边代码
@@ -245,6 +245,7 @@ tags: card-3
   console.log(SuperType.__proto__ == Function.prototype) // true
   console.log(SuperType.prototype.__proto__ == Object.prototype) // true 
 ```
+你可能想看下这个文章? [JavaScript-原型与原型链](https://github.com/PDKSophia/blog.io/blob/master/JavaScript%E7%AF%87-%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.md)
 
 #### 组合继承
 将原型链和借用构造函数的技术组合在一起。背后的思路是: 使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承。这样，既通过在原型上定义方法实现了函数的服用，又能够保证每个实例都有它的属性。
@@ -301,7 +302,36 @@ ECMAScript5 新增Object.create()方法规范了原型式继承，这个方法�
   obj2.friends.push('e')
 
   console.log(person.friends) // ['a', 'b', 'c', 'd', 'e']
-  console.log(person.name) // PDK
+  console.log(person.name) // PDK
 ```
 
 > Object.create()方法的第二个参数于 Object.defineProperties()方法的第二个参数格式相同，每个属性都是通过自己的描述符定义的。以这种方式指定的任何属性都会覆盖原型对象上的同名属性。
+
+#### 寄生式继承
+思路与寄生构造函数和工厂模式类似，即创建一个仅用于封装继承过程的函数，该函数在内部以某种方式来增强对象，最后再像真地是它做了所有工作一样返回对象。
+
+```javascript
+  function createObject(origin) {
+    var clone = Object.create(origin) // 通过调用函数来创建一个对象
+    clone.sayHi = function () {
+      console.log('hi')
+    }
+    return clone // 返回这个对象
+  }
+
+  var person = {
+    name: 'pdk'
+  }
+  var resClone = createObject(person)
+  resClone.sayHi() // "hi"
+```
+
+#### 寄生组合式继承
+所谓的寄生组合式继承，就是通过借用构造函数来继承属性，通过原型链的混用来继承方法。本质上，就是使用寄生式继承来继承超类型的原型，然后将结果指定给自类型的原型。
+```javascript
+  function inheritPrototype(SubType, SuperType) {
+    var prototype = Object.create(SuperType.prototype) // 创建对象
+    prototype.constructor = SubType // 增强对象 
+    SubType.prototype = prototype // 指定对象
+  }
+```
