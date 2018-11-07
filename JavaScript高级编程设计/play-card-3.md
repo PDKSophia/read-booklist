@@ -99,7 +99,7 @@ tags: card-3、数据属性、访问器属性、原型链继承、构造函数�
 通过 `Object.defineProperties()` 方法可以通过描述符一次定义多个属性。第一个参数是要添加和修改的对象，第二个是对象的属性与第一个对象中要添加或者修改的属性一一对应, 具体代码看下边的例子。
 
 #### 读取属性的特性
-使用 `Object.getOwnPropertyDescriptor()` 方法可以取得给定属性的描述符，接收两个参数： 属性所在的对象和描述符的属性名称，返回的是一个对象，如果是数据属性，这个对象的属性有: configurable、enumerable、writable、value； 如果是访问器属性，这个对象的属性有: configurable、enumerable、get、set
+使用 `Object.getOwnPropertyDescriptor()` 方法可以取得给定属性的描述符，接收两个参数： 属性所在的对象和描述符的属性名称，返回的是一个对象，如果是数据属性，这个对象的属性有: configurable、enumerable、writable、value； 如果是访问器属性，这个对象的属性有: configurable、enumerable、get、set
 
 ```javascript
   var tick = {}
