@@ -16,8 +16,8 @@
 | 7 | `《数据结构与算法 JavaScript描述》` |  暂定 | 暂定 | 0% |
 
 ### 十一月 & 打卡表
-- 11.05, 《JavaScript高级程序设计 第3版》打卡第一天，读至第四章结束，[查看详情](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md)
+- 11.05, 《JavaScript高级程序设计 第3版》打卡第一天，你可能想了解: [0.1+0.2!=0.3](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#number-%E7%B1%BB%E5%9E%8B)、[执行环境及作用域](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%8F%8A%E4%BD%9C%E7%94%A8%E5%9F%9F)、 [垃圾收集](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86) 读至第四章结束，[查看详情](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md)
 
-- 11.06, 《JavaScript高级程序设计 第3版》打卡第二天，读完第五章，[查看详情](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-2.md)
+- 11.06, 《JavaScript高级程序设计 第3版》打卡第二天，你可能想了解: [函数声明及函数表达式](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-2.md#%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F)、[函数属性和方法: call和apply](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-2.md#%E5%87%BD%E6%95%B0%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95)读完第五章，[查看详情](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-2.md)
 
-- 11.07, 《JavaScript高级程序设计 第3版》打卡第三天，补充第五章 `函数属性及方法`，`内置单体对象` 内容，阅读第六章，[查看详情](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-3.md)
+- 11.07, 《JavaScript高级程序设计 第3版》打卡第三天，补充第五章内容，阅读第六章，[查看详情](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-3.md)
