@@ -1,7 +1,7 @@
 ---
 title: JavaScript高级程序设计 - 打卡第二天
 date: 2018-11-06 09:34:52
-tags: card-2、基本概念、操作符、变量、作用域、内存问题...
+tags: card-2、引用类型、函数内置对象、函数属性及方法、单体内置对象...
 
 ---
 
@@ -332,3 +332,109 @@ ES5 规范了另一个函数对象的属性: `caller`， 这个属性中保存�
   outer()
 ```
 <strong>严格模式下，不能为函数的caller属性复制，否则会报错</strong>
+
+#### 函数属性和方法
+每个函数都有 `length` 和 `prototype` (只有函数才有prototype对象属性)，其中，length 属性表示函数希望接受的命名参数的个数
+```javascript
+  function fun1 (name) {
+    consolel.log(name)
+  }
+
+  function fun2 (name, age) {
+    return name + age
+  }
+
+  function fun3 () {
+    console.log('none')
+  }
+
+  console.log(fun1.length)  // 1
+  console.log(fun2.length)  // 2
+  console.log(fun3.length)  // 0
+```
+<strong>prototype</strong>属性是保存它们所有实例方法的真正所在，换句话说，toString() 扽等方法实际上保存在prototype下，总不过是通过各自对象的实例访问罢了。<strong>prototype</strong>属性不可枚举，也就是使用 for-in 无法发现。
+
+每个函数都有两个非继承的方法: <strong>`call`</strong> 和 <strong>`apply`</strong>，实际上就是设置函数体内的 this 对象的值。
+
+- apply: 接收两个参数，一个是在其中运行函数的作用域，一个是`参数数组`, 第二个参数可以是Array的实例，要可以是arguments对象
+
+- call: 接收两个参数，一个是在其中运行函数的作用域，其余参数都直接传递给函数，传递给函数的参数必须逐个列举出来
+
+```javascript
+  // apply 的使用
+  function sum (a1, b1) {
+    return a1+b1
+  }
+
+  function sum2 (a2, b2) {
+    return sum.apply(this, arguments) // 传入的是arguments对象，arguments[0] = ss1 ... 
+  }
+
+  function sum3 (a3, b3) {
+    return sum.apply(this, [a3, b3]) // 传入的是 Array 的实例
+  }
+```
+```javascript
+  // call 的使用
+  function sum (a1, b1) {
+    return a1+b1
+  }
+
+  function sum2 (a2, b2) {
+    return sum.call(this, a2, b2) // 传入的是连续参数
+  }
+```
+apply() 和 call() 真正牛逼的是: <strong>扩展函数赖以运行的作用域</strong>
+```javascript
+  window.color = 'red'
+  var obj = { color: 'blue' }
+  var tick = { color: 'yellow' }
+
+  function sayColor () {
+    console.log(this.color)
+  }
+
+  sayColor() // red，函数中的this指向的是全局作用域中的this
+  sayColor.call(this) // red，函数中的this指向的是全局作用域中的this
+  sayColor.call(obj) // blue， 函数中的this指向的是obj中的this
+  sayColor.call(tick) // yellow 函数中的this指向的是tick中的this
+  
+```
+这里还有一个需要说明的就是: `bind()`，这个bind()会创建一个函数的实例，其this值会被绑定给bind()函数的值
+```javascript
+  window.color = 'red'
+  var obj = { color: 'blue' }
+
+  function sayColor () {
+    console.log(this.color)
+  }
+
+  var objectColor = sayColor.bind(obj) // obj的this会被绑定给objectColor
+  objectColor() // blue
+```
+
+### 基本包装类型
+引用类型与基本包装类型的主要区别就是: <strong>对象的生存期</strong>，使用new操作符创建的引用类型的实例，在执行流离开当前作用域之前都一直保存在内存中。而`自动创建`的基本包装类型的对象，则只存在于一行代码的执行瞬间。然后`立即被销毁`，这意味着我们不能在运行时为基本类型值添加属性和方法。
+
+#### String类型
+- chartAt() : 以单字符字符串的形式返回给定位置的那个字符
+
+- charCodeAt() : 返回给定位置的那个字符的字符编码
+
+- concat() : 将一个字符或者多个字符串拼接起来，返回拼接得到的新字符串
+
+- slice() : 返回被操作字符串的一个子字符串，第一个参数指定子字符串的开始位置，第二个参数(在指定的情况下)表示子字符串到哪里结束，对原始字符没有影响
+
+- substring() : 返回被操作字符串的一个子字符串，第一个参数指定子字符串的开始位置，第二个参数(在指定的情况下)表示子字符串到哪里结束，对原始字符没有影响
+
+- substr() : 返回被操作字符串的一个子字符串，第一个参数指定子字符串的开始位置，第二个参数(在指定的情况下)表示返回的字符个数，对原始字符没有影响
+
+- indexOf() : 两个参数: 要查找的项和表示查找起点位置的索引，从数组的开头向后查找，返回查找的项在数组中的位置，没有找到就返回-1
+
+- lastIndexOf() : 两个参数: 要查找的项和表示查找起点位置的索引，从数组的末尾开始向前查找，返回查找的项在数组中的位置，没有找到就返回-1
+
+- trim() : 这个方法会创建一个字符串的副本，删除前置及后缀的所有空格，然后返回结果
+
+- toLowerCase() : 转换成小写
+
+- toUpperCase() : 转换成大写
