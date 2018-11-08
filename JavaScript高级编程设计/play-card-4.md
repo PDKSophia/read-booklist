@@ -76,15 +76,15 @@ tags: card-3、数据属性、访问器属性、原型链继承、构造函数�
 ```
 下面的图，表示了 compare() 函数执行时的作用域链。首先定义了compare()函数，然后在全局作用域中调用了它。调用 compare() 函数的时候，会创建一个包含 `argumetns`、`value1`、`value2`的活动对象。全局执行环境的变量对象(包含result和compare)在compare()执行环境的作用域链中则处于第二位
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/js-red-seven-1.png' /> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/js-red-seven-1.png' />
 
 全局环境得变量对象始终存在，而像 compare() 函数这样的局部环境的变量对象，则只在函数执行的过程中存在。在创建 compare() 函数时，会先创建一个预先包括全局变量对象的作用域链，这个作用域链被保存在内部的 [[ Scope ]] 属性中。
 
-当调用 compare() 函数的时候，会为函数创建一个执行环境，然后通过复制函数中的 [[ Scope ]]属性中的对象构建起执行环境的作用域链。此后，又有一个活动对象(在此作为变量对象使用)被创建并推入执行环境作用域链的前端。 (也就是作用域链的前端是compare的活动对象)
+当调用 compare() 函数的时候，会为函数创建一个执行环境，然后通过复制函数中的 [[ Scope ]]属性中的对象构建起执行环境的作用域链。此后，又有一个活动对象(在此作为变量对象使用)被创建并推入执行环境作用域链的前端。 (也就是作用域链的前端是compare的活动对象)
 
 对于例子中的compare()函数的执行环境来说，其作用域链中包含两个变量对象: 本地活动对象和全局变量对象。显然，<strong>作用域链的本质是一个指向变量对象的指针列表</strong>
 
-> 一般来讲，当函数执行完毕之后，局部活动对象就会被销毁，内存中仅保存着全局作用域，但是闭包不同，它会将活动对象添加到作用域链的前端，也就是说，局部活动对象被销毁，但是它的活动对象仍然留在内存中，这也就是为什么使用闭包可能会导致内存问题。因为闭包会携带包含它的函数的作用域，因此会比其他函数占用更多的内存
+> 一般来讲，当函数执行完毕之后，局部活动对象就会被销毁，内存中仅保存着全局作用域，但是闭包不同，它会将活动对象添加到作用域链的前端，也就是说，局部活动对象被销毁，但是它的活动对象仍然留在内存中，这也就是为什么使用闭包可能会导致内存问题。因为闭包会携带包含它的函数的作用域，因此会比其他函数占用更多的内存
 
 <strong>在一个函数内部定义的函数会将包含函数(即外部函数)的活动对象添加到它的作用域链中</strong>，例如下边代码
 ```javascript
@@ -122,7 +122,7 @@ tags: card-3、数据属性、访问器属性、原型链继承、构造函数�
 ```
 设置compareName为null，是为了解除对函数的引用，等于通知垃圾回收机制将其回收，随着匿名函数的作用域链被销毁，其他作用域 (除了全局作用域)也都可以安全地销毁了
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/js-red-seven-2.png' /> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/js-red-seven-2.png' />
 
 注意: <strong>`作用域链的这种配置机制，引出了一个副作用，即闭包只能取得包含函数中任何变量的最后一个值`</strong>
 
@@ -160,3 +160,43 @@ tags: card-3、数据属性、访问器属性、原型链继承、构造函数�
 
 ```
 在上述代码中，没有立即将闭包赋给数组，而是定义了一个匿名函数，并将立即执行该匿名函数的结果赋给数组。这里的匿名函数有一个参数 num，也就是最终的函数要返回的值。在调用每个匿名函数时，我 们传入了变量 i。由于函数参数是按值传递的，所以就会将变量 i 的当前值`复制`给参数 num。而在这个 匿名函数内部，又创建并返回了一个访问 num 的闭包。这样一来，result 数组中的每个函数都有自己 num 变量的一个副本，因此就可以返回各自不同的数值了
+
+#### 闭包与this对象
+this 对象是在运行时基于函数的执 行环境绑定的: `在全局函数中，this 等于 window，而当函数被作为某个对象的方法调用时，this 等于那个对象`。不过，<strong>匿名函数的执行环境具有全局性</strong>，因此其 this 对象通常指向 window，(在使用call和apply改变函数执行环境下，this会指向其他对象)。但有时候，由于编写闭包的方式不同，这一点可能不会那么明显
+
+```javascript
+  var name = "The Window"
+  var object = {
+    name : "My Object",
+    getNameFunc : function () {
+      console.log('@@@@', this)  // 执行 object
+      return function () {
+        console.log(this)       // 指向 window 
+        return this.name
+      }
+    }
+  }
+  console.log(object.getNameFunc()()) "The Window"(在非严格模式下)
+  
+  // 把外部作用域中的this对象保存在一个闭包能访问得到的变量里，这样就能让闭包访问该对象了
+
+  var name = "The Window"
+  var object = {
+    name : "My Object",
+    getNameFunc : function () {
+      console.log('@@@@', this)  // 执行 object
+      let _this = this
+      return function () {
+        console.log(this)       // 指向 window 
+        console.log(_this)      // 指向 object
+        return _this.name
+      }
+    }
+  }
+  console.log(object.getNameFunc()()) "My Object"
+```
+为什么匿名函数没 有取得其包含作用域(或外部作用域)的 this 对象呢 ? 
+
+> 每个函数在被调用时都会自动取得两个特殊变量:`this` 和 `arguments`。内部函数在搜索这两个变量时，只会搜索到其活动对象为止，因此永远不可能直接访问外部函数中的这两个变量。
+
+(怎么理解这句话？)，个人的理解： 在执行过程中，每个函数都会有一个执行环境，在getNameFunc()函数里的执行环境this指向的是 object，而在闭包中，`闭包又有自己的执行环境，而这里的this与它外部函数getNameFunc()的this是不相等的`，可能在某种情况下，它们都指向window，但是并不能说它们相等，而上述代码里，在定义匿名函数前，把this对象赋值给了 _this 变量，而在定义了闭包之后，闭包可以访问到外部函数的变量，即使在函数返回之后，闭包将活动对象添加到作用域链的前端，_this仍然引用着 object，所以会打印出 "My Object"
