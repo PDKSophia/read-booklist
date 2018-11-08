@@ -12,9 +12,10 @@
 | 3 | `《图解HTTP》` |  2018.11.17 | 2018.11.18 | 0% |
 | 4 | `《ECMAScript 6 入门》` |  2018.11.19 | 2018.11.26 | 0% |
 | 5 | `《JavaScript正则表达式》` |  2018.11.27 | 2018.11.31 | 0% |
-| 6 | `《算法图解》` | 暂定 | 暂定 | 0% |
-| 7 | `《数据结构与算法 JavaScript描述》` |  暂定 | 暂定 | 0% |
-| 8 | `《JavaScript设计模式与开发实践》` |  暂定 | 暂定 | 0% |
+| 6 | `《剑指 offer》` | 暂定 | 暂定 | 0% |
+| 7 | `《算法图解》` | 暂定 | 暂定 | 0% |
+| 8 | `《数据结构与算法 JavaScript描述》` |  暂定 | 暂定 | 0% |
+| 9 | `《JavaScript设计模式与开发实践》` |  暂定 | 暂定 | 0% |
 
 ### 十一月 & 打卡表
 - 11.05, 《JavaScript高级程序设计 第3版》打卡[第一天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md)，知识点: [0.1+0.2!=0.3](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#number-%E7%B1%BB%E5%9E%8B)、[执行环境及作用域](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%8F%8A%E4%BD%9C%E7%94%A8%E5%9F%9F)、 [垃圾收集](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86)
