@@ -7,7 +7,7 @@
 
 | 序号 | 数名 | 开始时间 | 结束时间 | 进度 |
 | :------: | :------: | :------: | :------: | :------: | 
-| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.11 | 15% |
+| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.11 | 22% |
 | 2 | `《计算机网络 第七版》` |  2018.11.12 | 2018.11.16 | 0% |
 | 3 | `《图解HTTP》` |  2018.11.17 | 2018.11.18 | 0% |
 | 4 | `《ECMAScript 6 入门》` |  2018.11.19 | 2018.11.26 | 0% |
@@ -22,3 +22,5 @@
 - 11.06, 《JavaScript高级程序设计 第3版》打卡[第二天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-2.md)，知识点: [函数声明及函数表达式](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-2.md#%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F)、[函数属性和方法: call和apply](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-2.md#%E5%87%BD%E6%95%B0%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95)
 
 - 11.07, 《JavaScript高级程序设计 第3版》打卡[第三天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-3.md)，知识点: [访问器属性](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-3.md#%E8%AE%BF%E9%97%AE%E5%99%A8%E5%B1%9E%E6%80%A7)、[继承之原型链继承](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-3.md#%E5%8E%9F%E5%9E%8B%E9%93%BE) 、[继承之原型式继承](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-3.md#%E5%8E%9F%E5%9E%8B%E5%BC%8F%E7%BB%A7%E6%89%BF) 
+
+- 11.08, 《JavaScript高级程序设计 第3版》打卡[第四天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-4.md)， 知识点: [闭包](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-4.md#%E9%97%AD%E5%8C%85)、[匿名函数与闭包](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-4.md#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0%E4%B8%8E%E9%97%AD%E5%8C%85)、[JS的私有变量](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-4.md#%E7%A7%81%E6%9C%89%E5%8F%98%E9%87%8F)
