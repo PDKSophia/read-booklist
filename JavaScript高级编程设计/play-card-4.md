@@ -76,4 +76,4 @@ tags: card-3、数据属性、访问器属性、原型链继承、构造函数�
 ```
 下面的图，表示了 compare() 函数执行时的作用域链。首先定义了compare()函数，然后在全局作用域中调用了它。调用 compare() 函数的时候，会创建一个包含 `argumetns`、`value1`、`value2`的活动对象。全局执行环境的变量对象(包含result和compare)在compare()执行环境的作用域链中则处于第二位
 
-<img src='../book-image/js-red-1.png' />
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/js-red-1.png' />
