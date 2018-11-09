@@ -7,7 +7,7 @@
 
 | 序号 | 数名 | 开始时间 | 结束时间 | 进度 |
 | :------: | :------: | :------: | :------: | :------: | 
-| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.11 | 22% |
+| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.11 | 25% |
 | 2 | `《计算机网络 第七版》` |  2018.11.12 | 2018.11.16 | 0% |
 | 3 | `《图解HTTP》` |  2018.11.17 | 2018.11.18 | 0% |
 | 4 | `《ECMAScript 6 入门》` |  2018.11.19 | 2018.11.26 | 0% |
@@ -36,3 +36,5 @@
 - 11.07, 《JavaScript高级程序设计 第3版》打卡[第三天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-3.md)，知识点: [访问器属性](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-3.md#%E8%AE%BF%E9%97%AE%E5%99%A8%E5%B1%9E%E6%80%A7)、[继承之原型链继承](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-3.md#%E5%8E%9F%E5%9E%8B%E9%93%BE) 、[继承之原型式继承](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-3.md#%E5%8E%9F%E5%9E%8B%E5%BC%8F%E7%BB%A7%E6%89%BF) 
 
 - 11.08, 《JavaScript高级程序设计 第3版》打卡[第四天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-4.md)， 知识点: [闭包](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-4.md#%E9%97%AD%E5%8C%85)、[匿名函数与闭包](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-4.md#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0%E4%B8%8E%E9%97%AD%E5%8C%85)、[JS的私有变量](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-4.md#%E7%A7%81%E6%9C%89%E5%8F%98%E9%87%8F)
+
+- 11.09，《JavaScript高级程序设计 第3版》打卡[第五天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-5.md)， 知识点: [window对象](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-5.md#window%E5%AF%B9%E8%B1%A1)、[setTimeout和setInterval的小秘密](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-5.md#%E8%B6%85%E6%97%B6%E8%B0%83%E7%94%A8%E5%92%8C%E9%97%B4%E6%AD%87%E8%B0%83%E7%94%A8)
