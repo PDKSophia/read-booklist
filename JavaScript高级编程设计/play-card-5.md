@@ -319,3 +319,221 @@ history 对象还有一个 length 属性，保存着历史记录的数量。这�
     // code
   }
 ```
+
+## Chapter Nine
+### 能力检测
+客户端检测形式是能力检测(又称特性检测)。能力检测的目标不是识别特定的浏览器，而是`识别浏览器的能力`。采用这种方式不必顾及特定的浏览器如何如何，只要确定浏览器支持特定的能力，就可以给出解决方案
+
+*能力检测，不是浏览器检测*。检测某个或某几个特性并不能够确定浏览器。下面给出的这段代码(或与之差不多的代码)可以在 许多网站中看到，这种“浏览器检测”代码就是错误地依赖能力检测的典型示例。
+```javascript
+  //错误!还不够具体
+  var isFirefox = !!(navigator.vendor && navigator.vendorSub)
+  //错误!假设过头了
+  var isIE = !!(document.all && document.uniqueID)
+```
+这两行代码代表了对能力检测的典型误用。以前，确实可以通过检测 navigator.vendor 和 navigator.vendorSub 来确定 Firefox 浏览器。但是，Safari 也依葫芦画瓢地实现了相同的属性。于是， 这段代码就会导致人们作出错误的判断。
+
+为检测 IE，代码测试了 document.all 和 document. uniqueID。这就相当于假设 IE 将来的版本中仍然会继续存在这两个属性，同时还假设其他浏览器都不会实现这两个属性。最后，这两个检测都使用了双逻辑非操作符来得到布尔值
+
+### 怪癖检测
+与能力检测类似，怪癖检测(quirks detection)的目标是识别浏览器的特殊行为。但与能力检测确 认浏览器支持什么能力不同，怪癖检测是想要知道浏览器存在什么缺陷(“怪癖”也就是 bug)。这通常 需要运行一小段代码，以确定某一特性不能正常工作。例如，IE8 及更早版本中存在一个 bug，即如果 某个实例属性与[[Enumerable]]标记为 false 的某个原型属性同名，那么该实例属性将不会出现在 fon-in 循环当中。可以使用如下代码来检测这种“怪癖”。
+```javascript
+  var hasDontEnumQuirk = function () {
+    var obj = {
+      toString: function () {}
+    }
+
+    for (let prop in obj) {
+      if (prop == 'toString') {
+        return false
+      }
+    }
+    return true
+  }()
+```
+以上代码通过一个匿名函数来测试该“怪癖”，函数中创建了一个带有 toString()方法的对象。 在正确的 ECMAScript 实现中，toString 应该在 for-in 循环中作为属性返回
+
+一般来说，“怪癖”都是个别浏览器所独有的，而且通常被归为 bug。在相关浏览器的新版本中，这 些问题可能会也可能不会被修复。
+
+### 用户代理检测
+第三种，也是争议最大的一种客户端检测技术叫做`用户代理检测`。用户代理检测通过检测用户代理字符串来确定实际使用的浏览器。在每一次 HTTP 请求过程中，用户代理字符串是作为响应首部发送的, 而且该字符串可以通过 JavaScript 的 __navigator.userAgent__ 属性访问。在服务器端，通过检测用户代理字符串来确定用户使用的浏览器是一种常用而且广为接受的做法。而在客户端，用户代理检测一般被当作一种万不得已才用的做法，其优先级排在能力检测和(或)怪癖检测之后
+
+具体过程不说了，下面是完整的用户代理字符串检测脚本，包括检测呈现引擎、平台、Windows 操作系统、移动设备
+和游戏系统。
+```javascript
+  var client = function () {
+    
+    // 呈现引擎
+    var engine = {
+      ie: 0,
+      gecko: 0,
+      webkit: 0,
+      khtml: 0,
+      opera: 0,
+
+      // 完整的版本号
+      ver: null
+    };
+
+    // 浏览器
+    var browser = {
+      // 主流浏览器
+      ie: 0,
+      firefox: 0,
+      safari: 0,
+      konq: 0,
+      opera: 0,
+      chrome: 0,
+
+      // 具体版本号
+      ver: null
+    };
+
+    // 平台、设备和操作系统
+    var system = {
+      win: false,
+      mac: false,
+      x11: false,
+
+      // 移动设备
+      iphone: false,
+      ipod: false,
+      ipad: false,
+      ios: false,
+      android: false,
+      nokiaN: false,
+      winMobile: false,
+
+      // 游戏系统
+      wii: false,
+      ps: false
+    };
+
+    //检测呈现引擎和浏览器
+    var ua = navigator.userAgent
+    if (window.opera) {
+      engine.ver = browser.ver = window.opera.version()
+      engine.opera = browser.opera = parseFloat(engine.ver)
+    } else if (/AppleWebKit\/(\S+)/.test(ua)) {
+      engine.ver = RegExp["$1"]
+      engine.webkit = parseFloat(engine.ver)
+
+      // 确定是 chrome 还是 safari
+      if (/Chrome\/(\S+)/.test(ua)) {
+        browser.ver = RegExp["$1"]
+        browser.chrome = parseFloat(browser.ver)
+      } else if (/Version\/(\S+)/.test(ua)) {
+        browser.ver = RegExp["$1"]
+        browser.safari = parseFloat(browser.ver)
+      } else {
+        //近似地确定版本号
+        var safariVersion = 1
+        if (engine.webkit < 100){
+          safariVersion = 1
+        } else if (engine.webkit < 312){
+          safariVersion = 1.2
+        } else if (engine.webkit < 412){
+          safariVersion = 1.3
+        } else {
+          safariVersion = 2
+        }
+        browser.safari = browser.ver = safariVersion
+      }
+    } else if (/KHTML\/(\S+)/.test(ua) || /Konqueror\/([^;]+)/.test(ua)) {
+      engine.ver = browser.ver = RegExp["$1"];
+      engine.khtml = browser.konq = parseFloat(engine.ver);
+    } else if (/rv:([^\)]+)\) Gecko\/\d{8}/.test(ua)) {
+      engine.ver = RegExp["$1"];
+      engine.gecko = parseFloat(engine.ver);
+
+      //确定是不是 Firefox
+      if (/Firefox\/(\S+)/.test(ua)){
+        browser.ver = RegExp["$1"];
+        browser.firefox = parseFloat(browser.ver);
+      }
+    } else if (/MSIE ([^;]+)/.test(ua)) {
+      engine.ver = browser.ver = RegExp["$1"];
+      engine.ie = browser.ie = parseFloat(engine.ver);
+    }
+
+    // 检测浏览器
+    browser.ie = engine.ie;
+    browser.opera = engine.opera;
+    
+    //检测平台
+    var p = navigator.platform;
+    system.win = p.indexOf("Win") == 0;
+    system.mac = p.indexOf("Mac") == 0;
+    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+    
+    // 检测window操作系统
+    if (system.win) {
+      if (/Win(?:dows )?([^do]{2})\s?(\d+\.\d+)?/.test(ua)) {
+        if (RegExp["$1"] == "NT") {
+          switch (RegExp['$2]') {
+            case '5.0':
+              system.win = '2000';
+              break;
+            case '5.1':
+              system.win = 'XP';
+              break;
+            case '6.0':
+              system.win = 'Vista';
+              break;
+            case '6.1':
+              system.win = '7';
+              break;
+            default:
+              system.win = 'NT';
+              break;
+          }
+        } else if (RegExp["$1"] == "9x") {
+          system.win = 'ME'
+        } else {
+          system.win = RegExp['$1']
+        }
+      }
+    }
+  
+    // 移动设备
+    system.iphone = ua.indexOf("iPhone") > -1;
+    system.ipod = ua.indexOf("iPod") > -1;
+    system.ipad = ua.indexOf("iPad") > -1;
+    system.nokiaN = ua.indexOf("NokiaN") > -1;
+    
+    //windows mobile
+    if (system.win == "CE") {
+      system.winMobile = system.win;
+    } else if (system.win == "Ph") {
+        if (/Windows Phone OS (\d+.\d+)/.test(ua)) {
+          system.win = "Phone";
+          system.winMobile = parseFloat(RegExp["$1"]);
+        } 
+      }
+
+    //检测 iOS 版本
+    if (system.mac && ua.indexOf("Mobile") > -1) {
+      if (/CPU (?:iPhone )?OS (\d+_\d+)/.test(ua)) {
+        system.ios = parseFloat(RegExp.$1.replace("_", "."));
+      } else {
+        system.ios = 2; //不能真正检测出来，所以只能猜测
+      } 
+    }
+
+    //检测 Android 版本
+    if (/Android (\d+\.\d+)/.test(ua)) {
+      system.android = parseFloat(RegExp.$1);
+    }
+    //游戏系统
+    system.wii = ua.indexOf("Wii") > -1; 
+    system.ps = /playstation/i.test(ua);
+
+    // 返回这些对象
+    return {
+      engine: engine,
+      browser: browser,
+      system: system
+    }
+  }()
+
+```
