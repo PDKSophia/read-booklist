@@ -84,7 +84,7 @@ innerWidth、innerHeight、outerWidth 和 outerHeight 用于确定一个窗口�
 __由于与桌面浏览器间存在这些差异，*最好是先检测一下用户是否在使用移动设备*，然后再决定使用哪个属性__
 
 
-#### 超时调用和间歇调用
+### 超时调用和间歇调用
 JavaScript 是单线程语言，但它允许通过设置超时值和间歇时间值来调度代码在特定的时刻执行。 前者是在指定的时间过后执行代码，而后者则是每隔指定的时间就执行一次代码
 
 超时调用需要使用 window 对象的 setTimeout()方法，它接受两个参数:要执行的代码和以毫秒表示的时间(即在执行代码前需要等待多少毫秒)。其中，第一个参数可以是一个包含 JavaScript 代码的字符串)，也可以是一个函数。例如，下面对 setTimeout() 的两次调用都会在一秒钟后显示一个警告框。
@@ -159,7 +159,7 @@ setTimeout()的第二个参数告诉 JavaScript 再过多长时间把当前任�
     // code ...
   }, 100)
 ```
-<img src='../book-image/js-red-eight-1.png'>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/js-red-eight-1.png'>
 
 <ol>
   <li>setInterval每隔100ms往队列中添加一个事件; 100ms 后，添加T1定时器至Task队列中，主线程中的执行栈有任务在执行，所以等待。</li> 
