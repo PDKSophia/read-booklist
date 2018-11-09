@@ -1,7 +1,7 @@
 ---
 title: JavaScript高级程序设计 - 打卡第五天
 date: 2018-11-08 09:52:32
-tags: card-5
+tags: card-5、setTimeout和setInterval
 
 ---
 
@@ -169,7 +169,9 @@ setTimeout()的第二个参数告诉 JavaScript 再过多长时间把当前任�
   <li>而且这里我们能够看到，T1定时器执行结束后立即执行了T2代码，所以并没有达到定时器的效果</li>
 </ol>
 所以我们能知道，setInterval有两个缺点:
+
 - 使用setInterval时，某些间隔会被跳过
+
 - 可能多个定时器会连续执行
 
 所以我们这么理解: <strong>每个setTimeout产生的任务会直接push到任务队列中；而setInterval在每次把任务push到任务队列前，都要进行一下判断(看上次的任务是否仍在队列中，在则跳过，不在则添加至Task队列)</strong>
@@ -183,4 +185,137 @@ setTimeout模拟setInterval，也可理解为链式的setTimeout
     // 任务
     setTimeout(arguments.callee, delay)
   }, delay)
+```
+
+### 系统对话框
+- alert(): 接受一个字符串并将其显示给用户，结果就是向用户显示一个系统对话框
+
+- confrim(): 显示“确定”和“取消”按钮。两个按钮可以让用户决定是否执行给定的操作
+
+- prompt(): 用于提示用户输入一些 文本。提示框中除了显示 OK 和 Cancel 按钮之外，还会显示一个文本输入域，以供用户在其中输入内容
+
+- find(): 显示查找对话框
+
+- print(): 显示打印对话框
+
+### location 对象
+location 对象是很特别的一个对象，因为它既是 window 对象的属性，也是 document 对象的属性; 换句话说， *window.location 和 document.location 引用的是同一个对象*。 location 对象的用处不只表现在它保存着当前文档的信息，还表现在它将 URL 解析为独立的片段，让 开发人员可以通过不同的属性访问这些片段
+
+| 属性名 | 例子 | 说明 | 
+| :------: | :------: | :------: | 
+| hash | `#contents` |  返回URL中的hash(#号后跟零或多个字符)，如果URL 中不包含散列，则返回空字符串 | 
+| host | `www.abc.com:80` |  返回服务器名称和端口号(如果有) | 
+| hostname | `www.abc.com` |  返回不带端口号的服务器名称 | 
+| href | `http://www.abc.com` |  返回当前加载页面的完整URL |
+| pathname | `/Files/` |  返回URL中的目录和(或)文件名 | 
+| port | `8080` |  返回URL中指定的端口号。如果URL中不包含端口号，则 这个属性返回空字符串 | 
+| protocol | `http:` | 返回页面使用的协议。通常是http:或https: | 
+| search | `?q=javascript` | 返回URL的查询字符串。这个字符串以问号开头 | 
+
+#### 查询字符串参数
+尽管 location.search 返回从问号到 URL 末尾的所有内容，但却没有办法逐个 访问其中的每个查询字符串参数。为此，可以像下面这样创建一个函数，用以解析查询字符串，然后返 回包含所有参数的一个对象
+```javascript
+  function getQueryStringArgs () {
+    // 取得查询字符串并去掉开头的问号
+    var qs = (location.search.length > 0? location.search.substring(1) : '')
+
+    // 保存数据的对象
+    var args = {}
+    
+    // 取得每一项
+    var items = qs.length ? qs.split('&') : []
+    var item = null, name = null, value = null
+
+    // for 循环， 逐个添加到 对象中
+    for (let i = 0; i < items.length; i++) {
+      item = items[i].split('=')
+      name = decodeURIComponent(item[0])
+      value = decodeURIComponent(item[1])
+      
+      if (name.length) {
+        args[name] = value
+      }
+    }
+
+    return args
+  }
+
+  // 假设查询字符串location.search为: ?tag=javascript&num=10
+  var res = getQueryStringArgs()
+  console.log(res['tag']) // javascript
+  console.log(res['num']) // 10
+```
+
+#### 位置操作
+改变浏览器位置的方法中，最常用的是设置 location.href 属性。另外，修改 location 对象的其他属性也可以改变当前加载的页面。下面的例子展示了通过将 hash、 search、hostname、pathname 和 port 属性设置为新值来改变 URL
+
+```javascript
+  //假设初始 URL 为 http://www.baidu.com/Files/
+
+  //将 URL 修改为"http://www.baidu.com/Files/#section1"
+  location.hash = "#section1"
+
+  //将 URL 修改为"http://www.baidu.com/Files/?q=javascript" 
+  location.search = "?q=javascript"
+
+  //将 URL 修改为"http://www.yahoo.com/Files/" 
+  location.hostname = "www.yahoo.com"
+
+  //将 URL 修改为"http://www.yahoo.com/mydir/" 
+  location.pathname = "mydir"
+
+  //将 URL 修改为"http://www.yahoo.com:8080/Files/" 
+  location.port = 8080
+```
+
+当通过上述任何一种方式修改 URL 之后，浏览器的历史记录中就会生成一条新记录，因此用户通 过单击“后退”按钮都会导航到前一个页面。
+
+要禁用这种行为，可以使用 `replace()` 方法。这个方法只接受一个参数，*即要导航到的 URL*; 结果虽然会导致浏览器位置改变，但不会在历史记录中生成新记录。在调用 replace()方法之后，用户不能回到前一个页面
+
+与位置有关的最后一个方法是 `reload()`，作用是*重新加载当前显示的页面*。如果调用 reload() 时不传递任何参数，页面就会以最有效的方式重新加载。也就是说，如果页面自上次请求以来并没有变过，页面就会从浏览器缓存中重新加载。如果要强制从服务器重新加载，则需要像下面这样为该方法传递参数 true。
+
+```javascript
+  location.reload()  //  重新加载(有可能从缓存中加载)
+  location.reload(true)  // 重新加载(从服务器重新加载)
+```
+
+#### history 对象
+history 对象保存着用户上网的历史记录，从窗口被打开的那一刻算起。因为 history 是 window 对象的属性，因此每个浏览器窗口、每个标签页乃至每个框架，都有自己的 history 对象与特定的 window 对象关联
+
+使用 go()方法可以在用户的历史记录中任意跳转，可以向后也可以向前。这个方法接受一个参数， 表示向后或向前跳转的页面数的一个整数值。负数表示向后跳转(类似于单击浏览器的“后退”按钮)， 8 正数表示向前跳转(类似于单击浏览器的“前进”按钮)。
+
+```javascript
+  //后退一页 
+  history.go(-1)
+
+  //前进一页 
+  history.go(1)
+
+  //前进两页 
+  history.go(2)
+```
+也可以给 go()方法传递一个字符串参数，此时浏览器会跳转到历史记录中包含该字符串的第一个位置——可能后退，也可能前进，具体要看哪个位置最近。如果历史记录中不包含该字符串，那么这个方法什么也不做
+
+```javascript
+  //跳转到最近的 wrox.com 页面 
+  history.go("wrox.com")
+
+  //跳转到最近的 nczonline.net 页面 
+  history.go("nczonline.net")
+```
+另外，还可以使用两个简写方法 back()和 forward()来代替 go()。顾名思义，这两个方法可以 模仿浏览器的“后退”和“前进”按钮。
+```javascript
+  //后退一页
+  history.back()
+
+  //前进一页 
+  history.forward() 
+```
+
+history 对象还有一个 length 属性，保存着历史记录的数量。这个数量包括所有历史记录，即所有向后和向前的记录。对于加载到窗口、标签页或框架中的第一个页面而言， history.length 等于 0。通过像下面这样测试该属性的值，可以确定用户是否一开始就打开了你的页面。
+```javascript
+  if (history.length === 0) {
+    // 用户打开窗口后的第一个页面
+    // code
+  }
 ```
