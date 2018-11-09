@@ -1,7 +1,7 @@
 ---
 title: JavaScript高级程序设计 - 打卡第五天
 date: 2018-11-08 09:52:32
-tags: card-5、setTimeout和setInterval
+tags: card-5、setTimeout和setInterval、用户代理检测
 
 ---
 
