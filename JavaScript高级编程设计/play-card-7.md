@@ -1,7 +1,7 @@
 ---
 title: JavaScript高级程序设计 - 打卡第七天
 date: 2018-11-11 14:31:52
-tags: card-7、Document类型、Element类型、滚动
+tags: card-7、 浏览器滚动、 offsetHeight及offsetWidth
 
 ---
 
