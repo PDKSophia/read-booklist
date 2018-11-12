@@ -24,7 +24,7 @@ IE 的事件流叫做事件冒泡(event bubbling)，简单来讲，<strong>事�
       <title>Example</title>
     </head>
     <body>
-      <div>事件冒泡</div>
+      <div>事件冒泡</div>
     </body>
   </html>
 ```
@@ -49,7 +49,7 @@ IE 的事件流叫做事件冒泡(event bubbling)，简单来讲，<strong>事�
       <title>Example</title>
     </head>
     <body>
-      <div>事件捕获</div>
+      <div>事件捕获</div>
     </body>
   </html>
 ```
@@ -140,7 +140,7 @@ DOM事件流包括三个阶段 :
   }, false)
 
 ```
-<strong>通过addEventListener添加的事件处理只有通过removeEventListener来移除</strong>
+<strong>通过addEventListener添加的事件处理只有通过removeEventListener来移除</strong>
 
 大多数情况下，*都是将事件处理程序添加到事件流的冒泡阶段*，这样可以最大限度地兼容各种浏览器。最好只在需要在事件到达目标之前截获它的时候将事件处理程序添加到捕获阶段。如果不是特别需要，不建议在事件捕获阶段注册事件处理程序。
 
