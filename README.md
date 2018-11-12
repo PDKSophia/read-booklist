@@ -29,6 +29,9 @@
 | 20 | `《丑陋的中国人》` |  暂定 | 暂定 | 0% | 未读 |
 
 ### 十一月 & 打卡表
+
+《JavaScript高级程序设计 第3版》打卡清单
+
 - 11.05, 《JavaScript高级程序设计 第3版》打卡[第一天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md)，知识点: [0.1+0.2!=0.3](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#number-%E7%B1%BB%E5%9E%8B)、[执行环境及作用域](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%8F%8A%E4%BD%9C%E7%94%A8%E5%9F%9F)、 [垃圾收集](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86)
 
 - 11.06, 《JavaScript高级程序设计 第3版》打卡[第二天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-2.md)，知识点: [函数声明及函数表达式](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-2.md#%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E4%B8%8E%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F)、[函数属性和方法: call和apply](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-2.md#%E5%87%BD%E6%95%B0%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95)
@@ -44,3 +47,9 @@
 - 11.11，《JavaScript高级程序设计 第3版》打卡[第七天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-7.md)，知识点: [浏览器滚动](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-7.md#%E6%BB%9A%E5%8A%A8)、 [offsetHeight及offsetWidth](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-7.md#%E5%85%83%E7%B4%A0%E5%A4%A7%E5%B0%8F)
 
 - 11.12， 《JavaScript高级程序设计 第3版》打卡[第八天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md)， 知识点: [DOM事件流](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md#dom%E4%BA%8B%E4%BB%B6%E6%B5%81)、[事件对象](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1) 
+
+--------
+
+《图解HTTP》打卡清单
+
+- 11.12, 《图解HTTP》打卡[第一天](injiahttps://github.com/PDKSophia/read-booklist/blob/master/图解HTTP/play-card-1.md)， 知识点: [TCP/IP的理解，DNS域名解析](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-1.md#tcpip%E7%9A%84%E4%BA%86%E8%A7%A3)

@@ -1,7 +1,7 @@
 ---
 title: 图解HTTP - 打卡第一天
 date: 2018-11-05 20:56:05
-tags: card-1、基本概念、操作符、变量、作用域、内存问题...
+tags: card-1、HTTP的诞生、TCP、DNS、IP的基本了解、
 
 ---
 
@@ -17,7 +17,7 @@ tags: card-1、基本概念、操作符、变量、作用域、内存问题...
 
 计算机与网络设备要相互通信，双方就必须基于相同的方法。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则，而我们把这种规则称为: *协议*
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-1.png'>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-1.png' width=500>
 
 <strong>TCP/IP是互联网相关的各类协议族的总称</strong>
 
@@ -33,13 +33,13 @@ TCP/IP协议族里重要的一点是: 分层。依次分为: 应用层、传输�
 
 利用TCP/IP协议族进行网络通信时，会通过分层顺序与对方进行通信。发送端从应用层往下走，接收端则往应用层往上走。你可能想了解一下 : [从输入URL到页面加载完成的过程](https://github.com/PDKSophia/blog.io/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87-%E4%BB%8E%E8%BE%93%E5%85%A5URL%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E5%AE%8C%E6%88%90%E8%BF%87%E7%A8%8B.md)
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-2.png'>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-2.png' width=500 height=550>
 
 首先作为发送端的客户端在应用层(HTTP协议)发出一个想看某个Web页面的HTTP请求，然后在传输层(TCP协议)把从应用层处收到的数据(HTTP请求报文)进行分割，并在各个报文上打上标记序号及端口号后转发给网络层，在网络层(IP协议)，增加作为通信目的地的MAC地址后转发给链路层。
 
 接收端的服务器在链路层接收到数据，按序往上层发送，一直到应用层。当传输到应用层，才能算真正接收到有客户端发送过来的HTTP请求
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-3.png'>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-3.png' width=600 height=650>
 
 发送端在层与层之间传输数据时，每经过一层时必定会被打上一个该层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层时会把对应的首部消去。
 
@@ -56,7 +56,7 @@ IP地址可以和MAC地址进行匹配。IP地址可变换，但是MAC地址是�
 
 IP间的通信依赖于MAC地址，在网络中，通信的双方很少会出现在同一个局域网内，通常是经过多台计算机和网络设备中转才能连接到双方。而在进行中转时，会利用下一站中转设备的MAC地址来搜索下一个中转目标。<strong>ARP是一种以解析地址的协议，根据通信方的IP地址就可以反查出对应的MAC地址</strong>
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-4.png'>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-4.png' width=600 height=650>
 
 #### 确保可靠性的TCP协议
 TCP 位于传输层，提供可靠的字节流服务。
@@ -67,14 +67,14 @@ TCP 位于传输层，提供可靠的字节流服务。
 
 那么怎样确保能够准确无误地传送呢？ TCP协议采用了[三次握手和四次挥手](https://github.com/PDKSophia/blog.io/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87-TCP%E7%9A%84%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.md)
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-5.png'>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-5.png' width=650 height=480>
 
 #### 负责域名解析的DNS服务
 DNS：位于应用层，它提供域名到IP地址间的解析服务
 
 DNS协议提供通过域名查找IP地址，或逆向从IP地址反查域名的服务
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-6.png'>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-6.png' width=700 height=550>
 
 ### URI和RUL
 
