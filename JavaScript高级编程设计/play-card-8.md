@@ -127,12 +127,12 @@ DOM事件流包括三个阶段 :
   }
   btn.addEventListener('click', handler, false)
   btn.removeEventListener('click', handler, false)
-  // 当第三个参数，boolean值, 默认false
+  // 当第三个参数，boolean值, 默认false
   // true， 表示捕获阶段调用事件处理程序
   // false，表示冒泡阶段调用事件处理程序
   // 如果同一个btn，绑定多个事件处理程序，那么会按照顺序触发
 
-  // 如果我们希望只触发目标函数，不希望冒泡或者捕获，这时候通过stopPropagation来阻止
+  // 如果我们希望只触发目标函数，不希望冒泡或者捕获，这时候通过stopPropagation来阻止
   // stopImmediatePropagation 同样也能实现阻止事件，但是还能阻止该事件目标执行别的注册事件。
   btn.addEventListener('click', (event) => {
     event.stopImmediatePropagation()
@@ -158,15 +158,15 @@ IE 实现了与 DOM 中类似的两个方法: `attachEvent()` 和 `detachEvent()
     console.log('register success')
   }
 
-  btn.attachEvent('onclick', handler)
+  btn.attachEvent('onclick', handler)
 
   // 这里的第一个参数是onclick，而不是DOM 中的click
   // 在使用attachEvent()方法的情况下，事件处理程序在全局作用域中运行
-  // 即 this === window
+  // 即 this === window
   // 如果同一个btn，绑定多个事件处理程序，那么会按照相反顺序触发
   btn.detachEvent('onclick', handler)
 ```
-<strong>通过attachEvent添加的事件处理只有通过detachEvent来移除</strong>
+<strong>通过attachEvent添加的事件处理只有通过detachEvent来移除</strong>
 
 【注意】: attachEvent()的第一个参数是"onclick"，而非 DOM 的 addEventListener()方法中 的"click"。
 
