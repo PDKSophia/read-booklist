@@ -8,7 +8,7 @@
 | 序号 | 数名 | 开始时间 | 结束时间 | 进度 | 状态 |
 | :------: | :------: | :------: | :------: | :------: |  :------: |
 | 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.15 | 40% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
-| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.15 | 0% | 未读 |
+| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.15 | 7% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
 | 3 | `《计算机网络 第七版》` |  2018.11.16 | 2018.11.22 | 0% | 未读 |
 | 4 | `《ECMAScript 6 入门》` |  2018.11.23 | 2018.11.31 | 0% | 未读 |
 | 5 | `《JavaScript正则表达式》` |   暂定 | 暂定 | 0% | 未读 |
@@ -52,4 +52,4 @@
 
 《图解HTTP》打卡清单
 
-- 11.12, 《图解HTTP》打卡[第一天](injiahttps://github.com/PDKSophia/read-booklist/blob/master/图解HTTP/play-card-1.md)， 知识点: [TCP/IP的理解，DNS域名解析](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-1.md#tcpip%E7%9A%84%E4%BA%86%E8%A7%A3)
+- 11.12, 《图解HTTP》打卡[第一天](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP/play-card-1.md)， 知识点: [TCP/IP的理解，DNS域名解析](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-1.md#tcpip%E7%9A%84%E4%BA%86%E8%A7%A3)
