@@ -31,7 +31,7 @@ TCP/IP协议族里重要的一点是: 分层。依次分为: 应用层、传输�
 
 - 数据链路层: 用来处理连接网络的硬件部分。包括控制操作系统、硬件的设备驱动、网络适配器(网卡)
 
-利用TCP/IP协议族进行网络通信时，会通过分层顺序与对方进行通信。发送端从应用层往下走，接收端则往应用层往上走。你可能想了解一下 : [从输入URL到页面加载完成的过程](https://github.com/PDKSophia/blog.io/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87-%E4%BB%8E%E8%BE%93%E5%85%A5URL%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E5%AE%8C%E6%88%90%E8%BF%87%E7%A8%8B.md)
+利用TCP/IP协议族进行网络通信时，会通过分层顺序与对方进行通信。发送端从应用层往下走，接收端则往应用层往上走。你可能想了解一下 : [从输入URL到页面加载完成的过程](https://github.com/PDKSophia/blog.io/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87-%E4%BB%8E%E8%BE%93%E5%85%A5URL%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E5%AE%8C%E6%88%90%E8%BF%87%E7%A8%8B.md)
 
 <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-2.png' width=500 height=550>
 
