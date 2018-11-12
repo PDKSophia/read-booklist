@@ -41,4 +41,6 @@
 
 - 11.10，《JavaScript高级程序设计 第3版》打卡[第六天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-6.md)， 知识点: [Document类型](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-6.md#document%E7%B1%BB%E5%9E%8B)、[Element类型](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-6.md#element-%E7%B1%BB%E5%9E%8B)
 
-- 11.11，《JavaScript高级程序设计 第3版》打卡[第七天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-7.md)，
+- 11.11，《JavaScript高级程序设计 第3版》打卡[第七天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-7.md)，知识点: [浏览器滚动](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-7.md#%E6%BB%9A%E5%8A%A8)、 [offsetHeight及offsetWidth](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-7.md#%E5%85%83%E7%B4%A0%E5%A4%A7%E5%B0%8F)
+
+- 11.12， 《JavaScript高级程序设计 第3版》打卡[第八天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md)
