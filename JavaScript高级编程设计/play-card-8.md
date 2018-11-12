@@ -62,7 +62,7 @@ IE 的事件流叫做事件冒泡(event bubbling)，简单来讲，<strong>事�
 
     <!-- 这就是事件捕获   -->
 ```
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/js-red-thirteen-2.png'> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/js-red-thirteen-2.png'>
 
 ### DOM事件流
 DOM事件流包括三个阶段 : 
@@ -73,7 +73,7 @@ DOM事件流包括三个阶段 :
 
 - 事件冒泡阶段: 这个阶段对事件做出响应
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/js-red-thirteen-3.png'> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/js-red-thirteen-3.png'>
 
 在 DOM 事件流中，实际的目标(`<div>`元素)在捕获阶段不会接收到事件。这意味着在捕获阶段，事件从 document 到`<html>`再到`<body>`后就停止了。下一个阶段是“处于目标”阶段，于是事件在`<div>` 上发生，并在事件处理中被看成冒泡阶段的一部分。然后，冒泡阶段发生，事件又传播回文档。
 
@@ -234,6 +234,7 @@ event 对象包含与创建它的特定事件有关的属性和方法。触发�
 | stopImmediatePropagation() | Function |  只读 | 取消事件的进一步捕获或冒泡，同时阻止任何事件处理程序被调用(DOM3级事件中新增) |
 | stopPropagation() | Function | 只读 | 取消事件的进一步捕获或冒泡。如果bubbles为true，则可以使用这个方法 |
 | target | Element | 只读 | 事件的目标 |
+| type | String | 只读 | 被触发的事件的类型 |
 
 在事件处理程序内部，<strong>对象 this 始终等于 currentTarget 的值，而 target 则只包含事件的实际目标。</strong>如果直接将事件处理程序指定给了目标元素，则 this、currentTarget 和 target 包含相同的值。
 
@@ -277,3 +278,115 @@ event 对象包含与创建它的特定事件有关的属性和方法。触发�
 > 只有在事件处理程序执行期间，event 对象才会存在;一旦事件处理程序执行完成，event 对象就会被销毁。
 
 ### IE中的事件对象
+在使用 DOM0 级方法添加事件处理程序时，event 对象作为 window 对象的一个属性存在
+```javascript
+  var btn = document.getElementById("myBtn")
+  btn.onclick = function(){
+    var event = window.event
+    console.log(event.type)     //"click"
+  }
+```
+咋一看，好像没啥问题，但是如果事件处理程序是使用 attachEvent()添加的，那么就会有一个 event 对象作为参数被传入事件处理程序函数中
+```javascript
+  var btn = document.getElementById("myBtn")
+  btn.attachEvent("onclick", function (event) {
+    console.log(event.type)  //"click"
+  })
+```
+IE 的 event 对象同样也包含与创建它的事件相关的属性和方法。其中很多属性和方法都有对应的 或者相关的 DOM 属性和方法。
+
+| 属性或方法 | 类型 | 读 / 写 | 说明 |
+| :------: | :------: | :------: | :------: |
+| cancelBubble | Boolean | 读/写 | 默认值为false，但将其设置为true就可以取消事件冒泡(与DOM中 的stopPropagation()方法的作用相同) |
+| returnValue | Boolean |  读/写 | 默认值为true，但将其设置为false就可以取消事件的默认行为(与 DOM中的preventDefault()方法的作用相同) |
+| srcElement | Element | 只读 | 事件的目标(与DOM中的target属性相同) |
+| type | String | 只读 | 被触发的事件的类型 |
+
+因为*事件处理程序的作用域是根据指定它的方式来确定的*，所以<strong>不能认为 this 会始终等于事件目标</strong>。故而，最好还是使用 event.srcElement 比较保险
+
+cancelBubble 属性与 DOM 中的 stopPropagation()方法作用相同，都是用来停止事件冒泡的。由于 IE 不支持事件捕获，因而只能取消事件冒泡; 但 stopPropagatioin() 可以同时取消事件捕获和冒泡。
+
+```javascript
+  var btn = document.getElementById("myBtn")
+  btn.onclick = function () {
+    console.log("Clicked")
+    window.event.cancelBubble = true
+  }
+
+  document.body.onclick = function(){
+    console.log("Body clicked")
+  }
+
+```
+通过在 onclick 事件处理程序中将 cancelBubble 设置为 true，就可阻止事件通过冒泡而触发 document.body 中注册的事件处理程序，结果，在单击按钮后，只会打印一遍console.log('Clicked')
+
+### 跨浏览器的事件对象
+前面说过了跨浏览器的事件处理程序，我们现在在 EventUtil 对象上添加几个方法
+
+> 在兼容 DOM 的浏览器中，event 变量只是简单地传入和返回。而在 IE 中，event 参数是未定义的(undefined)，因此就会返回 window.event。
+
+```javascript
+  EventUtil: {
+    /*
+     * desc: 视情况而定使用不同的事件处理程序
+     * @param : element，要操作的元素
+     * @param : type，事件名称
+     * @param : handler，事件处理程序函数
+    */
+    addHandler: function (element, type, handler) {
+      if (element.addEventListener) { // DOM2级
+        element.addEventListener(type, handler, false)
+      } else if (element.attachEvent) { // IE级
+        element.attachEvent(`on${type}`, handler)
+      } else {
+        element[`on${type}`] = handler // DOM0级
+      }
+    },
+
+    /*
+     * desc: 返回对 event 对象的引用
+     * @param : event
+    */
+    getEvent: function (event) {
+       return event ? event: window.event
+    },
+
+    /*
+     * desc: 返回事件的目标
+     * @param : event
+    */
+    getTarget: function (event) {
+      return event.target || event.srcElement
+    },
+
+    /*
+     * desc: 取消事件的默认行为
+     * @param : event
+    */
+    preventDefault: function (event) {
+      if (event.preventDefault) {
+        event.preventDefault()
+      } else {
+        event.returnValue = false
+      }
+    },
+
+    removeHandler: function (element, type, handler) {
+      if (element.removeEventListener) { // DOM2级
+        element.removeEventListener(type, handler, false)
+      } else if (element.detachEvent) { // IE级
+        element.detachEvent(`on${type}`, handler)
+      } else {
+        element[`on${type}`] = null // DOM0级
+      }
+    },
+
+    stopPropagation: function (event) {
+      if (event.stopPropagation) {
+        event.stopPropagation()
+      } else {
+        event.cancelBubble = true
+      }
+    }
+  }
+```
