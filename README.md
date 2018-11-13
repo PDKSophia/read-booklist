@@ -7,8 +7,8 @@
 
 | 序号 | 数名 | 开始时间 | 结束时间 | 进度 | 状态 |
 | :------: | :------: | :------: | :------: | :------: |  :------: |
-| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.15 | 40% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
-| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.15 | 7% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
+| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.15 | 46% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
+| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.15 | 15% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
 | 3 | `《计算机网络 第七版》` |  2018.11.16 | 2018.11.22 | 0% | 未读 |
 | 4 | `《ECMAScript 6 入门》` |  2018.11.23 | 2018.11.31 | 0% | 未读 |
 | 5 | `《JavaScript正则表达式》` |   暂定 | 暂定 | 0% | 未读 |
@@ -48,7 +48,7 @@
 
 - 11.12, 《JavaScript高级程序设计 第3版》打卡[第八天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md)， 知识点: [DOM事件流](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md#dom%E4%BA%8B%E4%BB%B6%E6%B5%81)、[事件对象](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1) 
 
-- 11.13, 《JavaScript高级程序设计 第3版》打卡[第九天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md)， 知识点: [事件类型](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md#%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B)、[内存及性能之事件委托](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md#%E5%86%85%E5%AD%98%E4%B8%8E%E6%80%A7%E8%83%BD%E4%B9%8B%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98)
+- 11.13, 《JavaScript高级程序设计 第3版》打卡[第九天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md)， 知识点: [内存和性能之事件委托](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md#%E5%86%85%E5%AD%98%E4%B8%8E%E6%80%A7%E8%83%BD%E4%B9%8B%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98) 、[表单过滤输入](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md#%E8%A1%A8%E5%8D%95%E8%BF%87%E6%BB%A4%E8%BE%93%E5%85%A5)、[HTML5约束验证API](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md#html5%E7%BA%A6%E6%9D%9F%E9%AA%8C%E8%AF%81api)
 
 --------
 
