@@ -168,3 +168,14 @@ HTML5 规定可以为元素添加非标准的属性，但要添加前缀: *data-
 
 - scrollRight: 被隐藏在内容区域上方的像素数。通过设置这个属性可以改变元素的滚动位置
 
+-------
+
+补充一点
+
+- clientX、clientY : 点击位置距离当前body可视区域的x，y坐标
+
+- pageX、pageY : 对于整个页面来说，包括了被卷去的body部分的长度
+
+- screenX、screenY : 点击位置距离当前电脑屏幕的x，y坐标
+
+- offsetX、offsetY : 相对于带有定位的父盒子的x，y坐标
