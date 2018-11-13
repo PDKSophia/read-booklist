@@ -286,7 +286,7 @@ Event对象提供了一个属性叫target，可以返回事件的目标节点，
 ### 表单过滤输入
 
 #### 屏蔽字符
-有时候，我们需要用户输入的文本中包含或不包含某些字符。例如，电话号码中不能包含非数值字符。响应向文本框中插入字符操作的是 keypress 事件。因此，可以通过阻止这个事件的默认行为来屏蔽此类字符
+有时候，*我们需要用户输入的文本中包含或不包含某些字符*。例如，电话号码中不能包含非数值字符。响应向文本框中插入字符操作的是 keypress 事件。因此，可以通过阻止这个事件的默认行为来屏蔽此类字符
 ```javascript
   EventUtil.addHandler(textbox, "keypress", function(event){
     event = EventUtil.getEvent(event)
@@ -305,7 +305,7 @@ Event对象提供了一个属性叫target，可以返回事件的目标节点，
     }
   })
 ```
-使用 EventUtil.getCharCode()实现了跨浏览器取得字符编码。然后，使用 `String.fromCharCode()` 将字符编码转换成字符串，再使用正则表达式 /\d/ 来测试该字符串，从 而确定用户输入的是不是数值。如果测试失败，那么就使用 EventUtil.preventDefault() 屏蔽按键事件
+使用 EventUtil.getCharCode() 实现了跨浏览器取得字符编码。然后，使用 `String.fromCharCode()` 将字符编码转换成字符串，再使用正则表达式 `/\d/` 来测试该字符串，从而确定用户输入的是不是数值。<strong>如果测试失败，那么就使用 EventUtil.preventDefault() 屏蔽按键事件</strong>
 
 但是，仅考虑到屏蔽不是数值的字符还 不够，还要避免屏蔽这些极为常用和必要的键，比如向上键、向下键、退格键和删除键等。在 Firefox 中，所有由非字符键触发的 keypress 事件对应的字符编码为 0，而在 Safari 3 以前的版本中，对应的字符编码全部为 8。为了让代码更通用，只要不屏蔽那些字符编码小于 10 的键即可
 
@@ -322,7 +322,7 @@ Event对象提供了一个属性叫target，可以返回事件的目标节点，
 ```
 这样，就可以屏蔽所有非数值字符，但不屏蔽那些也会乘除法keypress事件的基本按键
 
-除此之外，还有一个问题需要处理:复制、粘贴及其他操作还要用到 Ctrl 键。在除 IE 之外的所有浏览器中，前面的代码也会屏蔽 `Ctrl+C`、`Ctrl+V`，以及其他使用 `Ctrl` 的组合键。因此，最后还要添加一个检测条件，以确保用户没有按下 Ctrl 键
+除此之外，还有一个问题需要处理 : <strong>复制、粘贴及其他操作还要用到 Ctrl 键。</strong>在除 IE 之外的所有浏览器中，前面的代码也会屏蔽 `Ctrl+C`、`Ctrl+V`，以及其他使用 `Ctrl` 的组合键。因此，最后还要添加一个检测条件，以确保用户没有按下 Ctrl 键
 
 ```javascript
   EventUtil.addHandler(textbox, 'keypress', function (event) {
@@ -354,7 +354,7 @@ Event对象提供了一个属性叫target，可以返回事件的目标节点，
 lipboardData 对象有三个方法: 
 - getData(): 用于从剪贴板中取得数据，它接受一个参数，即要取得的数据的格式。在 IE 中，有两种数据格式: `text` 和`URL`。
 
-- setData(): 第一个参数也是数据类型，第二个参数是要放在剪贴板中的文本。对于 第一个参数，IE 照样支持`text`和`URL`
+- setData(): 第一个参数也是数据类型，第二个参数是要放在剪贴板中的文本。对于第一个参数，IE 照样支持`text`和`URL`
 
 - clearData(): 清除剪贴板中的数据
 
@@ -408,7 +408,7 @@ lipboardData 对象有三个方法:
   })()
 ```
 
-#### HTML约束验证API
+#### HTML5约束验证API
 ##### 必填字段
 `required` 属性。任何标注有 required 的字段，在提交表单时都不能空着。
 ```html
