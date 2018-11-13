@@ -284,3 +284,183 @@ Event对象提供了一个属性叫target，可以返回事件的目标节点，
 对于`<input>`和`<textarea>`元素，当它们从获得焦点到失去焦点且 value 值改变时，才会触发 change 事件。对于`<select>`元素，只要用户选择了不同的选项，就会触发 change 事件; 换句话说，不失去焦点也会触发 change 事件
 
 ### 表单过滤输入
+
+#### 屏蔽字符
+有时候，我们需要用户输入的文本中包含或不包含某些字符。例如，电话号码中不能包含非数值字符。响应向文本框中插入字符操作的是 keypress 事件。因此，可以通过阻止这个事件的默认行为来屏蔽此类字符
+```javascript
+  EventUtil.addHandler(textbox, "keypress", function(event){
+    event = EventUtil.getEvent(event)
+    EventUtil.preventDefault(event)
+  })
+```
+运行以上代码后，由于所有按键操作都将被屏蔽，结果会导致文本框变成只读的。如果只想屏蔽特定的字符，则需要检测 keypress 事件对应的字符编码，然后再决定如何响应。例如，下列代码只允许用户输入数值。
+```javascript
+  EventUtil.addHandler(textbox, 'keypress', function (event) {
+    event = EventUtil.getEvent(event)
+    var target = EventUtil.getTarget(event)
+    var charCode = EventUtil.getCharCode(event)
+
+    if (!/\d/.test(String.formCharCode(charCode))) {  // 正则匹配只能输入数字
+      EventUtil.preventDefault(event)
+    }
+  })
+```
+使用 EventUtil.getCharCode()实现了跨浏览器取得字符编码。然后，使用 `String.fromCharCode()` 将字符编码转换成字符串，再使用正则表达式 /\d/ 来测试该字符串，从 而确定用户输入的是不是数值。如果测试失败，那么就使用 EventUtil.preventDefault() 屏蔽按键事件
+
+但是，仅考虑到屏蔽不是数值的字符还 不够，还要避免屏蔽这些极为常用和必要的键，比如向上键、向下键、退格键和删除键等。在 Firefox 中，所有由非字符键触发的 keypress 事件对应的字符编码为 0，而在 Safari 3 以前的版本中，对应的字符编码全部为 8。为了让代码更通用，只要不屏蔽那些字符编码小于 10 的键即可
+
+```javascript
+  EventUtil.addHandler(textbox, 'keypress', function (event) {
+    event = EventUtil.getEvent(event)
+    var target = EventUtil.getTarget(event)
+    var charCode = EventUtil.getCharCode(event)
+
+    if (!/\d/.test(String.formCharCode(charCode)) && charCode > 9) { 
+      EventUtil.preventDefault(event)
+    }
+  })
+```
+这样，就可以屏蔽所有非数值字符，但不屏蔽那些也会乘除法keypress事件的基本按键
+
+除此之外，还有一个问题需要处理:复制、粘贴及其他操作还要用到 Ctrl 键。在除 IE 之外的所有浏览器中，前面的代码也会屏蔽 `Ctrl+C`、`Ctrl+V`，以及其他使用 `Ctrl` 的组合键。因此，最后还要添加一个检测条件，以确保用户没有按下 Ctrl 键
+
+```javascript
+  EventUtil.addHandler(textbox, 'keypress', function (event) {
+    event = EventUtil.getEvent(event)
+    var target = EventUtil.getTarget(event)
+    var charCode = EventUtil.getCharCode(event)
+
+    if (!/\d/.test(String.formCharCode(charCode)) && charCode > 9 && !event.ctrlKey) { 
+      EventUtil.preventDefault(event)
+    }
+  })
+```
+
+#### 操作剪贴板
+- beforecopy: 在发生复制操作前触发。
+
+- copy: 在发生复制操作时触发。
+
+- beforecut: 在发生剪切操作前触发。 
+
+- cut: 在发生剪切操作时触发。
+
+- beforepaste: 在发生粘贴操作前触发。 
+
+- paste: 在发生粘贴操作时触发。
+
+要访问剪贴板中的数据，可以使用 <strong>clipboardData</strong> 对象: 在 IE 中，这个对象是 window 对象的属性; 而在 Firefox 4+、Safari 和 Chrome 中，这个对象是相应 event 对象的属性。但是，在 Firefox、 6 Safari 和 Chorme 中，*只有在处理剪贴板事件期间 clipboardData 对象才有效，这是为了防止对剪贴板的未授权访问*; 在 IE 中，则*可以随时访问 clipboardData 对象*。
+
+lipboardData 对象有三个方法: 
+- getData(): 用于从剪贴板中取得数据，它接受一个参数，即要取得的数据的格式。在 IE 中，有两种数据格式: `text` 和`URL`。
+
+- setData(): 第一个参数也是数据类型，第二个参数是要放在剪贴板中的文本。对于 第一个参数，IE 照样支持`text`和`URL`
+
+- clearData(): 清除剪贴板中的数据
+
+在需要确保粘贴到文本框中的文本中包含某些字符，或者符合某种格式要求时，能够访问剪贴板是非常有用的。例如，如果一个文本框只接受数值，那么就必须检测粘贴过来的值，以确保有效。在 paste 事件中，可以确定剪贴板中的值是否有效，如果无效，取消默认的行为。
+
+```javascript
+  EventUtil.addHandler(textbox, "paste", function (event) {
+    event = EventUtil.getEvent(event)
+    var text = EventUtil.getClipboardText(event)
+    if (!/^\d*$/.test(text)){
+        EventUtil.preventDefault(event)
+    }
+  })
+```
+
+#### 自动切换焦点
+最常见的一种方式就是在用户填写 完当前字段时，自动将焦点切换到下一个字段。通常，在自动切换焦点之前，必须知道用户已经输入了 既定长度的数据(例如电话号码)。例如下边例子:
+```html
+  <input type="text" name="tel1" id="txtTel1" maxlength="3">
+  <input type="text" name="tel2" id="txtTel2" maxlength="3">
+  <input type="text" name="tel3" id="txtTel3" maxlength="4">
+```
+为增强易用性，同时加快数据输入，可以在前一个文本框中的字符达到最大数量后，自动将焦点切换到下一个文本框。换句话说，用户在第一个文本框中输入了 3 个数字之后，焦点就会切换到第二个文本框，再输入 3 个数字，焦点又会切换到第三个文本框
+```javascript
+  // 定义一个匿名函数，然后立即执行
+  (function () {
+    function tabForward (event) {
+      event = EventUtil.getEvent(event)
+      var target = EventUtil.getTarget(event)
+
+      if (target.value.length == target.maxLength) {
+        var form = target.form
+        for (let i = 0; i < form.elements.length; i++) {
+          if (form.elements[i] == target) {
+            if (form.elements[i+1]) {
+              form.elements[i+1].focus()
+            }
+            return
+          }
+        }
+      }
+    }
+
+    var textbox1 = document.getElementById("txtTel1")
+    var textbox2 = document.getElementById("txtTel2")
+    var textbox3 = document.getElementById("txtTel3")
+    EventUtil.addHandler(textbox1, "keyup", tabForward)
+    EventUtil.addHandler(textbox2, "keyup", tabForward)
+    EventUtil.addHandler(textbox3, "keyup", tabForward)
+
+  })()
+```
+
+#### HTML约束验证API
+##### 必填字段
+`required` 属性。任何标注有 required 的字段，在提交表单时都不能空着。
+```html
+  <input type='text' name='username' required />
+```
+
+##### 数值范围
+`min属性；max属性；step属性；`例如，想让用户只能输入 0 到 100 的值，而且这个值必须是 5 的倍数
+```html
+  <input type='number' min='0' max='100' step='5' name='count' />
+```
+##### 输入模式
+HTML5为文本字段新增了`pattern`属性。这个属性的值是一个正则表达式，用于匹配文本框中的值。例如，如果只想允许在文本字段中输入数值
+```html
+  <input type='text' pattern='\d+' name='count'>
+```
+##### 检测有效性
+使用 checkValidity()方法可以检测表单中的某个字段是否有效。所有表单字段都有个方法，如果字段的值有效，这个方法返回 true，否则返回 false
+```javascript
+  if (document.forms[0].elements[0].checkValidity()) {
+    // 第一个表单forms[0]的第一个字段elements[0]有效
+  } else {
+    // 字段无效
+  }
+```
+与 checkValidity()方法简单地告诉你字段是否有效相比，`validity` 属性则会告诉你为什么字段有效或无效。这个对象中包含一系列
+- customError :如果设置了 setCustomValidity()，则为 true，否则返回 false。
+
+- patternMismatch:如果值与指定的 pattern 属性不匹配，返回 true。
+
+- rangeOverflow: 如果值比 max 值大，返回 true。
+
+- rangeUnderflow: 如果值比 min 值小，返回 true。
+
+- stepMisMatch: 如果 min 和 max 之间的步长值不合理，返回 true。
+
+- tooLong: 如果值的长度超过了 maxlength 属性指定的长度，返回 true。有的浏览器会自动约束字符数量，因此这个值可能永远都返回 false。
+
+- typeMismatch: 如果值不是"mail"或"url"要求的格式，返回 true。
+
+- valid: 如果这里的其他属性都是 false，返回 true。checkValidity()也要求相同的值。
+
+- valueMissing: 如果标注为 required 的字段中没有值，返回 true。
+
+```javascript
+  if (input.validity && !input.validity.valid){
+    if (input.validity.valueMissing){
+      console.log('Please specify a value.')
+    } else if (input.validity.typeMismatch){
+      console.log('Please enter an email address.');
+    } else {
+      console.log('Value is invalid.');
+    }
+  }
+```
