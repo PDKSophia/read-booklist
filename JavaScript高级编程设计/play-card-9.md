@@ -211,3 +211,76 @@ Event对象提供了一个属性叫target，可以返回事件的目标节点，
 <storng>在事件处理程序中删除按钮也能阻止事件冒泡。目标元素在文档中是事件冒泡的前提</strong>
 
 一般来说，最好的做法是在页面卸载之前，先通过 onunload 事件处理程序移除所有事件处理程序，在此，事件委托技术再次表现出它的优势——需要跟踪的事件处理程序越少，移除它们就越容易。对这种类似撤销的操作，我们可以把它想象成: *只要是通过 onload 事件处理程序添加的东西，最后都要通过 onunload 事件处理程序将它们移除*。
+
+
+-----------
+
+## Chapter Fourteen
+### 表单脚本
+在 HTML 中，表单是由`<form>`元素来表示的，而在 JavaScript 中，表单对应的则是HTMLFormElement 类型。HTMLFormElement 继承了 HTMLElement，因而与其他 HTML 元素具有相同的默认属 性。不过，HTMLFormElement 也有它自己下列独有的属性和方法
+
+- action: 接受请求的 URL; 等价于HTML中的 action 特性。
+
+- enctype: 请求的编码类型; 等价于HTML中的 enctype 特性。
+
+- length: 表单中控件的数量。
+
+- target: 用于发送请求和接收响应的窗口名称;等价于 HTML 的 target 特性。
+
+- method: 要发送的 HTTP 请求类型，通常是"get"或"post"; 等价于 HTML 的 method 特性。
+
+- name: 表单的名称; 等价HTML的name特性
+
+- reset(): 表达域设置成默认值
+
+- submit(): 提交表单
+
+### 表单字段
+可以像访问页面中的其他元素一样，使用原生 DOM 方法访问表单元素，每个表单都有elements 属性，该属性是表单中所有表单元素(字段)的集合。这个 elements 集合是一个有序列表，其中包含着表单中的所有字段
+```javascript
+  var form = document.getElementById("form1")
+
+  //取得表单中的第一个字段
+  var field1 = form.elements[0]
+
+  //取得名为"textbox1"的字段
+  var field2 = form.elements["textbox1"]
+
+  //取得表单中包含的字段的数量
+  var fieldCount = form.elements.length
+```
+#### 共有的表单字段属性
+- disabled: 布尔值，表示当前字段是否被禁用。
+
+- form: 指向当前字段所属表单的指针;只读。
+
+- name: 当前字段的名称。
+
+- readOnly: 布尔值，表示当前字段是否只读。
+
+- tabIndex: 表示当前字段的切换(tab)序号。
+
+- type: 当前字段的类型，如"checkbox"、"radio"，等等。
+
+- value: 当前字段将被提交给服务器的值。对文件字段来说，这个属性是只读的，包含着文件
+在计算机中的路径。
+
+#### 共有的表单字段方法
+- blur() : 作用是从元素中移走焦点。在调用 blur()方法时， 并不会把焦点转移到某个特定的元素上; 仅仅是将焦点从调用这个方法的元素上面移走而已
+
+- focus() : 用于将浏览器的焦点设置 到表单字段，即激活表单字段，使其可以响应键盘事件
+
+使用 `focus()` 需要注意的是: 如果第一个表单字段是一个`<input>`元素，且其 type 特性的值为"hidden"，那么 以上代码会导致错误。另外，如果使用 CSS 的 display 和 visibility 属性隐藏了该字段，同样也会 导致错误。
+
+#### 共有的表单字段事件
+- blur : 当前字段失去焦点时触发
+
+- focus : 当前字段获得焦点时触发
+
+- change : 对于`<input>`和`<textarea>`元素，在它们失去焦点且 value 值改变时触发;对于`<select>元素`，在其选项改变时触发。
+
+当用户改变了当前字段的焦点，或者我们调用了 blur()或 focus()方法时，都可以触发 blur 和 focus 事件。这两个事件在所有表单字段中都是相同的。但是，change 事件在不同表单控件中触发的 次数会有所不同。
+
+对于`<input>`和`<textarea>`元素，当它们从获得焦点到失去焦点且 value 值改变时，才会触发 change 事件。对于`<select>`元素，只要用户选择了不同的选项，就会触发 change 事件; 换句话说，不失去焦点也会触发 change 事件
+
+### 表单过滤输入
