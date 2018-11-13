@@ -16,7 +16,7 @@ tags: card-2、
 
 在两台计算机之间使用HTTP协议通信时，一定有一端是客户端，另一端是服务器端
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-8.png' width=700 height=350>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-8.png' width=550 height=300>
 
 ### 通过请求和响应的交换达成通信
 请求必定是由客户端发出，服务器端回复响应。换句话说 : <strong>由客户端发起请求建立通信，服务器端在没有接受到请求之前，是不会发送响应端</strong>
@@ -86,7 +86,7 @@ tags: card-2、
 ### HTTP是不保存状态的协议
 也就是说是<strong>无状态协议</strong>, HTTP协议自身不对请求和响应之间的通信状态进行保存。协议对于发送过的请求或者响应不做持久化处理
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-11.png' width=700 height=350>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-11.png' width=650 height=320>
 
 HTTP/1.1中，虽然是无状态协议，但是，为了实现保持状态功能，于是引入了Cookie技术。有了Cookie之后，再用HTTP协议通信，就可以管理状态了
 
@@ -112,7 +112,7 @@ HTTP/1.1协议中共定义了八种方法，来表明Request-URL指定的资源�
 ### 持久连接节省通信量
 由于每次HTTP通信都要经过TCP三次握手连接，在当年的通信情况来说，不存在什么大问题，但对于现在来讲，问题是大大滴
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-12.png' width=700 height=350>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-12.png' width=550 height=310>
 
 所以在HTTP/1.1中，提出了持久连接的方法，也就是通过 `keep-alive: true`，持久连接的特点是 : 只要任意一端没有明确提出断开连接，则保持TCP连接状态
 

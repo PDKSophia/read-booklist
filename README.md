@@ -7,8 +7,8 @@
 
 | 序号 | 数名 | 开始时间 | 结束时间 | 进度 | 状态 |
 | :------: | :------: | :------: | :------: | :------: |  :------: |
-| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.15 | 46% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
-| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.15 | 15% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
+| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.15 | 48% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
+| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.15 | 18% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
 | 3 | `《计算机网络 第七版》` |  2018.11.16 | 2018.11.22 | 0% | 未读 |
 | 4 | `《ECMAScript 6 入门》` |  2018.11.23 | 2018.11.31 | 0% | 未读 |
 | 5 | `《JavaScript正则表达式》` |   暂定 | 暂定 | 0% | 未读 |
@@ -55,3 +55,5 @@
 《图解HTTP》打卡清单
 
 - 11.12, 《图解HTTP》打卡[第一天](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP/play-card-1.md)， 知识点: [TCP/IP的理解，DNS域名解析](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-1.md#tcpip%E7%9A%84%E4%BA%86%E8%A7%A3)
+
+- 11.13, 《图解HTTP》打卡[第二天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-2.md)， 知识点: [简单了解HTTP协议](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-2.md#http%E5%8D%8F%E8%AE%AE%E7%94%A8%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1)
