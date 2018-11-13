@@ -48,7 +48,7 @@
 
 - 11.12，《JavaScript高级程序设计 第3版》打卡[第八天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md)， 知识点: [DOM事件流](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md#dom%E4%BA%8B%E4%BB%B6%E6%B5%81)、[事件对象](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1) 
 
-- 11.13，《JavaScript高级程序设计 第3版》打卡[第九天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md)， 知识点: [事件类型]()
+- 11.13，《JavaScript高级程序设计 第3版》打卡[第九天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md)， 知识点: [事件类型]()、[内存及性能之事件委托]
 
 --------
 
