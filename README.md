@@ -56,4 +56,13 @@
 
 - 11.12, 《图解HTTP》打卡[第一天](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP/play-card-1.md)， 知识点: [TCP/IP的理解，DNS域名解析](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-1.md#tcpip%E7%9A%84%E4%BA%86%E8%A7%A3)
 
-- 11.13, 《图解HTTP》打卡[第二天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-2.md)， 知识点: [简单了解HTTP协议](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-2.md#http%E5%8D%8F%E8%AE%AE%E7%94%A8%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1)
+- 11.13, 《图解HTTP》打卡[第二天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-2.md)， 知识点: [简单了解HTTP协议](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-2.md#http%E5%8D%8F%E8%AE%AE%E7%94%A8%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1) 
+
+-------------
+
+### 给个支持？
+客官，如果你觉得我写的还阔以，打个赏？
+
+<img src='https://github.com/PDKSophia/blog.io/raw/master/image/agree.jpeg' width=250 height=250>
+
+
