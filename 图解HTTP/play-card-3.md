@@ -1,7 +1,7 @@
 ---
 title: 图解HTTP - 打卡第三天
 date: 2018-11-14 10:26:05
-tags: card-3、
+tags: card-3、HTTP报文内的HTTP信息、 HTTP code
 
 ---
 
@@ -13,7 +13,7 @@ tags: card-3、
 
 <strong>用于HTTP协议交互的信息叫做 `HTTP报文`</strong>，客户端的请求HTTP报文叫做请求报文，服务器端的叫做响应报文。下图为请求报文(上)和响应报文(下)
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-13.png' width=550 height=300> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-13.png' width=550 height=300>
 
 HTTP在传输数据时可以按照数据原貌直接传输，但也可以在传输过程中通过编码提升传输速率。通过在传输时编码，能有效地处理大量的访问请求，但是，编码的操作需要计算机来完成，因此会消耗更多的CPU等资源
 
@@ -26,7 +26,7 @@ HTTP报文的主体用于传输请求或响应的实体主体，通常，报文�
 
 HTTP协议中，有一种被称为内容编码的功能也能进行压缩再发送
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-14.png' width=550 height=300> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-14.png' width=550 height=300>
 
 常见的内容编码有下边几种
 - gzip (GNU zop)
@@ -42,7 +42,7 @@ HTTP协议中，有一种被称为内容编码的功能也能进行压缩再发�
 
 这种通过把实体主体分块的功能称为 `分块传输编码`
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-15.png' width=550 height=300> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-15.png' width=550 height=300>
 
 分块传输编码会将实体主体分成多个部分(块)，每一块都会用十六进制来标记块的大小，而实体主体的最后一块会使用 `0(CR+LF)` 来标记
 
@@ -51,7 +51,7 @@ HTTP协议中，有一种被称为内容编码的功能也能进行压缩再发�
 #### 获取部分内容的范围请求
 范围请求(Range Request) : 对一份10000字节大小的资源，如果使用范围请求，可以只请求5001～10000字节内的资源
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-16.png' width=550 height=300> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-16.png' width=550 height=300>
 
 byte 范围的指定形式
 ```javascript
