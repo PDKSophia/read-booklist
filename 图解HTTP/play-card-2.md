@@ -1,7 +1,7 @@
 ---
 title: 图解HTTP - 打卡第二天
-date: 2018-11-05 20:56:05
-tags: card-2、
+date: 2018-11-13 15:32:05
+tags: card-2、简单了解HTTP协议
 
 ---
 
