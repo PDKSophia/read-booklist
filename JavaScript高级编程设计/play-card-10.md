@@ -1,7 +1,7 @@
 ---
 title: JavaScript高级程序设计 - 打卡第十天
 date: 2018-11-14 09:33:42n b
-tags: card-8、 事件机制
+tags: card-10、富文本编辑、canvas基本用法
 
 ---
 
@@ -97,7 +97,7 @@ document.execCommand()方法传递3个参数:
 --------- 
 
 ## Chapter Fifteen
-### Canvas绘图
+### Canvas绘图
 什么是canvas ？ HTML5 `<canvas>` 元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成 , `<canvas>` 标签只是图形容器，必须使用脚本来绘制图形。`canvas` 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成
 
 #### 基本用法
