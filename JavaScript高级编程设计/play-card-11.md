@@ -1,7 +1,7 @@
 ---
 title: JavaScript高级程序设计 - 打卡第十一天
 date: 2018-11-15 14:04:42
-tags: card-11
+tags: card-11、Canvas的基本使用、吸取图片像素色作为主题色调
 
 ---
 # JavaScript高级程序设计 - 第三版
