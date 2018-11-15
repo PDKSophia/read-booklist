@@ -7,10 +7,10 @@
 
 | 序号 | 数名 | 开始时间 | 结束时间 | 进度 | 状态 |
 | :------: | :------: | :------: | :------: | :------: |  :------: |
-| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.15 | 52% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
-| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.15 | 36% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
-| 3 | `《计算机网络 第七版》` |  2018.11.16 | 2018.11.22 | 0% | 未读 |
-| 4 | `《ECMAScript 6 入门》` |  2018.11.23 | 2018.11.31 | 0% | 未读 |
+| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.19 | 60% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
+| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.17 | 58% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
+| 3 | `《计算机网络 第七版》` |  2018.11.20 | 2018.11.27 | 0% | 未读 |
+| 4 | `《ECMAScript 6 入门》` |  2018.11.28 | 2018.11.31 | 0% | 未读 |
 | 5 | `《JavaScript正则表达式》` |   暂定 | 暂定 | 0% | 未读 |
 | 6 | `《剑指 offer》` | 暂定 | 暂定 | 0% | 未读 |
 | 7 | `《算法图解》` | 暂定 | 暂定 | 0% | 未读 |
@@ -50,7 +50,9 @@
 
 - 11.13, 《JavaScript高级程序设计 第3版》打卡[第九天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md)， 知识点: [内存和性能之事件委托](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md#%E5%86%85%E5%AD%98%E4%B8%8E%E6%80%A7%E8%83%BD%E4%B9%8B%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98) 、[表单过滤输入](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md#%E8%A1%A8%E5%8D%95%E8%BF%87%E6%BB%A4%E8%BE%93%E5%85%A5)、[HTML5约束验证API](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md#html5%E7%BA%A6%E6%9D%9F%E9%AA%8C%E8%AF%81api)
 
-- 11.14, 《JavaScript高级程序设计 第3版》打卡[第十天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-10.md)， 知识点: [富文本编辑](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-10.md#%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91)、[canvas基础用法](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-10.md#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95)
+- 11.14, 《JavaScript高级程序设计 第3版》打卡[第十天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-10.md)， 知识点: [富文本编辑操作](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-10.md#%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91)
+
+- 11.15, 《JavaScript高级程序设计 第3版》打卡[第十一天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-11.md)，知识点: [Canvas的基本使用]()、[吸取图片像素色作为主题色调]()
 
 --------
 
@@ -61,6 +63,8 @@
 - 11.13, 《图解HTTP》打卡[第二天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-2.md)， 知识点: [简单了解HTTP协议](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-2.md#http%E5%8D%8F%E8%AE%AE%E7%94%A8%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1) 
 
 - 11.14, 《图解HTTP》打卡[第三天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-3.md)， 知识点: [HTTP报文中的HTTP信息](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-3.md#http%E6%8A%A5%E6%96%87%E5%86%85%E7%9A%84http%E4%BF%A1%E6%81%AF) 、 [HTTP code](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-3.md#%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84http%E7%8A%B6%E6%80%81%E7%A0%81)
+
+- 11.15, 《图解HTTP》打卡[第四天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-4.md)，
 
 -------------
 

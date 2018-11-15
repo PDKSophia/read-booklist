@@ -1,6 +1,6 @@
 ---
 title: JavaScript高级程序设计 - 打卡第十天
-date: 2018-11-14 09:33:42n b
+date: 2018-11-14 09:33:42
 tags: card-10、富文本编辑、canvas基本用法
 
 ---
@@ -92,24 +92,4 @@ document.execCommand()方法传递3个参数:
 最后一个方法是 `queryCommandValue()` ，用于取得执行命令时传入的值。例如，在对一段文本应用 ' fontsize ' 命令时如果传入了 7，那么下面的代码就会返回 ' 7 ' 
 ```javascript
   var fontSize = frames['richedit'].document.queryCommandValue('fontsize')
-```
-
---------- 
-
-## Chapter Fifteen
-### Canvas绘图
-什么是canvas ？ HTML5 `<canvas>` 元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成 , `<canvas>` 标签只是图形容器，必须使用脚本来绘制图形。`canvas` 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成
-
-#### 基本用法
-要使用`<canvas>`元素，必须先设置其 width 和 height 属性，指定可以绘图的区域大小。出现在开始和结束标签中的内容是后备信息
-
-要在这块画布(canvas)上绘图，需要取得绘图上下文。而取得绘图上下文对象的引用，需要调用 getContext()方法并传入上下文的名字。传入 "2d" ，就可以取得 2D 上下文对象。
-
-```javascript
-  <canvas id="drawing" width=" 200" height="200"></canvas>
-
-  var drawing = document.getElementById('drawing')
-  if (drawing.getContext) {
-    var context = drawing.getContext('2d')
-  }
 ```
