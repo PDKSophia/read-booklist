@@ -64,7 +64,7 @@
 
 - 11.14, 《图解HTTP》打卡[第三天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-3.md)， 知识点: [HTTP报文中的HTTP信息](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-3.md#http%E6%8A%A5%E6%96%87%E5%86%85%E7%9A%84http%E4%BF%A1%E6%81%AF) 、 [HTTP code](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-3.md#%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84http%E7%8A%B6%E6%80%81%E7%A0%81)
 
-- 11.15, 《图解HTTP》打卡[第四天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-4.md)，
+- 11.15, 《图解HTTP》打卡[第四天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-4.md)，知识点: [通信数据转发程序 : 代理、网关、隧道](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-4.md#%E9%80%9A%E4%BF%A1%E6%95%B0%E6%8D%AE%E8%BD%AC%E5%8F%91%E7%A8%8B%E5%BA%8F--%E4%BB%A3%E7%90%86%E7%BD%91%E5%85%B3%E9%9A%A7%E9%81%93)
 
 -------------
 
