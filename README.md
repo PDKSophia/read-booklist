@@ -8,7 +8,7 @@
 | 序号 | 数名 | 开始时间 | 结束时间 | 进度 | 状态 |
 | :------: | :------: | :------: | :------: | :------: |  :------: |
 | 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.19 | 60% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
-| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.17 | 58% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
+| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.17 | 68% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
 | 3 | `《计算机网络 第七版》` |  2018.11.20 | 2018.11.27 | 0% | 未读 |
 | 4 | `《ECMAScript 6 入门》` |  2018.11.28 | 2018.11.31 | 0% | 未读 |
 | 5 | `《JavaScript正则表达式》` |   暂定 | 暂定 | 0% | 未读 |
@@ -66,7 +66,7 @@
 
 - 11.15, 《图解HTTP》打卡[第四天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-4.md)，知识点: [通信数据转发程序 : 代理、网关、隧道](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-4.md#%E9%80%9A%E4%BF%A1%E6%95%B0%E6%8D%AE%E8%BD%AC%E5%8F%91%E7%A8%8B%E5%BA%8F--%E4%BB%A3%E7%90%86%E7%BD%91%E5%85%B3%E9%9A%A7%E9%81%93)
 
-- 11.16, 《图解HTTP》打卡[第五天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md)，知识点: [HTTP报文首部]()、[HTTPS通信步骤]()、[HTTPS的优缺点]()
+- 11.16, 《图解HTTP》打卡[第五天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md)，知识点: [HTTP报文首部](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md#http%E6%8A%A5%E6%96%87%E9%A6%96%E9%83%A8)、[HTTPS通信步骤](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8Bhttps%E9%80%9A%E4%BF%A1%E6%AD%A5%E9%AA%A4)、[HTTPS的优缺点](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md#https%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9)
 
 -------------
 

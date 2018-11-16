@@ -14,7 +14,7 @@ HTTP协议的请求和响应报文中必定包含HTTP首部。首部内容为客
 
 #### HTTP请求报文
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-20.png' width=500 height=300>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-20.png' width=450 height=220>
 
 比如请求访问: www://jackr.jp 时，请求报文的首部信息
 
@@ -34,7 +34,7 @@ HTTP协议的请求和响应报文中必定包含HTTP首部。首部内容为客
 #### HTTP响应报文
 在响应中，HTTP报文由HTTP版本、状态码 (数字和原因短语)、HTTP首部字段3部分构成
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-21.png' width=500 height=300>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-21.png' width=450 height=220>
 
 以下示例是之前请求: www://jackr.jp 时，响应报文的首部信息
 ```javascript
@@ -70,21 +70,21 @@ HTTP首部字段是由首部字段名和字段值构成，中间由冒号 `:` �
 
 ### 通用首部字段
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-22.png' width=450 height=350>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-22.png' width=450 height=320>
 
 > 关于Cache-Control中的说明: no-cache不是不缓存，它是代表不缓存过期的资源，缓存会向源服务器进行有效期确定后处理资源； no-store才是真正地不进行缓存
 
 ### 请求首部字段
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-23.png' width=500 height=620>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-23.png' width=450 height=620>
 
 ### 响应首部字段
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-24.png' width=500 height=400>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-24.png' width=450 height=350>
 
 ### 实体首部字段
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-25.png' width=500 height=460>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-25.png' width=450 height=350>
 
 
 ### 为Cookie服务的首部字段
@@ -127,7 +127,7 @@ HTTP传输协议的数据是未加密的，也就是明文传输，因而很不�
 #### HTTPS是身披SSL外壳的HTTP
 HTTPS并非是应用层的一种新协议。只是HTTP通信接口部分用SSL和TLS协议代替而已。 通常，HTTP直接和TCP通信，但是使用SSL时，就演变成HTTP先和SSL通信，再由SSL和TCP通信。
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-26.png' width=500 height=380>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-26.png' width=450 height=220>
 
 SSL采用了一种叫做 <strong>公开密钥加密</strong>的加密处理方式。那么是什么公开密钥加密呢？
 
@@ -135,7 +135,7 @@ SSL采用了一种叫做 <strong>公开密钥加密</strong>的加密处理方�
 
 使用公开密钥加密方式，发送密文的一方使用对方的`公开密钥`
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-27.png' width=640 height=500>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-27.png' width=600 height=380>
 
 #### 接下来了解一下HTTPS通信步骤
 
