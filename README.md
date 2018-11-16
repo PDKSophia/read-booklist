@@ -7,7 +7,7 @@
 
 | 序号 | 数名 | 开始时间 | 结束时间 | 进度 | 状态 |
 | :------: | :------: | :------: | :------: | :------: |  :------: |
-| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.19 | 60% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
+| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.19 | 73% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
 | 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.17 | 68% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
 | 3 | `《计算机网络 第七版》` |  2018.11.20 | 2018.11.27 | 0% | 未读 |
 | 4 | `《ECMAScript 6 入门》` |  2018.11.28 | 2018.11.31 | 0% | 未读 |
@@ -46,13 +46,15 @@
 
 - 11.11, 《JavaScript高级程序设计 第3版》打卡[第七天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-7.md)，知识点: [浏览器滚动](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-7.md#%E6%BB%9A%E5%8A%A8)、 [offsetHeight及offsetWidth](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-7.md#%E5%85%83%E7%B4%A0%E5%A4%A7%E5%B0%8F)
 
-- 11.12, 《JavaScript高级程序设计 第3版》打卡[第八天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md)， 知识点: [DOM事件流](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md#dom%E4%BA%8B%E4%BB%B6%E6%B5%81)、[事件对象](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1) 
+- 11.12, 《JavaScript高级程序设计 第3版》打卡[第八天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md)， 知识点: [DOM事件流](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md#dom%E4%BA%8B%E4%BB%B6%E6%B5%81)、[事件对象](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md#%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1)、[EventUtil](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-8.md#%E8%B7%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1)
 
 - 11.13, 《JavaScript高级程序设计 第3版》打卡[第九天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md)， 知识点: [JS事件委托](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md#%E5%86%85%E5%AD%98%E4%B8%8E%E6%80%A7%E8%83%BD%E4%B9%8B%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98) 、[表单过滤输入](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md#%E8%A1%A8%E5%8D%95%E8%BF%87%E6%BB%A4%E8%BE%93%E5%85%A5)、[HTML5约束验证API](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-9.md#html5%E7%BA%A6%E6%9D%9F%E9%AA%8C%E8%AF%81api)
 
 - 11.14, 《JavaScript高级程序设计 第3版》打卡[第十天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-10.md)， 知识点: [富文本编辑操作](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-10.md#%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91)
 
 - 11.15, 《JavaScript高级程序设计 第3版》打卡[第十一天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-11.md)，知识点: [Canvas的基本使用](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-11.md#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95)、[吸取图片像素色作为主题色调](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-11.md#%E4%BD%BF%E7%94%A8%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE-%E4%B9%9F%E5%B0%B1%E6%98%AF%E5%90%B8%E5%8F%96%E5%9B%BE%E7%89%87%E7%9A%84%E9%A2%9C%E8%89%B2%E5%BD%93%E4%BD%9C%E4%B8%BB%E9%A2%98%E8%89%B2%E8%B0%83)
+
+- 11.16, 《JavaScript高级程序设计 第3版》打卡[第十二天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-12.md)，知识点: [postMessage]()、[原生拖放]()、[实现一个小拖动]()
 
 --------
 
