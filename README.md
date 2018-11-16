@@ -66,6 +66,8 @@
 
 - 11.15, 《图解HTTP》打卡[第四天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-4.md)，知识点: [通信数据转发程序 : 代理、网关、隧道](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-4.md#%E9%80%9A%E4%BF%A1%E6%95%B0%E6%8D%AE%E8%BD%AC%E5%8F%91%E7%A8%8B%E5%BA%8F--%E4%BB%A3%E7%90%86%E7%BD%91%E5%85%B3%E9%9A%A7%E9%81%93)
 
+- 11.16, 《图解HTTP》打卡[第五天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md)，知识点: [HTTP报文首部]()、[HTTPS通信步骤]()、[HTTPS的优缺点]()
+
 -------------
 
 ### 给个支持？
