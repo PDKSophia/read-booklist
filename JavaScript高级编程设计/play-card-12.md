@@ -1,7 +1,7 @@
 ---
 title: JavaScript高级程序设计 - 打卡第十二天
 date: 2018-11-15 14:04:42
-tags: card-11、Canvas的基本使用、吸取图片像素色作为主题色调
+tags: card-12、postMessage、HTML5 原生拖放、实现一个小拖动例子
 
 ---
 # JavaScript高级程序设计 - 第三版
