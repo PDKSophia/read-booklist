@@ -70,6 +70,9 @@
 
 - 11.16, 《图解HTTP》打卡[第五天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md)，知识点: [HTTP报文首部](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md#http%E6%8A%A5%E6%96%87%E9%A6%96%E9%83%A8)、[HTTPS通信步骤](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8Bhttps%E9%80%9A%E4%BF%A1%E6%AD%A5%E9%AA%A4)、[HTTPS的优缺点](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md#https%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9)
 
+- 11.17, 《图解HTTP》打卡[第六天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-6.md)，知识点: [消除HTTP瓶颈的SPDY](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md#http%E6%8A%A5%E6%96%87%E9%A6%96%E9%83%A8)、[WebSocket通信](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-5.md#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8Bhttps%E9%80%9A%E4%BF%A1%E6%AD%A5%E9%AA%A4)
+
+
 -------------
 
 ### 给个支持？
