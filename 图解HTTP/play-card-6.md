@@ -15,7 +15,7 @@ tags: card-6
 
 使用HTTP协议探知服务器是否有内容更新，就必须频繁从客户端到服务器端进行确认。如果服务器端没有内容更新，那么就会产生徒劳的通信
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-30.png' width=450 height=220>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-30.png' width=450 height=400>
 
 #### Ajax 的解决办法
 利用 JavaScript 的 DOM 操作，以达到局部 Web 页面替换家在的异步通信手段。和以前的同步通信相比，由于它只更新一部分页面，响应中传输的数据量会因此而减少。
@@ -24,7 +24,7 @@ Ajax 的核心技术是名为 `XMLHttpRequest` 的 API，通过 JavaScript 脚�
 
 __但是，利用 Ajax 实时地从服务器获取内容，有可能会导致大量请求产生。另外，Ajax 仍未解决 HTTP 协议本身存在的问题__
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-31.png' width=450 height=220>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-31.png' width=450 height=400>
 
 #### Comet 的解决方法
 一旦服务器有内容更新了，Comet 不会让请求等待，而是直接给客户端返回响应，这是一种通过延迟应答，模拟实现服务器向客户端推送的功能
@@ -33,12 +33,12 @@ __但是，利用 Ajax 实时地从服务器获取内容，有可能会导致大
 
 内容上虽然可以做到实时更新，但为了保存响应，一次连接的持续时间变长了。期间，为了维持链接会消耗更多的资源。另外，Ajax 仍未解决 HTTP 协议本身存在的问题
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-32.png' width=450 height=220>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-32.png' width=450 height=400>
 
 ### SPDY 的设计与功能
 SPDY在TCP/IP的应用层与运输层之间通过新加回话层的形式运作。同时考虑到安全问题，SPDY规定通信中使用SSL
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-33.png' width=450 height=220>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-33.png' width=300 height=300>
 
 使用SPDY之后，HTTP协议额外获得一下功能:
 
@@ -59,7 +59,7 @@ SPDY在TCP/IP的应用层与运输层之间通过新加回话层的形式运作�
 
 __成功握手确立 WebSocket 连接之后，通信时不会再使用 HTTP 的数据帧，而是采用 WebSocket 独立的数据帧__
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-34.png' width=450 height=220>
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/http-34.png' width=450 height=350>
 
 ```javascript
   var socket = new WebSocket('ws://www.pengdaokuan.cn')
