@@ -10,11 +10,11 @@
 
 | 序号 | 数名 | 开始时间 | 结束时间 | 进度 | 状态 |
 | :------: | :------: | :------: | :------: | :------: |  :------: |
-| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.19 | 73% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
-| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.17 | 68% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
-| 3 | `《计算机网络 第七版》` |  2018.11.20 | 2018.11.27 | 0% | 未读 |
-| 4 | `《ECMAScript 6 入门》` |  2018.11.28 | 2018.11.31 | 0% | 未读 |
-| 5 | `《JavaScript正则表达式》` |   暂定 | 暂定 | 0% | 未读 |
+| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.24 | 80% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
+| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.23 | 70% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
+| 3 | `《计算机网络 第七版》` |  2018.11.25 | 2018.11.31 | 0% | 未读 |
+| 4 | `《ECMAScript 6 入门》` | 暂定 | 暂定 | 0% | 未读 |
+| 5 | `《JavaScript正则表达式》` | 暂定 | 暂定 | 0% | 未读 |
 | 6 | `《剑指 offer》` | 暂定 | 暂定 | 0% | 未读 |
 | 7 | `《算法图解》` | 暂定 | 暂定 | 0% | 未读 |
 | 8 | `《数据结构与算法 JavaScript描述》` |  暂定 | 暂定 | 0% | 未读 |
@@ -58,6 +58,8 @@
 - 11.15, 《JavaScript高级程序设计 第3版》打卡[第十一天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-11.md)，知识点: [Canvas的基本使用](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-11.md#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95)、[吸取图片像素色作为主题色调](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-11.md#%E4%BD%BF%E7%94%A8%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE-%E4%B9%9F%E5%B0%B1%E6%98%AF%E5%90%B8%E5%8F%96%E5%9B%BE%E7%89%87%E7%9A%84%E9%A2%9C%E8%89%B2%E5%BD%93%E4%BD%9C%E4%B8%BB%E9%A2%98%E8%89%B2%E8%B0%83)
 
 - 11.16, 《JavaScript高级程序设计 第3版》打卡[第十二天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-12.md)，知识点: [postMessage](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-12.md#%E8%B7%A8%E6%96%87%E6%A1%A3%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92)、[HTML5 原生拖放](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-12.md#%E6%8B%96%E6%94%BE%E4%BA%8B%E4%BB%B6)、[实现一个小拖动例子](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-12.md#%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%8B%96%E5%8A%A8)
+
+- 11.17, 《JavaScript高级程序设计 第3版》打卡[第十三天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-13.md)，知识点: [try-catch]()、[throw]()、[常见的错误类型]()
 
 --------
 
