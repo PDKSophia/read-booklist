@@ -10,7 +10,7 @@
 
 | 序号 | 数名 | 开始时间 | 结束时间 | 进度 | 状态 |
 | :------: | :------: | :------: | :------: | :------: |  :------: |
-| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.24 | 80% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
+| 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.24 | 85% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
 | 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.23 | 70% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
 | 3 | `《计算机网络 第七版》` |  2018.11.25 | 2018.11.31 | 0% | 未读 |
 | 4 | `《ECMAScript 6 入门》` | 暂定 | 暂定 | 0% | 未读 |
@@ -33,7 +33,7 @@
 
 ### 十一月 & 打卡表
 
-《JavaScript高级程序设计 第3版》打卡清单
+《JavaScript高级程序设计 第3版》打卡清单 (跳过十四章、十八章、十九章、其他章节有些内容略过)
 
 - 11.05, 《JavaScript高级程序设计 第3版》打卡[第一天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md)，知识点: [0.1+0.2!=0.3](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#number-%E7%B1%BB%E5%9E%8B)、[执行环境及作用域](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83%E5%8F%8A%E4%BD%9C%E7%94%A8%E5%9F%9F)、 [垃圾收集](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-1.md#%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86)
 
@@ -63,8 +63,8 @@
 
 - 11.21, 《JavaScript高级程序设计 第3版》打卡[第十四天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-14.md)，知识点: [JSON的序列化和解析](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-14.md#json%E5%BA%8F%E5%88%97%E5%8C%96%E9%80%89%E9%A1%B9)、[JSON与XML的比较](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-14.md#xml%E4%B8%8Ejson%E7%9A%84%E5%8C%BA%E5%88%AB%E6%AF%94%E8%BE%83)
 
-- 11.22, 《JavaScript高级程序设计 第3版》打卡[第十五天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-15.md)，知识点: [XMLHttpRequest]()
-
+- 11.22, 《JavaScript高级程序设计 第3版》打卡[第十五天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-15.md)，知识点: [XMLHttpRequest](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-15.md#xmlhttprequest%E5%AF%B9%E8%B1%A1)
+、[XML-2级](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-15.md#xmlhttprequest-2%E7%BA%A7)
 --------
 
 《图解HTTP》打卡清单
