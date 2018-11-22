@@ -171,7 +171,7 @@ tags: card-3、数据属性、访问器属性、原型链继承、构造函数�
   console.log(instance.getSubValue()) // false
   console.log(instance.getSuperValue()) // true
 ```
-上述代码，定义了两个类型: SuperType 和 SubType，每个类型分别有一个属性和方法，它们的区别是: SubType 继承了 SuperType，而继承是通过创建 SuperType的实例，并将该实例赋给SubType.prototype实现的。实现的本质是重写原型对象，代之以一个新类型的实例。换句换说，<strong>原来存在于SubType的实例中的所有属性和方法，现在也存在于SubType.prototype中了 </strong>
+上述代码，定义了两个类型: SuperType 和 SubType，每个类型分别有一个属性和方法，它们的区别是: SubType 继承了 SuperType，而继承是通过创建 SuperType的实例，并将该实例赋给SubType.prototype实现的。实现的本质是重写原型对象，代之以一个新类型的实例。换句换说，<strong>原来存在于SuperType的实例中的所有属性和方法，现在也存在于SubType.prototype中了 </strong>
 
 在上述代码中，没有使用 SubType 默认提供的原型，而是给它换了一个新的原型: 这个原型就是 SuperType的实例。于是，新原型不仅作为一个SuperType的实例所拥有的全部属性和方法，而且其内部还有一个指针，指向了 SuperType的原型，最终结果是这样的 : `intance 指向 SubType的原型，SubType的原型指向SuperType的原型。getSuperValue() 方法仍然在SuperType.prototype上，但是property位于SubType.prototype中。`这是因为property是一个实例属性，而getSuperValue()是一个原型方法。
 
