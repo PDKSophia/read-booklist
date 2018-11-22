@@ -1,6 +1,6 @@
 ---
 title: JavaScript高级程序设计 - 打卡第十三天
-date: 2018-11-21 14:04:42
+date: 2018-11-20 14:04:42
 tags: card-13、try-catch、throw、常见的错误类型
 
 ---

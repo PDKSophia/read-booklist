@@ -1,6 +1,6 @@
 ---
 title: JavaScript高级程序设计 - 打卡第十四天
-date: 2018-11-22 10:20:42
+date: 2018-11-21 10:20:42
 tags: card-14、JSON、XML与JSON的比较
 
 ---
