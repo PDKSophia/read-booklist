@@ -127,6 +127,20 @@ tags: card-15、XMLHttpRequest
   xhr.open('get', 'www.pengdaokuan.cn/test.php', true) // true 表示异步
   xhr.setRequestHeader("MyHeader", "MyValue") // 发送header头部信息
   xhr.send(null)
+
+```
+调用 XHR 对象的 `getResponseHeader()` 方法并传入头部字段名称，可以取得相应的响应头部信息。而调用 getAllResponseHeaders() 方法则可以取得一个包含所有头部信息的长字符串。
+
+在服务器端，也可以利用头部信息向浏览器发送额外的、结构化的数据。在没有自定义信息的情况下, `getAllResponseHeaders() `方法通常会返回如下所示的多行文本内容:
+
+```javascript
+  Date: Sun, 14 Nov 2018 18:04:03 GMT
+  Server: Apache/1.3.29 (Unix)
+  Vary: Accept
+  X-Powered-By: PHP/4.3.8
+  Connection: close
+  Content-Type: text/html; charset=iso-8859-1
+
 ```
 
 #### XHR的GET请求
