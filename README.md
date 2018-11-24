@@ -73,7 +73,7 @@
 
 --------
 
-《图解HTTP》打卡清单
+《图解HTTP》打卡清单，(跳过第10章)
 
 - 11.12, 《图解HTTP》打卡[第一天](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP/play-card-1.md)， 知识点: [TCP/IP的理解，DNS域名解析](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-1.md#tcpip%E7%9A%84%E4%BA%86%E8%A7%A3)
 
@@ -87,6 +87,7 @@
 
 - 11.17, 《图解HTTP》打卡[第六天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-6.md)，知识点: [消除HTTP瓶颈的SPDY](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-6.md#%E6%B6%88%E9%99%A4http%E7%93%B6%E9%A2%88%E7%9A%84spdy)、[WebSocket通信](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-6.md#%E4%BD%BF%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%9B%E8%A1%8C%E5%85%A8%E5%8F%8C%E5%B7%A5%E9%80%9A%E4%BF%A1%E7%9A%84-websocket)
 
+- 11.24, 《图解HTTP》打卡[第七天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-6.md)，知识点: [针对Web的攻击技术](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-7.md#%E9%92%88%E5%AF%B9web%E7%9A%84%E6%94%BB%E5%87%BB%E6%8A%80%E6%9C%AF)、[XSS攻击](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-7.md#%E4%BD%BF%E7%94%A8xss%E6%94%BB%E5%87%BB)、[CSRF跨站请求伪造](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-7.md#csrf%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0)
 
 -------------
 
