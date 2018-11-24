@@ -1,7 +1,7 @@
 ---
 title: JavaScript高级程序设计 - 打卡第十七天
 date: 2018-11-23 15:57:32
-tags: card-17、作用域安全的构造函数
+tags: card-17、作用域安全的构造函数、惰性载入函数、函数绑定与函数柯里化
 
 ---
 # JavaScript高级程序设计 - 第三版
@@ -10,7 +10,7 @@ tags: card-17、作用域安全的构造函数
 ### 安全的类型检测
 JavaScript 内置的类型检测机制并非完全可靠，比如 Safari 在对正则表达式应用 typeof 操作符时会返回 `' function '`，再比如， instanceof 操作符再存在多个全局作用域的情况下，也存在诸多问题。
 
-如何解决？我们都知道，在任何值上调用 Object 原生的 toString() 方法，都会返回一个 `[object NativeConstructorName]` 格式的字符串，。每个类在内部都有一个 [[Class]] 属
+如何解决？我们都知道，在任何值上调用 Object 原生的 toString() 方法，都会返回一个 `[object NativeConstructorName]` 格式的字符串，。每个类在内部都有一个 [[Class]] 属
 性，这个属性中就指定了上述字符串中的构造函数名。
 
 ```javascript
@@ -63,7 +63,7 @@ JavaScript 内置的类型检测机制并非完全可靠，比如 Safari 在对�
   console.log(p1.name) // Uncaught TypeError: Cannot read property 'name' of undefined
   console.log(p1.age) // Uncaught TypeError: Cannot read property 'age' of undefined
 
-  console.log(window.name) // 彭道宽 
+  console.log(window.name) // 彭道宽 
   console.log(window.age) // 21
 ```
 这里，原本针对 Person 实例的三个属性被加到 window 对象上，<strong>因为构造函数是作为普通函数调用的</strong>，忽略了 new 操作符。这个问题是由 this 对象的晚绑定造成的，<strong>在这里 this 被解析成了 window 对象</strong>。
@@ -165,7 +165,7 @@ JavaScript 内置的类型检测机制并非完全可靠，比如 Safari 在对�
 为什么加了一句 `Child.prototype = new Person()` 就可以了呢？因为一个 Child 实例也同时是一个 Person 实例，所以 Person.call() 会照原意执行，最终为 Child 实例添加了 len 属性
 
 ### 惰性载入函数
-因为浏览器之间行为的差异，多数 JavaScript 代码包含了大量的 if 语句，将执行引导到正确的代码中。比如说，你调用某一函数判断a的时候，总会走一些其他的分支，比如说 if (a<3) , else if (a > 20)，在你第一次执行该函数的时候就知道 a = 10，那么第二次，第三次执行该函数，就没必要走这些分支了。举个例子，打卡第十五天里的 [createXHR()](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-15.md#xmlhttprequest%E5%AF%B9%E8%B1%A1) 函数:
+因为浏览器之间行为的差异，多数 JavaScript 代码包含了大量的 if 语句，将执行引导到正确的代码中。比如说，你调用某一函数判断a的时候，总会走一些其他的分支，比如说 if (a<3) , else if (a > 20)，在你第一次执行该函数的时候就知道 a = 10，那么第二次，第三次执行该函数，就没必要走这些分支了。举个例子，打卡第十五天里的 [createXHR()](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-15.md#xmlhttprequest%E5%AF%B9%E8%B1%A1) 函数:
 
 ```javascript
   function createXHR () {
