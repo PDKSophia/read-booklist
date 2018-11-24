@@ -1,7 +1,7 @@
 ---
 title: JavaScript高级程序设计 - 打卡第十七天
 date: 2018-11-23 15:57:32
-tags: card-17、XMLHttpRequest
+tags: card-17、作用域安全的构造函数
 
 ---
 # JavaScript高级程序设计 - 第三版
