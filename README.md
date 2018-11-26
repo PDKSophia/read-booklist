@@ -11,7 +11,7 @@
 | 序号 | 数名 | 开始时间 | 结束时间 | 进度 | 状态 |
 | :------: | :------: | :------: | :------: | :------: |  :------: |
 | 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.24 | 90% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
-| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.23 | 100% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
+| 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.24 | 100% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
 | 3 | `《计算机网络 第七版》` |  2018.11.25 | 2018.11.31 | 0% | 未读 |
 | 4 | `《ECMAScript 6 入门》` | 暂定 | 暂定 | 0% | 未读 |
 | 5 | `《JavaScript正则表达式》` | 暂定 | 暂定 | 0% | 未读 |
@@ -70,6 +70,8 @@
 
 - 11.24, 《JavaScript高级程序设计 第3版》打卡[第十七天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-17.md)，知识点: [作用域安全的构造函数](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-17.md#%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%AE%89%E5%85%A8%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0)
 、[惰性载入函数](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-17.md#%E6%83%B0%E6%80%A7%E8%BD%BD%E5%85%A5%E5%87%BD%E6%95%B0)、[函数绑定与函数柯里化](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-17.md#%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96)、[如何手写实现一个bind()函数](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-17.md#%E7%BB%93%E5%90%88%E5%87%BD%E6%95%B0%E6%9F%AF%E9%87%8C%E5%8C%96%E7%9A%84%E6%83%85%E5%86%B5%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA_bind%E5%87%BD%E6%95%B0)
+
+- 11.25, 《JavaScript高级程序设计 第3版》打卡[第十七天](https://github.com/PDKSophia/read-booklist/blob/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1/play-card-18.md)，知识点: [防篡改对象]()、[函数节流]()
 
 --------
 
