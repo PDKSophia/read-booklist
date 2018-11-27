@@ -1,7 +1,7 @@
 ---
 title: JavaScript高级程序设计 - 打卡第十九天
 date: 2018-11-26 14:57:32
-tags: card-19、
+tags: card-19、离线检测
 
 ---
 # JavaScript高级程序设计 - 第三版
