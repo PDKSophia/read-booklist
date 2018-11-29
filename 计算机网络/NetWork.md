@@ -7,6 +7,7 @@
     * [电路交换与分组交换](#电路交换与分组交换)
     * [计算机网络的类别](#计算机网络的类别)
     * [计算机网络的性能](#计算机网络的性能)
+    * [计算机网络体系结构](#计算机网络体系结构)
 * [参考资料](#参考资料)
 <!-- GFM-TOC -->
 
@@ -19,7 +20,7 @@
 
 网络把主机连接起来，而互联网是把多种不同的网络连接起来，因此互联网是网络的网络。
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-1.png' width=600>
+<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-1.png' width=600> -->
 
 ## 互联网的组成
 互联网可以划分为两大块: `边缘部分` 和 `核心部分`
@@ -42,11 +43,11 @@
 ## 主机之间的通信方式
 - 客户服务器方式 ( C/S方式 ) : 客户是服务请求方，服务器是服务提供方
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-2.png' width=600>
+<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-2.png' width=600> -->
 
 - 对等连接方式 (P2P方式) : 两台主机在通信时不区分哪一个是服务器请求方哪一个是服务器提供方
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-3.png' width=600>
+<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-3.png' width=600> -->
 
 ## 电路交换与分组交换
 ### 1. 电路交换
@@ -54,14 +55,14 @@
 
 电路交换的三个步骤 : “ 建立连接 ” -> “ 通话 ” -> “ 释放连接 ”，电路交换的一个重要特点就是: __在通话的全部时间内，通话的两个用户始终占用端到端的通信资源__
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-4.png' width=600>
+<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-4.png' width=600> -->
 
 ### 2.分组交换
 分组交换采用的是<strong>“存储转发”</strong>技术，下图中表示将一个报文划分为几个分组在进行传送。通常我们把要发送的整块数据称为一个 __报文__，在发送报文之前，先把较长的报文划分成一个个更小的等长数据段。在每一个数据段前面，加上一些必要的控制信息组成的<strong>首部</strong>， 就构成了一个分组。
 
 分组又称为<strong>“包”</strong>，首部称为包头。每个分组都有首部和尾部，包含了源地址和目的地址等控制信息，在同一个传输线路上同时传输多个分组互相不会影响，因此在同一条传输线路上允许同时传输多个分组，也就是说分组交换不需要占用传输线路。
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-5.png' width=600>
+<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-5.png' width=600> -->
 
 位于网络边缘的主机和位于网络核心部分的路由器都是计算机，但是他们的作用却不一样。*主机是为用户进行信息处理的，可以和其他主机通过网络交换信息，路由器是用来转发分组的，即进行分组交换的。*
 
@@ -89,24 +90,59 @@
 - 专用网(private network)
 
 ## 计算机网络的性能
-#### 速率
+### 速率
 网络中的速率指的是`数据的传送速率`，它又称为数据率或比特率。速率的单位是: bit/s。(K=2<sup>10</sup>=1024，M=2<sup>20</sup>，G=2<sup>30</sup>，T=2<sup>40</sup>， ..... )，当提到网络的速率时，往往指的是额定速率或标称速率，而并非网络实际上运行的速率。
 
-#### 带宽
+### 带宽
 带宽本来是指某个信号具有的频带宽度，这种意义的带宽单位是赫。因此，表示某通信道允许通过的信号频带范围就称为该信道的带宽
 
 在计算机网络中，带宽用来表示某通道传输数据的能力。因此网络带宽表示在单位时间内网络中的某信道所能通过的最高数据率。
 
-#### 吞吐量
+### 吞吐量
 表示在单位时间内通过某个网络的实际的数据量
 
-#### 时延
+### 时延
 是指数据从网络的一端到另一端所需要的时间。它有时也称为延迟或者迟延
 
-(1) 发送时延 : 主机或路由器发送数据帧所需要的时间，也就是从发送数据帧的第一个比特算起，到该帧的最后一个比特发送完毕所需的时间
+(1) 发送时延 : 主机或路由器发送数据帧所需要的时间，也就是从发送数据帧的第一个比特算起，到该帧的最后一个比特发送完毕所需的时间，计算公式为
 
+<!-- <div align='center'>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-6.png' width=400>
+</div> -->
+
+(2) 传播时延 : 电磁波在信道中传播一定的距离需要花费的时间，计算公式为
+<!-- 
 <div align='center'>
-  <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-6.png' width=600>
-</div>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-7.png' width=400>
+</div> -->
 
-(2) 传播时延
+(3) 处理时延 : 主机或者路由器收到分组后，要花费一定的时间进行处理，这就是处理时延
+
+(4) 排队时延 : 分组在经过网络传输时，要经过路由器。但是分组在进入路由器后要现在输入队列中排队等待处理。在路由器确定了转发接口之后，还要在输出队列中排队等待转发。排队时延的长短取决于网络当时的通信量。当网络的通信量很大时会发生队列溢出，使分组丢失，这相当于排队时延为无穷大
+
+__总时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延__
+
+<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-8.png' width=600> -->
+
+### 往返时间RTT
+
+## 计算机网络体系结构
+<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-9.png' width=600> -->
+
+### 五层协议
+#### 应用层
+通过应用进程间的交互来完成特定网络应用。比如 DNS、HTTP协议、SMTP协议。数据单位为报文。
+
+#### 运输层
+为进程提供通用数据传输服务。由于应用层协议很多，定义通用的传输层协议就可以支持不断增多的应用层协议。运输层包括两种协议：传输控制协议 TCP，提供面向连接、可靠的数据传输服务，数据单位为报文段；用户数据报协议 UDP，提供无连接、尽最大努力的数据传输服务，数据单位为用户数据报。TCP 主要提供完整性服务，UDP 主要提供及时性服务。
+
+#### 网络层
+为主机提供数据传输服务。而传输层协议是为主机中的进程提供数据传输服务。网络层把传输层传递下来的报文段或者用户数据报封装成分组。比如 CMP 、 IP 、 ARP等协议
+
+#### 数据链路层
+网络层针对的还是主机之间的数据传输服务，而主机之间可以有很多链路，链路层协议就是为同一链路的主机提供数据传输服务。数据链路层把网络层传下来的分组封装成帧，在两个相邻结点间的链路上传送帧。每一帧包括数据和必要的控制信息。硬件地址寻址、差错校验、将比特组合成字节进而组合成帧，用MAC地址访问介质
+
+#### 物理层
+考虑的是怎样在传输媒体上传输数据比特流，而不是指具体的传输媒体。物理层的作用是尽可能屏蔽传输媒体和通信手段的差异，使数据链路层感觉不到这些差异。以二进制形式传输数据
+
+<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-10.png' width=600> -->
