@@ -8,6 +8,10 @@
     * [计算机网络的类别](#计算机网络的类别)
     * [计算机网络的性能](#计算机网络的性能)
     * [计算机网络体系结构](#计算机网络体系结构)
+* [二、物理层](#二物理层)
+    * [物理层任务](#物理层任务)
+    * [通信方式](#通信方式)
+    * [信道复用技术](#信道复用技术)
 * [参考资料](#参考资料)
 <!-- GFM-TOC -->
 
@@ -20,7 +24,7 @@
 
 网络把主机连接起来，而互联网是把多种不同的网络连接起来，因此互联网是网络的网络。
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-1.png' width=600> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-1.png' width=500>
 
 ## 互联网的组成
 互联网可以划分为两大块: `边缘部分` 和 `核心部分`
@@ -43,11 +47,11 @@
 ## 主机之间的通信方式
 - 客户服务器方式 ( C/S方式 ) : 客户是服务请求方，服务器是服务提供方
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-2.png' width=600> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-2.png' width=420>
 
 - 对等连接方式 (P2P方式) : 两台主机在通信时不区分哪一个是服务器请求方哪一个是服务器提供方
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-3.png' width=600> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-3.png' width=420>
 
 ## 电路交换与分组交换
 ### 1. 电路交换
@@ -55,14 +59,14 @@
 
 电路交换的三个步骤 : “ 建立连接 ” -> “ 通话 ” -> “ 释放连接 ”，电路交换的一个重要特点就是: __在通话的全部时间内，通话的两个用户始终占用端到端的通信资源__
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-4.png' width=600> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-4.png' width=600>
 
 ### 2.分组交换
 分组交换采用的是<strong>“存储转发”</strong>技术，下图中表示将一个报文划分为几个分组在进行传送。通常我们把要发送的整块数据称为一个 __报文__，在发送报文之前，先把较长的报文划分成一个个更小的等长数据段。在每一个数据段前面，加上一些必要的控制信息组成的<strong>首部</strong>， 就构成了一个分组。
 
 分组又称为<strong>“包”</strong>，首部称为包头。每个分组都有首部和尾部，包含了源地址和目的地址等控制信息，在同一个传输线路上同时传输多个分组互相不会影响，因此在同一条传输线路上允许同时传输多个分组，也就是说分组交换不需要占用传输线路。
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-5.png' width=600> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-5.png' width=600>
 
 位于网络边缘的主机和位于网络核心部分的路由器都是计算机，但是他们的作用却不一样。*主机是为用户进行信息处理的，可以和其他主机通过网络交换信息，路由器是用来转发分组的，即进行分组交换的。*
 
@@ -106,15 +110,15 @@
 
 (1) 发送时延 : 主机或路由器发送数据帧所需要的时间，也就是从发送数据帧的第一个比特算起，到该帧的最后一个比特发送完毕所需的时间，计算公式为
 
-<!-- <div align='center'>
+<div align='center'>
   <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-6.png' width=400>
-</div> -->
+</div>
 
 (2) 传播时延 : 电磁波在信道中传播一定的距离需要花费的时间，计算公式为
-<!-- 
+
 <div align='center'>
   <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-7.png' width=400>
-</div> -->
+</div>
 
 (3) 处理时延 : 主机或者路由器收到分组后，要花费一定的时间进行处理，这就是处理时延
 
@@ -122,27 +126,106 @@
 
 __总时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延__
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-8.png' width=600> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-8.png' width=600>
 
 ### 往返时间RTT
 
 ## 计算机网络体系结构
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-9.png' width=600> -->
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-9.png' width=560>
 
 ### 五层协议
 #### 应用层
 通过应用进程间的交互来完成特定网络应用。比如 DNS、HTTP协议、SMTP协议。数据单位为报文。
 
 #### 运输层
-为进程提供通用数据传输服务。由于应用层协议很多，定义通用的传输层协议就可以支持不断增多的应用层协议。运输层包括两种协议：传输控制协议 TCP，提供面向连接、可靠的数据传输服务，数据单位为报文段；用户数据报协议 UDP，提供无连接、尽最大努力的数据传输服务，数据单位为用户数据报。TCP 主要提供完整性服务，UDP 主要提供及时性服务。
+为进程提供通用数据传输服务。由于应用层协议很多，定义通用的传输层协议就可以支持不断增多的应用层协议。
+
+运输层包括两种协议：`传输控制协议 TCP`，提供面向连接、可靠的数据传输服务，数据单位为报文段；`用户数据报协议 UDP`，提供无连接、尽最大努力的数据传输服务，数据单位为用户数据报。TCP 主要提供完整性服务，UDP 主要提供及时性服务。
 
 #### 网络层
-为主机提供数据传输服务。而传输层协议是为主机中的进程提供数据传输服务。网络层把传输层传递下来的报文段或者用户数据报封装成分组。比如 CMP 、 IP 、 ARP等协议
+为分组交换网上的`不同主机`提供数据传输服务。在发送数据时，网络层把运输层产生的报文段或用户数据报封装成`分组`或`包`进行传送。在TCP/IP协议中，由于网络层使用IP协议，因此分组也叫做 `IP数据包`。网络层的另一任务就是 : 选择合适的路由，使源主机运输层传下来的分组，能够通过网络中的路由器找到目的主机。
+
+常见的协议比如 CMP 、 IP 、 ARP等协议
 
 #### 数据链路层
-网络层针对的还是主机之间的数据传输服务，而主机之间可以有很多链路，链路层协议就是为同一链路的主机提供数据传输服务。数据链路层把网络层传下来的分组封装成帧，在两个相邻结点间的链路上传送帧。每一帧包括数据和必要的控制信息。硬件地址寻址、差错校验、将比特组合成字节进而组合成帧，用MAC地址访问介质
+网络层针对的还是主机之间的数据传输服务，而主机之间可以有很多链路，*链路层协议就是为同一链路的主机提供数据传输服务*。数据链路层把网络层传下来的`IP数据包`封装成`帧`，在两个相邻结点间的链路上传送帧。每一帧包括数据和必要的控制信息。硬件地址寻址、差错校验、将比特组合成字节进而组合成帧，用MAC地址访问介质
 
 #### 物理层
 考虑的是怎样在传输媒体上传输数据比特流，而不是指具体的传输媒体。物理层的作用是尽可能屏蔽传输媒体和通信手段的差异，使数据链路层感觉不到这些差异。以二进制形式传输数据
 
-<!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-10.png' width=600> -->
+### OSI七层协议
+其中表示层和会话层用途如下：
+
+- 表示层 ：数据压缩、加密以及数据描述，这使得应用程序不必关心在各台主机中数据内部格式不同的问题。比如HTTP、HTTPS等协议
+
+- 会话层 ：建立及管理会话。比如session、cookie
+
+五层协议没有表示层和会话层，而是将这些功能留给应用程序开发者处理
+
+### 数据在各层之间的传递过程
+在向下的过程中，需要添加下层协议所需要的首部或者尾部，而在向上的过程中不断拆开首部和尾部。
+
+路由器只有下面三层协议，因为路由器位于网络核心中，不需要为进程或者应用程序提供服务，因此也就不需要传输层和应用层。
+
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-10.png' width=480>
+
+### TCP/IP的体系结构
+它只有四层，相当于五层协议中数据链路层和物理层合并为网络接口层。
+
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-11.png' width=480>
+
+TCP/IP 体系结构不严格遵循 OSI 分层概念，应用层可能会直接使用 IP 层或者网络接口层。
+
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-12.png' width=480>
+
+
+还有一种方法，就是分层次画出具体的协议来表示TCP/IP协议族，它的特点是 : 一种沙漏形状，中间小两边大，IP 协议在其中占据举足轻重的地位。
+
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-13.png' width=480>
+
+--------
+
+# 二、物理层
+## 物理层任务
+物理层的作用及任务就是 : 尽可能地屏蔽掉传输媒体和通信手段的差异，使物理层上面的数据链路层感觉不到这种差异，这样就能使得数据链路层只需要考虑如何完成本层的协议和服务，不需要考虑网路具体的传输媒体和通信手段。
+
+## 通信方式
+首先，我们先理解一些常用术语，通信的目的是传送信息，数据是运送信息的实体，在RFC 4949中给出的定义，数据是使用特定方式表示的信息，通常是有意义的符号序列。信号则是数据的电气或电磁的表现。
+
+信号分为两大类
+- 模拟信号——代表信息的参数的取值是连续的。
+
+- 数字信号——代表信息的参数的取值是离散的。
+
+从通信的双方信息交互的方式来看，有三种基本方式: 
+
+- 单向通信 : 又称为`单工通信`，只有一个方向的通信而没有反方向的交互，比如无线电广播或有线电广播
+
+- 双向交替通信 : 又称为`半双工通信`，通信的双方都可以发送信息，但是不能双方同时发送，当然也不能同时接收
+
+- 双向同时通信 : 又称为`全双工通信`，通信的双方可以同时发送和接收信息
+
+来自信源的信号常称为 `基带信号`，基带信号往往包含有较多的低频成分，甚至有直流成分，而很多信道不能传输这种低频或者直流，所以我们要进行<strong>调制</strong>
+
+基带信号调制分两大类， __基带调制__ 和 __带通调制__
+### 基带调制
+仅仅对基带信号的波形进行变换，使它能够与信道特性相适应。转变后的信号仍是基带信号，这种基带调制一般是把`数字信号`转换成另一种数字信号，所以这个过程常常被称为`编码`。（数字信号 - 数字信号）
+
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-14.png' width=400>
+
+### 带通调制
+使用`载波`进行调制，把基带信号的频率范围搬移到较高的频段，并转换为`模拟信号`。（数字信号 - 模拟信号）
+
+最基本的带通调制方法有 : 调幅、调频和调相，复杂点的就正交振幅调制
+
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-15.png' width=400>
+
+## 信道复用技术
+- 频分复用、时分复用和统计时分复用
+
+- 波分复用
+
+- 码分复用
+
+---------
+
