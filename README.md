@@ -13,7 +13,7 @@
 | :------: | :------: | :------: | :------: | :------: |  :------: |
 | 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.26 | 91% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
 | 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.24 | 100% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
-| 3 | `《计算机网络 第七版》` |  2018.11.25 | 2018.11.31 | 0% | 未读 |
+| 3 | `《计算机网络 第七版》` |  2018.12.02 | 2018.12.10 | 7% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C) |
 | 4 | `《ECMAScript 6 入门》` | 暂定 | 暂定 | 0% | 未读 |
 | 5 | `《JavaScript正则表达式》` | 暂定 | 暂定 | 0% | 未读 |
 | 6 | `《剑指 offer》` | 暂定 | 暂定 | 0% | 未读 |
@@ -95,6 +95,15 @@
 - 11.24, 《图解HTTP》打卡[第七天](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-6.md)，知识点: [针对Web的攻击技术](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-7.md#%E9%92%88%E5%AF%B9web%E7%9A%84%E6%94%BB%E5%87%BB%E6%8A%80%E6%9C%AF)、[XSS攻击](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-7.md#%E4%BD%BF%E7%94%A8xss%E6%94%BB%E5%87%BB)、[CSRF跨站请求伪造](https://github.com/PDKSophia/read-booklist/blob/master/%E5%9B%BE%E8%A7%A3HTTP/play-card-7.md#csrf%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0)
 
 -------------
+
+《计算机网络》打卡清单
+
+- 12.02, 《计算机网络》打卡[第一天](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%B8%80%E6%A6%82%E8%BF%B0)， 知识点: [主机之间的通信方式](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%B8%BB%E6%9C%BA%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F)、[计算机网络的性能](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD)、[五层协议](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84)
+
+- 12.03, 《计算机网络》打卡[第二天](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%B8%80%E6%A6%82%E8%BF%B0)， 知识点: [物理层任务](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%B8%BB%E6%9C%BA%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F)、[通信方式](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD)、[信道复用技术](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84)
+
+
+--------------
 
 ### 给个支持？
 客官，如果你觉得我写的还阔以，打个赏？

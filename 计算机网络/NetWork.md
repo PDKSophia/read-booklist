@@ -211,21 +211,59 @@ TCP/IP 体系结构不严格遵循 OSI 分层概念，应用层可能会直接�
 ### 基带调制
 仅仅对基带信号的波形进行变换，使它能够与信道特性相适应。转变后的信号仍是基带信号，这种基带调制一般是把`数字信号`转换成另一种数字信号，所以这个过程常常被称为`编码`。（数字信号 - 数字信号）
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-14.png' width=400>
+<div align='center'>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-14.png' width=400>
+</div>
 
 ### 带通调制
 使用`载波`进行调制，把基带信号的频率范围搬移到较高的频段，并转换为`模拟信号`。（数字信号 - 模拟信号）
 
 最基本的带通调制方法有 : 调幅、调频和调相，复杂点的就正交振幅调制
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-15.png' width=400>
+<div align='center'>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-15.png' width=400>
+</div>
 
 ## 信道复用技术
-- 频分复用、时分复用和统计时分复用
+### 1.频分复用
+频分复用的所有用户在相同的时间占用不同的频率带宽资源。
 
-- 波分复用
+<div align='center'>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-16.png' width=400>
+</div>
 
-- 码分复用
+### 2.时分复用
+时分复用的所有用户在不同的时间占用相同的频率带宽资源。
+
+<div align='center'>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-17.png' width=400>
+</div>
+
+使用频分复用和时分复用进行通信，在通信的过程中主机会一直占用一部分信道资源。但是由于计算机数据的突发性质，通信过程没必要一直占用信道资源而不让出给其它用户使用，因此这两种方式对信道的利用率都不高。
+
+### 3.统计时分复用
+是对时分复用的一种改进，不固定每个用户在时分复用帧中的位置，只要有数据就集中起来组成统计时分复用帧然后发送。
+<div align='center'>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-18.png' width=400>
+</div>
+
+### 4.波分复用
+光的频分复用。由于光的频率很高，因此习惯上用波长而不是频率来表示所使用的光载波。
+<div align='center'>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-19.png' width=660>
+</div>
+
+### 5.码分复用
+又称为 : `码分多址CDMA`。在CDMA中，每一个比特时间再划分为m个短的间隔，称为`码片`，通常m的值是64或128。
+
+使用CDMA的每一个站被指派一个唯一的 m bit 码片序列，一个站如果要发送比特1，那么就发送自己的 m bit 码片序列。如果要发送比特0，就发送该码片序列的二进制反码。例如，指派给S站的 8 bit码片序列是 00011011，那么当S发送比特1时，它就发送序列00011011，如果S发送比特0时，就发送11100100
+
+<div align='center'>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-20.png' width=660>
+</div>
+
 
 ---------
 
+# 参考资料
+CS-Notes : https://github.com/CyC2018/CS-Notes/blob/master/notes/计算机网络.md
