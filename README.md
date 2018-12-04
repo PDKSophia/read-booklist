@@ -13,7 +13,7 @@
 | :------: | :------: | :------: | :------: | :------: |  :------: |
 | 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.26 | 91% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
 | 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.24 | 100% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
-| 3 | `《计算机网络 第七版》` |  2018.12.02 | 2018.12.10 | 7% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C) |
+| 3 | `《计算机网络 第七版》` |  2018.12.02 | 2018.12.10 | 12% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C) |
 | 4 | `《ECMAScript 6 入门》` | 暂定 | 暂定 | 0% | 未读 |
 | 5 | `《JavaScript正则表达式》` | 暂定 | 暂定 | 0% | 未读 |
 | 6 | `《剑指 offer》` | 暂定 | 暂定 | 0% | 未读 |
@@ -101,6 +101,8 @@
 - 12.02, 《计算机网络》打卡[第一天](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%B8%80%E6%A6%82%E8%BF%B0)， 知识点: [主机之间的通信方式](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%B8%BB%E6%9C%BA%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F)、[计算机网络的性能](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD)、[五层协议](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84)
 
 - 12.03, 《计算机网络》打卡[第二天](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%BA%8C%E7%89%A9%E7%90%86%E5%B1%82)， 知识点: [物理层任务](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E7%89%A9%E7%90%86%E5%B1%82%E4%BB%BB%E5%8A%A1)、[通信方式](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F)、[信道复用技术](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%BF%A1%E9%81%93%E5%A4%8D%E7%94%A8%E6%8A%80%E6%9C%AF)
+
+- 12.04, 《计算机网络》打卡[第三天](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%B8%89%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82)， 知识点: [数据链路层-信道分类](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%BF%A1%E9%81%93%E5%88%86%E7%B1%BB)、[三个基本问题](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%B8%89%E4%B8%AA%E5%9F%BA%E6%9C%AC%E9%97%AE%E9%A2%98)、[PPP协议](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#PPP%E5%8D%8F%E8%AE%AE)
 
 
 --------------
