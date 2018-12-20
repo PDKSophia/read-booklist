@@ -13,24 +13,25 @@
 | :------: | :------: | :------: | :------: | :------: |  :------: |
 | 1 | `《JavaScript高级程序设计 第3版》` |  2018.11.05 | 2018.11.26 | 91% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
 | 2 | `《图解HTTP》` |  2018.11.12 | 2018.11.24 | 100% | [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP) |
-| 3 | `《计算机网络 第七版》` |  2018.12.02 | 2018.12.10 | 18% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C) |
-| 4 | `《ECMAScript 6 入门》` | 暂定 | 暂定 | 0% | 未读 |
-| 5 | `《JavaScript正则表达式》` | 暂定 | 暂定 | 0% | 未读 |
-| 6 | `《剑指 offer》` | 暂定 | 暂定 | 0% | 未读 |
-| 7 | `《算法图解》` | 暂定 | 暂定 | 0% | 未读 |
-| 8 | `《数据结构与算法 JavaScript描述》` |  暂定 | 暂定 | 0% | 未读 |
-| 9 | `《JavaScript设计模式与开发实践》` |  暂定 | 暂定 | 0% | 未读 |
-| 10 | `《计算机是怎样跑起来的》` |  暂定 | 暂定 | 0% | 未读 |
-| 11 | `《编程之法：面试和算法心得》` |  暂定 | 暂定 | 0% | 未读 |
-| 12 | `《程序员修炼之道——从小工到专家》` |  暂定 | 暂定 | 0% | 未读 |
-| 13 | `《大型网站技术架构》` |  暂定 | 暂定 | 0% | 未读 |
-| 14 | `《编程珠玑》` |  暂定 | 暂定 | 0% | 未读 |
-| 15 | `《硅谷之火》` |  暂定 | 暂定 | 0% | 未读 |
-| 16 | `《白帽子讲Web安全》` |  暂定 | 暂定 | 0% | 未读 |
-| 17 | `《程序员的英语》` |  暂定 | 暂定 | 0% | 未读 |
-| 18 | `《了不起到Node.js》` |  暂定 | 暂定 | 0% | 未读 |
-| 19 | `《黑客与画家》` |  暂定 | 暂定 | 0% | 未读 |
-| 20 | `《丑陋的中国人》` |  暂定 | 暂定 | 0% | 未读 |
+| 3 | `《计算机网络 第七版》` |  2018.12.02 | 2018.12.20 | 24% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C) |
+| 4 | `《深入浅出React》` | 12.20 | 12.30 | 10% | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact) |
+| 5 | `《ECMAScript 6 入门》` | 暂定 | 暂定 | 0% | 未读 |
+| 6 | `《JavaScript正则表达式》` | 暂定 | 暂定 | 0% | 未读 |
+| 7 | `《剑指 offer》` | 暂定 | 暂定 | 0% | 未读 |
+| 8 | `《算法图解》` | 暂定 | 暂定 | 0% | 未读 |
+| 9 | `《数据结构与算法 JavaScript描述》` |  暂定 | 暂定 | 0% | 未读 |
+| 10 | `《JavaScript设计模式与开发实践》` |  暂定 | 暂定 | 0% | 未读 |
+| 11 | `《计算机是怎样跑起来的》` |  暂定 | 暂定 | 0% | 未读 |
+| 12 | `《编程之法：面试和算法心得》` |  暂定 | 暂定 | 0% | 未读 |
+| 13 | `《程序员修炼之道——从小工到专家》` |  暂定 | 暂定 | 0% | 未读 |
+| 14 | `《大型网站技术架构》` |  暂定 | 暂定 | 0% | 未读 |
+| 15 | `《编程珠玑》` |  暂定 | 暂定 | 0% | 未读 |
+| 16 | `《硅谷之火》` |  暂定 | 暂定 | 0% | 未读 |
+| 17 | `《白帽子讲Web安全》` |  暂定 | 暂定 | 0% | 未读 |
+| 18 | `《程序员的英语》` |  暂定 | 暂定 | 0% | 未读 |
+| 19 | `《了不起到Node.js》` |  暂定 | 暂定 | 0% | 未读 |
+| 20 | `《黑客与画家》` |  暂定 | 暂定 | 0% | 未读 |
+| 201 | `《丑陋的中国人》` |  暂定 | 暂定 | 0% | 未读 |
 
 ### 十一月 & 打卡表
 
@@ -107,6 +108,10 @@
 - 12.05, 《计算机网络》打卡[第四天](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%B8%89%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82)， 知识点: [适配器](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E9%80%82%E9%85%8D%E5%99%A8)、[以太网的MAC层](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%BB%A5%E5%A4%AA%E7%BD%91%E7%9A%84MAC%E5%B1%82)、[CSMA/CD协议](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#csmacd%E5%8D%8F%E8%AE%AE)
 
 --------------
+
+《深入浅出React》打卡清单
+
+- 12.21，《深入浅出React》阅读之 : [《React生命周期》](https://github.com/PDKSophia/read-booklist/blob/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md)
 
 ### 给个支持？
 客官，如果你觉得我写的还阔以，打个赏？
