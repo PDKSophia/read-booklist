@@ -4,7 +4,7 @@
   - [了解 Node](#了解Node)
     - [Node 简介](#Node简介)
     - [Node 解决的问题](#Node解决的问题)
-    - [异步式 I/O 与事件驱动](#异步式i/o与事件驱动)
+    - [异步式 I/O 与事件驱动](#异步式io与事件驱动)
   - [开始入坑](#开始入坑)
     - [Day-1](./Day1/README.md)
       - [阻塞与非阻塞IO](./Day1/README.md/#阻塞与非阻塞io)
@@ -74,7 +74,7 @@ Node.js 使用的是`单线程模型`，对于所有 I/O 都采用<strong>异步
 ### Day-1
 
 - [能力越大责任越大](./Day1/README.md/#能力越大责任越大)
-- [阻塞与非阻塞IO](./Day1/README.md/#阻塞与非阻塞IO)
+- [阻塞与非阻塞IO](./Day1/README.md/#阻塞与非阻塞io)
   - [什么是阻塞]('./Day1/README.md/#什么是阻塞)
   - [事件轮训]('./Day1/README.md/#事件轮训)
 
