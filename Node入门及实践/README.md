@@ -4,10 +4,10 @@
   - [了解 Node](#了解Node)
     - [Node 简介](#Node简介)
     - [Node 解决的问题](#Node解决的问题)
-    - [异步式 I/O 与事件驱动](#异步式I/O与事件驱动)
+    - [异步式 I/O 与事件驱动](#异步式i/o与事件驱动)
   - [开始入坑](#开始入坑)
     - [Day-1](./Day1/README.md)
-      - [阻塞与非阻塞IO](./Day1/README.md/#阻塞与非阻塞IO)
+      - [阻塞与非阻塞IO](./Day1/README.md/#阻塞与非阻塞io)
 - [相关链接](#相关链接)
 
 # Node入坑记录
@@ -49,7 +49,7 @@ Node.js 使用的是`单线程模型`，对于所有 I/O 都采用<strong>异步
 
 采用 《Node.js开发指南》中的例子来说事 : 数据库查询操作
 ```javascript
-  // 传统方法
+  // 传统方法
   res = db.query('SELECT * from user')
   res.output()
 ```
@@ -86,7 +86,7 @@ Node.js 使用的是`单线程模型`，对于所有 I/O 都采用<strong>异步
 
 - [ Node 入门 ](https://www.nodebeginner.org/index-zh-cn.html#a-full-blown-web-application-with-nodejs)
 
-- [ 30 Days of Node ](https://www.nodejsera.com/nodejs-tutorial-day1-thebeginning.html)
+- [ 30 Days of Node ](https://www.nodejsera.com/nodejs-tutorial-day1-thebeginning.html)
 
 - [《Node.js 从入门到上线》](https://cnodejs.org/topic/5b1939ad29e6e510415b2916)
 
