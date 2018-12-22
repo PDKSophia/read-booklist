@@ -1,8 +1,8 @@
 - [Day1](#Day1)
   - [能力越大责任越大](##能力越大责任越大)
   - [阻塞与非阻塞 IO](##阻塞与非阻塞IO)
-  - [什么是阻塞](###什么是阻塞)
-  - [事件轮训](###事件轮训)
+    - [什么是阻塞](###什么是阻塞)
+    - [事件轮训](###事件轮训)
 - [相关链接](#相关链接)
 
 # Day1
@@ -32,7 +32,7 @@ function serveBooks() {
 $books = array('Node.js', 'PHP');
 
 function serveBooks() {
-  $html = 'b>' . join($boos, '</b><br></b>') . '</b>'>;
+  $html = '<b>' . join($boos, '</b><br></b>') . '</b>';
 
   $books = array();
 
