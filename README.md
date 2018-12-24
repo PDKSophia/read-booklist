@@ -15,7 +15,7 @@
 |  1   |     `《JavaScript高级程序设计 第3版》`      | 2018.11.05 | 2018.11.26 | 91%  | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
 |  2   |               `《图解HTTP》`                | 2018.11.12 | 2018.11.24 | 100% |                             [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP)                             |
 |  3   |           `《计算机网络 第七版》`           | 2018.12.02 | 2018.12.20 | 24%  |          [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C)           |
-|  4   | `《了不起的NodeJS》搭配《Node.js开发指南》` | 2018.12.21 | 2018.12.30 | 10%  |          [跟读](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5)           |
+|  4   | `《了不起的NodeJS》搭配《Node.js开发指南》` | 2018.12.21 | 2018.12.30 | 23%  |          [跟读](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5)           |
 |  5   |             `《深入浅出React》`             | 2018.12.20 | 2018.12.30 | 10%  |            [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact)             |
 |  6   |           `《ECMAScript 6 入门》`           |    暂定    |    暂定    |  0%  |                                                              未读                                                               |
 |  7   |         `《JavaScript正则表达式》`          |    暂定    |    暂定    |  0%  |                                                              未读                                                               |
@@ -123,6 +123,7 @@
 
 - 12.22，《了不起的NodeJS》搭配《Node.js开发指南》，Node.js 的了解打卡[第一天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1)，你可能想知道 : [能力越大责任越大？](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1#%E8%83%BD%E5%8A%9B%E8%B6%8A%E5%A4%A7%E8%B4%A3%E4%BB%BB%E8%B6%8A%E5%A4%A7)、[阻塞与非阻塞](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1#%E9%98%BB%E5%A1%9E%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9Eio)
 
+- 12.23，《了不起的NodeJS》搭配《Node.js开发指南》，Node.js 的了解打卡[第二天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2)，你可能想知道 : 
 
 ### 给个支持？
 

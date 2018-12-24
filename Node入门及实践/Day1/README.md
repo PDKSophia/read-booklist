@@ -5,7 +5,9 @@
     - [事件轮训](#事件轮训)
     - [错误处理](#错误处理)
     - [堆栈追踪](#堆栈追踪)
-- [相关链接](#相关链接)
+  - [模块和包](模块和包)
+    - [什么是模块](#什么是模块)
+    - [创建及加载模块](#创建及加载模块)
 
 # Day1
 
@@ -230,3 +232,94 @@ taskOne()
 </div>
 
 我们要捕获一个未来才会执行到的函数所抛出的错误是不可能的。这就是为什么 Node 中，每步都要正确进行错误处理的原因
+
+## 模块和包
+
+### 什么是模块
+
+模块是 Node.js 应用程序的基本组成部分，文件和模块是一一对应的。换言之，一个 Node.js 文件就是一个模块，这个文件可能是 JavaScript 代码、JSON 或者编译过的 C/C++ 扩展。比如 `require('http')` ，其中 http 就是 Node.js 的一个核心模块，内部用 C++实现，外部用 JavaScript 封装。我们通过 require 函数才能获取这个模块，然后才能使用其中的对象
+
+### 创建及加载模块
+
+在 Node.js 中，创建一个模块非常简单，因为一个文件就是一个模块，我们要关注的问题仅仅在于如何在其他文件中获取这个模块。Node.js 提供了 exports 和 require 两个对 象，其中 exports 是模块公开的接口，require 用于从外部获取一个模块的接口，即所获 取模块的 exports 对象。
+
+```javascript
+// single.js
+function Person() {
+  var name
+
+  this.setName = function(username) {
+    name = username
+  }
+
+  this.sayHello = function() {
+    console.log('hello' + name)
+  }
+}
+
+module.exports = Person
+```
+
+```javascript
+// index.js
+var Person = require('./single')
+
+var person = new Person()
+person.setName('PDK')
+person.sayHello()
+```
+
+### Module 对象
+
+Node 内部提供一个 Module 构建函数。所有模块都是 Module 的实例。
+
+```javascript
+function Module(id, parent) {
+  this.id = id;
+  this.exports = {};
+  this.parent = parent;
+   // ...
+}
+
+module.id 模块的识别符，通常是带有绝对路径的模块文件名。
+module.filename 模块的文件名，带有绝对路径。
+module.loaded 返回一个布尔值，表示模块是否已经完成加载。
+module.parent 返回一个对象，表示调用该模块的模块。
+module.children 返回一个数组，表示该模块要用到的其他模块。
+module.exports 表示模块对外输出的值。
+```
+
+### Module.exports 和 exports
+
+Node 为每个模块提供一个 exports 变量，指向 module.exports。这等同在每个模块头部，有一行这样的命令
+
+```javascript
+// 基本实现
+var module = {
+  exports: {} // exports 就是个空对象
+}
+// 这个是为什么 exports 和 module.exports 用法相似的原因
+var exports = module.exports
+
+// 造成的结果是,在对外输出模块接口时，可以向exports对象添加方法
+exports.area = function(r) {
+  return Math.PI * r * r
+}
+```
+
+注意，不能直接将 exports 变量指向一个值，因为这样等于切断了 exports 与 module.exports 的联系。
+
+```javascript
+// 无效写法,exports不再指向module.exports了。
+exports = function(x) {
+  console.log(x)
+}
+
+// 如果一个模块的对外接口，就是一个单一的值，不能使用exports输出，只能使用module.exports输出。
+module.exports = function (x) {
+  console.log(x);
+}
+
+如果你觉得，exports与module.exports之间的区别很难分清，一个简单的处理方法，就是放弃使用exports，只使用module.exports。
+```
+> 不可以通过对 exports 直接赋值代替对 module.exports 赋值。 exports 实际上只是一个和 module.exports 指向同一个对象的变量， 它本身会在模块执行结束后释放，但 module 不会，因此只能通过指定 module.exports 来改变访问接口。
