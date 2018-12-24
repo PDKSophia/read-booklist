@@ -22,7 +22,7 @@
 
 process——用于描述当前 Node.js 进程状态 的对象，提供了一个与操作系统的简单接口。下面将会介绍 process 对象的一些最常用的成员方法。
 
-- process.argv ：命令行参数数组。第一个元素是 node，第二个元素是脚本文件名，从第三个元素开始  每个元素是一个运行参数
+- process.argv ：命令行参数数组。第一个元素是 node，第二个元素是脚本文件名，从第三个元素开始每个元素是一个运行参数
 
 ```javascript
 console.log(process.argv)
@@ -87,7 +87,7 @@ window.addEventListener('load', function() {
 
 浏览器中负责处理事件相关的 DOM API 主要是包括 addEventListener、removeEventListener、以及 dispatchEvent。他们还用在一系列从 window 到 XMLHttpRequest 等其他对象上
 
-在 Node 中，可能我们也希望随时进行事件的监听和分发，为此，node 暴露了 Event EmitterAPI，该 API 上定义了 on、emit、removeListener 方法，它以 process.EventEmitter 形式暴露才出来
+在 Node 中，可能我们也希望随时进行事件的监听和分发，为此，node 暴露了 Event EmitterAPI，该 API 上定义了 on、emit、removeListener 方法，它以 process.EventEmitter 形式暴露才出来
 
 ```javascript
 var EventEmitter = require('events').EventEmitter
@@ -189,7 +189,7 @@ MyClass = function () {
 
 MyClass.prototype.__proto__ = EventEmitter.prototype
 
-// 所有 MyClass 的实例都具备了事件功能
+// 所有 MyClass 的实例都具备了事件功能
 
 var mine = new MyClass
 
