@@ -10,12 +10,15 @@
       - [能力越大责任越大](./Day1/README.md/#能力越大责任越大)
       - [阻塞与非阻塞IO](./Day1/README.md/#阻塞与非阻塞io)
       - [模块和包](./Day1/README.md/#模块和包)
-    - [Day2](#./Day2/README.md)
+    - [Day2](./Day2/README.md)
       - [全局对象与全局变量](./Day2/README.md/#全局对象与全局变量)
       - [process](./Day2/README.md/#process)
       - [console](./Day2/README.md/#console)
       - [buffer](./Day2/README.md/#buffer)
       - [事件驱动](./Day2/README.md/#事件驱动)
+    - [Day3](./Day3/README.md)
+      - [文件系统](./Day3/README.md/#文件系统)
+      - [发送一个简单的 HTTP 请求](./Day3/README.md/#发送一个简单的HTTP请求)
 - [相关链接](#相关链接)
 
 # Node入坑记录
@@ -91,6 +94,10 @@ Node.js 使用的是`单线程模型`，对于所有 I/O 都采用<strong>异步
 - [console](./Day2/README.md/#console)
 - [buffer](./Day2/README.md/#buffer)
 - [事件驱动](./Day2/README.md/#事件驱动)
+
+### Day-3
+- [文件系统](./Day3/README.md/#文件系统)
+- [发送一个简单的 HTTP 请求](./Day3/README.md/#发送一个简单的HTTP请求)
 
 # 相关链接
 
