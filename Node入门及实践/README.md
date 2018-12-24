@@ -10,12 +10,12 @@
       - [能力越大责任越大](./Day1/README.md/#能力越大责任越大)
       - [阻塞与非阻塞IO](./Day1/README.md/#阻塞与非阻塞io)
       - [模块和包](./Day1/README.md/#模块和包)
-    - [Day2](#Day2)
+    - [Day2](#./Day2/README.md)
       - [全局对象与全局变量](#全局对象与全局变量)
-      - [process](#process)
-      - [console](#console)
-      - [buffer](#buffer)
-      - [事件驱动](#事件驱动)
+      - [process](./Day2/README.md/#process)
+      - [console](./Day2/README.md/#console)
+      - [buffer](./Day2/README.md/#buffer)
+      - [事件驱动](./Day2/README.md/#事件驱动)
 - [相关链接](#相关链接)
 
 # Node入坑记录
