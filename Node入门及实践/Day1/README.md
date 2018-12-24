@@ -166,8 +166,8 @@ http
 node index.js
 ```
 
-<div align='center'>
-  <!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/Node入门及/http-7.png'> -->
+<div>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/node-image/node-1.png' width=800 />
 </div>
 因为错误未被捕获，如果访问3000端口，进程就会奔溃。Node之这么处理就是因为，在发生未被捕获的错误时，进程的状态就不确定了。之后就可能无法正常工作了，并且错误始终不处理的话，就会一致抛出意料之外的错误
 
@@ -201,8 +201,8 @@ function taskThree() {
 taskOne()
 ```
 
-<div align='center'>
-  <!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/Node入门及/http-7.png'> -->
+<div>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/node-image/node-2.png' width=800 />
 </div>
 
 在上图中，我们能看到导致错误发生的函数调用路径。
@@ -225,8 +225,8 @@ function taskThree() {
 taskOne()
 ```
 
-<div align='center'>
-  <!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/Node入门及/http-7.png'> -->
+<div>
+  <img src='https://github.com/PDKSophia/read-booklist/raw/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/node-image/node-3.png' width=800 />
 </div>
 
 我们要捕获一个未来才会执行到的函数所抛出的错误是不可能的。这就是为什么 Node 中，每步都要正确进行错误处理的原因
