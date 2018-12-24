@@ -3,6 +3,8 @@
   - [阻塞与非阻塞 IO](#阻塞与非阻塞io)
     - [什么是阻塞](#什么是阻塞)
     - [事件轮训](#事件轮训)
+    - [错误处理](#错误处理)
+    - [堆栈追踪](#堆栈追踪)
 - [相关链接](#相关链接)
 
 # Day1
@@ -142,3 +144,89 @@ setTimeout(() => {
 由于 Node 是运行在单线程环境中，所以，当调用堆栈展开时，Node 就无法处理客户端或者 http 请求了。你可能会想，那这样子看来，Node 的最大并发量不就是 1 了？ 没错！Node 并不提供真正的并行操作。因为那样需要引入更多的并行执行线程
 
 <strong>关键在于，在调用堆栈执行非常快的情况下，同一时刻，你无需处理多个请求。这也就是为什么 V8 搭配非阻塞 IO 是最佳组合。v8 执行 JS 速度非常快，非阻塞 IO 确保了单线程执行时，不会因为有数据库访问或者硬盘访问等操作而导致被挂起</strong>
+
+### 错误处理
+
+在上边的图中，我们可以看到，Node 应用依托于一个拥有大量共享状态的大进程中。举个例子，如果在一个 HTTP 请求中，如果某个回调函数发生了错误，整个进程都会遭殃 :
+
+```javascript
+// index.js
+var http = require('http')
+
+http
+  .createServer(function() {
+    throw new Error('错误不会被捕获')
+  })
+  .listen(3000)
+```
+
+我们来执行一下这个 index.js 文件
+
+```javascript
+node index.js
+```
+
+<div align='center'>
+  <!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/Node入门及/http-7.png'> -->
+</div>
+因为错误未被捕获，如果访问3000端口，进程就会奔溃。Node之这么处理就是因为，在发生未被捕获的错误时，进程的状态就不确定了。之后就可能无法正常工作了，并且错误始终不处理的话，就会一致抛出意料之外的错误
+
+Node 中，许多像 http、net 这样的原生模块都会分发 error 事件。如果该事件未处理，就会抛出未捕获的异常。**大部分情况下，Node 异步 API 除了 `uncaughtException` 和 `error` 事件外接收到的回调函数，第一个参数都是错误对象或者 null**
+
+```javascript
+var fs = require('fs')
+fs.readFile('/pdk/readme', function(err, data) {
+  if (err) {
+    return console.error(err)
+  }
+  console.log(data)
+})
+```
+
+### 堆栈追踪
+
+在 JavaScript 中，当错误发生时，在错误信息中可以看到一系列的函数调用，这称为堆栈追踪
+
+```javascript
+function taskOne() {
+  taskTwo()
+}
+function taskTwo() {
+  taskThree()
+}
+function taskThree() {
+  throw new Error('I am an error')
+}
+
+taskOne()
+```
+
+<div align='center'>
+  <!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/Node入门及/http-7.png'> -->
+</div>
+
+在上图中，我们能看到导致错误发生的函数调用路径。
+
+如果我们在里边加入轮训，比如 `setTimeout()` ，那么又会有何不同？
+
+```javascript
+function taskOne() {
+  taskTwo()
+}
+function taskTwo() {
+  taskThree()
+}
+function taskThree() {
+  setTimeout(function() {
+    throw new Error('I am an error')
+  }, 10)
+}
+
+taskOne()
+```
+
+<div align='center'>
+  <!-- <img src='https://github.com/PDKSophia/read-booklist/raw/master/Node入门及/http-7.png'> -->
+</div>
+
+我们要捕获一个未来才会执行到的函数所抛出的错误是不可能的。这就是为什么 Node 中，每步都要正确进行错误处理的原因

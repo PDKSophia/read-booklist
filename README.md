@@ -117,6 +117,10 @@
 
 - 12.21，《深入浅出 React》阅读之 : [《Redux 应用架构》 - Redux 的内幕（一）](https://github.com/PDKSophia/read-booklist/blob/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact/Redux%E7%9A%84%E5%86%85%E5%B9%95%EF%BC%88%E4%B8%80%EF%BC%89.md#%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88)
 
+---
+
+12.22，《了不起的NodeJS》搭配《Node.js开发指南》，Node.js 的了解打卡[第一天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1)，你可能想知道 : [能力越大责任越大？](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1#%E8%83%BD%E5%8A%9B%E8%B6%8A%E5%A4%A7%E8%B4%A3%E4%BB%BB%E8%B6%8A%E5%A4%A7)、[阻塞与非阻塞](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1#%E9%98%BB%E5%A1%9E%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9Eio)
+
 ### 给个支持？
 
 客官，如果你觉得我写的还阔以，打个赏？
