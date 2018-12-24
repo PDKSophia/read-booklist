@@ -123,7 +123,7 @@
 
 - 12.22，《了不起的NodeJS》搭配《Node.js开发指南》，Node.js 的了解打卡[第一天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1)，你可能想知道 : [能力越大责任越大？](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1#%E8%83%BD%E5%8A%9B%E8%B6%8A%E5%A4%A7%E8%B4%A3%E4%BB%BB%E8%B6%8A%E5%A4%A7)、[阻塞与非阻塞](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1#%E9%98%BB%E5%A1%9E%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9Eio)
 
-- 12.23，《了不起的NodeJS》搭配《Node.js开发指南》，Node.js 的了解打卡[第二天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2)，你可能想知道 : 
+- 12.23，《了不起的NodeJS》搭配《Node.js开发指南》，Node.js 的了解打卡[第二天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2)，你可能想知道 : [process](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2/README.md/#process)、[console](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2/README.md/#console)、[事件驱动](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2/README.md/#%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8)
 
 ### 给个支持？
 
