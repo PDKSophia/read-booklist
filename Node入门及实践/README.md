@@ -11,7 +11,7 @@
       - [阻塞与非阻塞IO](./Day1/README.md/#阻塞与非阻塞io)
       - [模块和包](./Day1/README.md/#模块和包)
     - [Day2](#./Day2/README.md)
-      - [全局对象与全局变量](#全局对象与全局变量)
+      - [全局对象与全局变量](./Day2/README.md/#全局对象与全局变量)
       - [process](./Day2/README.md/#process)
       - [console](./Day2/README.md/#console)
       - [buffer](./Day2/README.md/#buffer)
