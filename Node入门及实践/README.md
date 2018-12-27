@@ -20,7 +20,7 @@
       - [文件系统](./Day3/README.md/#文件系统)
       - [发送一个简单的 HTTP 请求](./Day3/README.md/#发送一个简单的HTTP请求)
     - [Day4](./Day4/README.md)
-      - [Node+Express+Mysql](./Day4/README.md/)
+      - [Node+Express+Mysql](./Day4/README.md#%E5%BC%80%E5%A7%8B%E6%89%8B%E6%8A%8A%E6%89%8B%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-node--express--mysql)
 - [相关链接](#相关链接)
 
 # Node入坑记录
@@ -102,7 +102,8 @@ Node.js 使用的是`单线程模型`，对于所有 I/O 都采用<strong>异步
 - [发送一个简单的 HTTP 请求](./Day3/README.md/#发送一个简单的HTTP请求)
 
 ### Day-4
-- [Node+Express+Mysql]
+- [Node+Express+Mysql](./Day4/README.md#%E5%BC%80%E5%A7%8B%E6%89%8B%E6%8A%8A%E6%89%8B%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-node--express--mysql)
+
 
 # 相关链接
 
