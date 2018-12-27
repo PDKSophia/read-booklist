@@ -10,46 +10,13 @@
 
 ```
 ·
+├── package-lock.json
+|
 ├── package.json
 │ 
-├── public                          打包的数据
-│   │
-│   ├── config
-│   │    ├─app.js                   应用的一些配置
-│   │    ├─shopMenu.js              商城的Menu配置
-│   │    └─ ...
-│   │
-│   ├── mock                        mock模拟请求
-│   │    ├─commodity.js
-│   │    ├─index.js
-│   │    ├─message.js
-│   │    ├─user.js
-│   │    └─ ...
-│   │
-│   ├── router                      路由
-│   │
-│   ├── service                     与服务器相关文件
-│   │    ├─api-commodity.js
-│   │    ├─api-user.js
-│   │    ├─index.js
-│   │    ├─request.js
-│   │    └─ ...
-│   │
-│   ├── store                       vuex模块化
-│   │    ├─modules
-│   │    │    ├─app.js
-│   │    │    ├─connect.js
-│   │    │    ├─message.js
-│   │    │    ├─shop.js
-│   │    │    ├─user.js
-│   │    │    └─ ...
-│   │    ├─index.js
-│   │    ├─types.js
-│   │    └─ ...
+├── node_modules
 │ 
-├── main.js
-│ 
-├── App.vue
+├── app.js
 │ 
 └─
 ```
@@ -191,11 +158,11 @@ app.listen(app.get('port'), function() {
 
 - 问题 2 : [Error: connect ECONNREFUSED](https://stackoverflow.com/questions/30266221/node-js-mysql-error-connect-econnrefused) 、[connect ECONNREFUSED 127.0.0.1:3306](https://github.com/mysqljs/mysql/issues/1675)
 
-- 问题 3 : [Host 'xxx.xxx.xxx..xx' is not allowed to connect to this MySQL server](https://blog.csdn.net/EI__Nino/article/details/25069391)、[或者查看  这个](https://blog.csdn.net/symoriaty/article/details/78425920)
+- 问题 3 : [Host 'xxx.xxx.xxx..xx' is not allowed to connect to this MySQL server](https://blog.csdn.net/EI__Nino/article/details/25069391)、[或者查看这个](https://blog.csdn.net/symoriaty/article/details/78425920)
 
-关于上边的三个问题，我先安装本地 mysql，然后出现第一个问题的时候， 好像是套接字啥的问题，我就卸载了，直接连接远程 mysql，如果你有第一个问题，google、百度一下，很多教程。自己解决一下哈
+关于上边的三个问题，我先安装本地 mysql，然后出现第一个问题的时候，好像是套接字啥的问题，我就卸载了，直接连接远程 mysql，如果你有第一个问题，google、百度一下，很多教程。自己解决一下哈
 
-然后我接着遇到了第二个问题， 第二个问题我一开始也不知道为什么。然后我就先去看了下 mysql。我远程登陆之后，远程进入 mysql 是 ok 的。然后想起来好像是 “安全组” 没配，于是去配了一下安全组。开放了 3306 端口，这时候我再去 `telnet xxx.xxx.xxx.xxx 3306` 是 ok 的了
+然后我接着遇到了第二个问题，第二个问题我一开始也不知道为什么。然后我就先去看了下 mysql。我远程登陆之后，远程进入 mysql 是 ok 的。然后想起来好像是 “安全组” 没配，于是去配了一下安全组。开放了 3306 端口，这时候我再去 `telnet xxx.xxx.xxx.xxx 3306` 是 ok 的了
 
 接着遇到第三个问题。说我这个 ip 不被允许连接到 mysql，由于我装了 phpmyadmin，所以我直接把用户表的 `Host` 字段改成了 `%` ，因为数据库只允许 `localhost` 的连接。解决方法我上边也给连接了
 
