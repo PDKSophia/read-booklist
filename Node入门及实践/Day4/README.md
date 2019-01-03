@@ -4,8 +4,6 @@
 
 《了不起的 Node.js》在第 6 章之后就开始边上手例子边学习了，《Node.js 开发指南》也是在第五章开始做一个 Web 应用，所以我跟着做了一遍，这边就不贴出来了，直接跳过所以书籍中的教程小例子，开始做一个项目吧。这个是我 node 写“校内共享平台”的真实后端代码。很 low，先凑合吧
 
-- [Origin http://localhost:3000 is not allowed by Access-Control-Allow-Origin](https://stackoverflow.com/questions/18642828/origin-http-localhost3000-is-not-allowed-by-access-control-allow-origin)
-
 这次自己捣鼓的项目是一个校内共享平台所延伸出来的一个商品平台，采用 Vue + Node Express + Mysql 实现的。可能 Node 这边代码写的会比较 low，理解理解哈，毕竟刚学 Node，后面再慢慢进步哈～
 
 ## 后端代码文件架构布局
