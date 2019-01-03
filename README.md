@@ -8,15 +8,15 @@
 
 这里是记录我看过的书和给自己的一个`书单计划表`，虽然没这个必要，但是觉得有个计划，总比每天都佛性打卡好的多，人都是有惰性都，只有坚持下来，中途有一天不打卡，就会想着放弃，所以这算是变相督促自己吧，所有都知识，我会省略，把我认为`重要`的知识点记下来，有时候你会发现，跟书本都一模一样，没错，我是大自然都搬运工～
 
-### 十一月书单 ～ 十二月书单
+### 书单
 
 | 序号 |                    数名                     |  开始时间  |  结束时间  | 进度 |                                                              状态                                                               |
 | :--: | :-----------------------------------------: | :--------: | :--------: | :--: | :-----------------------------------------------------------------------------------------------------------------------------: |
 |  1   |     `《JavaScript高级程序设计 第3版》`      | 2018.11.05 | 2018.11.26 | 91%  | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
 |  2   |               `《图解HTTP》`                | 2018.11.12 | 2018.11.24 | 100% |                             [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP)                             |
 |  3   |           `《计算机网络 第七版》`           | 2018.12.02 | 2018.12.20 | 24%  |          [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C)           |
-|  4   | `《了不起的NodeJS》搭配《Node.js开发指南》` | 2018.12.21 | 2018.12.30 | 68%  |          [跟读](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5)           |
-|  5   |             `《深入浅出React》`             | 2018.12.20 | 2018.12.30 | 10%  |            [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact)             |
+|  4   | `《了不起的NodeJS》搭配《Node.js开发指南》` | 2018.12.21 | 2018.12.30 | 72%  |        [跟读](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5)         |
+|  5   |             `《深入浅出React》`             | 2018.12.20 | 2019.1.30  | 10%  |            [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact)             |
 |  6   |           `《ECMAScript 6 入门》`           |    暂定    |    暂定    |  0%  |                                                              未读                                                               |
 |  7   |         `《JavaScript正则表达式》`          |    暂定    |    暂定    |  0%  |                                                              未读                                                               |
 |  8   |              `《剑指 offer》`               |    暂定    |    暂定    |  0%  |                                                              未读                                                               |
@@ -109,6 +109,8 @@
 
 - 12.05, 《计算机网络》打卡[第四天](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%B8%89%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82)， 知识点: [适配器](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E9%80%82%E9%85%8D%E5%99%A8)、[以太网的 MAC 层](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E4%BB%A5%E5%A4%AA%E7%BD%91%E7%9A%84MAC%E5%B1%82)、[CSMA/CD 协议](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#csmacd%E5%8D%8F%E8%AE%AE)
 
+- 2019.01.03, 《计算机网络》打卡[第五天](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E5%9B%9B%E7%BD%91%E7%BB%9C%E5%B1%82), 知识点: [网际协议IP](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E7%BD%91%E9%99%85%E5%8D%8F%E8%AE%AEip)、[分类的IP地址](https://github.com/PDKSophia/read-booklist/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/NetWork.md#%E5%88%86%E7%B1%BB%E7%9A%84ip%E5%9C%B0%E5%9D%80)
+
 ---
 
 《深入浅出 React》打卡清单
@@ -117,18 +119,19 @@
 
 - 12.21，《深入浅出 React》阅读之 : [《Redux 应用架构》 - Redux 的内幕（一）](https://github.com/PDKSophia/read-booklist/blob/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact/Redux%E7%9A%84%E5%86%85%E5%B9%95%EF%BC%88%E4%B8%80%EF%BC%89.md#%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88)
 
+- 2019.01.03，《深入浅出 React》阅读之 : [《Redux 应用架构》 - Redux 的内幕（二）](https://github.com/PDKSophia/read-booklist/blob/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact/Redux%E7%9A%84%E5%86%85%E5%B9%95%EF%BC%88%E4%BA%8C%EF%BC%89.md)
+
 ---
 
-《了不起的NodeJS》搭配《Node.js开发指南》打卡清单
+《了不起的 NodeJS》搭配《Node.js 开发指南》打卡清单
 
-- 12.22，《了不起的NodeJS》搭配《Node.js开发指南》，Node.js 的了解打卡[第一天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1)，你可能想知道 : [能力越大责任越大？](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1#%E8%83%BD%E5%8A%9B%E8%B6%8A%E5%A4%A7%E8%B4%A3%E4%BB%BB%E8%B6%8A%E5%A4%A7)、[阻塞与非阻塞](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1#%E9%98%BB%E5%A1%9E%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9Eio)
+- 12.22，《了不起的 NodeJS》搭配《Node.js 开发指南》，Node.js 的了解打卡[第一天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1)，你可能想知道 : [能力越大责任越大？](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1#%E8%83%BD%E5%8A%9B%E8%B6%8A%E5%A4%A7%E8%B4%A3%E4%BB%BB%E8%B6%8A%E5%A4%A7)、[阻塞与非阻塞](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day1#%E9%98%BB%E5%A1%9E%E4%B8%8E%E9%9D%9E%E9%98%BB%E5%A1%9Eio)
 
-- 12.23，《了不起的NodeJS》搭配《Node.js开发指南》，Node.js 的了解打卡[第二天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2)，你可能想知道 : [process](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2/README.md/#process)、[console](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2/README.md/#console)、[事件驱动](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2/README.md/#%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8)
+- 12.23，《了不起的 NodeJS》搭配《Node.js 开发指南》，Node.js 的了解打卡[第二天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2)，你可能想知道 : [process](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2/README.md/#process)、[console](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2/README.md/#console)、[事件驱动](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day2/README.md/#%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8)
 
-- 12.24，《了不起的NodeJS》搭配《Node.js开发指南》，Node.js 的了解打卡[第三天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day3)，你可能想知道 : [文件系统 fs](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day3/README.md#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F)、[发送一个简单的HTTP请求](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day3/README.md#%E5%8F%91%E9%80%81%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E8%AF%B7%E6%B1%82)
+- 12.24，《了不起的 NodeJS》搭配《Node.js 开发指南》，Node.js 的了解打卡[第三天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day3)，你可能想知道 : [文件系统 fs](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day3/README.md#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F)、[发送一个简单的 HTTP 请求](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day3/README.md#%E5%8F%91%E9%80%81%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84http%E8%AF%B7%E6%B1%82)
 
-- 12.25，《了不起的NodeJS》搭配《Node.js开发指南》，Node.js 的了解打卡[第四天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day3)，你可能想知道 : [Node+Express+Mysql](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day4/README.md#%E5%BC%80%E5%A7%8B%E6%89%8B%E6%8A%8A%E6%89%8B%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-node--express--mysql)
-
+- 12.25，《了不起的 NodeJS》搭配《Node.js 开发指南》，Node.js 的了解打卡[第四天](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day3)，你可能想知道 : [Node+Express+Mysql](https://github.com/PDKSophia/read-booklist/blob/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/Day4/README.md#%E5%BC%80%E5%A7%8B%E6%89%8B%E6%8A%8A%E6%89%8B%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA-node--express--mysql)
 
 ### 给个支持？
 

@@ -1,7 +1,7 @@
 - [Redux 的内幕（二）](#Redux的内幕（二）)
   - [一堆废话](#一堆废话)
-  - [index.js](#index.js)
-  - [createStore.js](#createStore.js)
+  - [index.js](#indexjs)
+  - [createStore.js](#createStorejs)
   - [来个小彩蛋](#来个小彩蛋)
   - [未待完续](#未待完续)
 - [相关链接](#相关链接)
@@ -174,10 +174,10 @@ export default function createStore(reducer, preloadedState, enhancer) {
     }
 
     if (isDispatching) {
-      throw new Error('
-        在reducer执行时，您可能无法调用store.subscribe()，如果你希望在更新store后收到通知,
-        请从组件订阅并在回调中调用 store.getState() 以访问最新状态
-      ')
+      throw new Error(
+        '在reducer执行时，您可能无法调用store.subscribe()，如果你希望在更新store后收到通知,
+        请从组件订阅并在回调中调用 store.getState() 以访问最新状态'
+      )
     }
 
     let isSubscribed = true
