@@ -8,10 +8,15 @@ var app = express();
 var routes = require('./routes');
 
 var whitelist = [
-  'http://localhost:6969', // 白名单
+  'http://localhost:6969',
+  'http://www.pengdaokuan.cn/erek-market',
+  'http://www.pengdaokuan.cn',
+  'https://www.pengdaokuan.cn',
+  'http://www.pengdaokuan.cn/erek-market/#/'
 ];
 var corsOptions = {
   origin: function(origin, callback) {
+    console.log('@@@@@@@', origin);
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
