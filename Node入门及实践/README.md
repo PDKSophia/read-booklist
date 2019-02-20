@@ -32,6 +32,21 @@
 ## 插播一条广告
 跟我一样是Node小白菜鸡的，先去看看这篇文章 : [Node入门](https://www.nodebeginner.org/index-zh-cn.html)，看完之后，再回来看我这个，同时有兴趣的小伙伴，去google或者百度搜索下《了不起的Node.js》、《Node.js开发指南》，所有的都是我从这两本书，包括一些博客文章，总结的～
 
+## 流程
+1. 看书《了不起的Node.js》、《Node.js开发指南》
+
+2. 结合我的总结 
+
+3. 结合书籍,动手做个 GET/POST 的demo
+
+4. 可以参考我的小demo做个简单的demo 
+
+5. 看Day4中的node-server，是我抽离重构后的一个算完整的demo 
+
+6. 看这篇文章 : [Nodejs：摆脱黑工坊发展出一款基础企业级框架](https://zhuanlan.zhihu.com/p/33143058)，了解一下知道自己代码架构多垃圾
+
+7. 看Day5中再次重构架构后的node-server
+
 ## 了解Node
 
 ### Node简介
@@ -108,6 +123,8 @@ Node.js 使用的是`单线程模型`，对于所有 I/O 都采用<strong>异步
 # 相关链接
 
 搜了很多资料和资源，然后贴出我自认为有用的给你们吧～
+
+- [Nodejs：摆脱黑工坊发展出一款基础企业级框架](https://zhuanlan.zhihu.com/p/33143058)
 
 - [《如何有效地学习 Node.js》](https://www.zhihu.com/question/19793473)
 
