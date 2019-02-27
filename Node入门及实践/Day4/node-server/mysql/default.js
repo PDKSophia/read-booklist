@@ -6,4 +6,4 @@ module.exports = {
     PASSWORD: '你的密码', // 数据库登陆密码
     HOST: 'xxx.xxx.xxx.xxx' // 本地的话就是 127.0.0.1
   }
-};
+}

@@ -5,8 +5,8 @@
     - [buffer](#buffer)
     - [事件驱动](#事件驱动)
       - [事件发射器](#事件发射器)
-      - [error事件](#error事件)
-      - [继承EventEmitter](#继承EventEmitter)
+      - [error 事件](#error事件)
+      - [继承 EventEmitter](#继承EventEmitter)
 
 # Day2
 
@@ -57,23 +57,27 @@ console.log(2)
 > 可以把它想像成 setTimeout(fn , 0)，但是不要使用 setTimeout(fn,0) 代替 process.nextTick(callback)， 前者比后者效率要低得多。其实 process.nextTick 相当 setImmediate
 
 ### console
+
 console 用于提供控制台标准输出，它是由 Internet Explorer 的 JScript 引擎提供的调试 工具，后来逐渐成为浏览器的事实标准
 
 - console.log() : 向标准输出流打印字符并以换行符结束。console.log 接受若干 个参数，如果只有一个参数，则输出这个参数的字符串形式。
 
-- console.error() : 与 console.log()用法相同，只是向标准错误流输出。 
+- console.error() : 与 console.log()用法相同，只是向标准错误流输出。
 
 - console.trace() : 向标准错误流输出当前的调用栈。
- 
+
 ### buffer
-buffer 是一个表示固定内存分配的全局对象(缓冲区中的字节数需要提前定下)，它就好比是一个由八位字节元素组成的数组，可以有效地在JavaScript中表示二进制数据。该功能一部分作用是可以对数据进行编码转换。
+
+buffer 是一个表示固定内存分配的全局对象(缓冲区中的字节数需要提前定下)，它就好比是一个由八位字节元素组成的数组，可以有效地在 JavaScript 中表示二进制数据。该功能一部分作用是可以对数据进行编码转换。
+
 ```javascript
 var myBuffer = new Buffer('PDK_IMAGE', 'base64')
 
 console.log(myBuffer)
 require('fs').writeFile('logo.png', myBuffer)
 ```
-在Node中，绝大部分进行数据IO操作的API都用buffer来接收和返回数据。
+
+在 Node 中，绝大部分进行数据 IO 操作的 API 都用 buffer 来接收和返回数据。
 
 ### 事件驱动
 
@@ -99,47 +103,52 @@ event.on('event', function() {
 
 event.emit('event')
 ```
-__事件是Node非阻塞设计的重要体现__。Node通常不会直接返回数据(因为这样可能会在等待某个资源的时候发生线程阻塞)，而是采用分发事件来传递数据的方式
 
-例如这个例子，我们要通过POST请求提交一个表单
+**事件是 Node 非阻塞设计的重要体现**。Node 通常不会直接返回数据(因为这样可能会在等待某个资源的时候发生线程阻塞)，而是采用分发事件来传递数据的方式
+
+例如这个例子，我们要通过 POST 请求提交一个表单
+
 ```javascript
 var http = require('http')
 
-http.Server(function (req, res) {
+http.Server(function(req, res) {
   var buffer = ''
 
-  req.on('data', function (data) {
+  req.on('data', function(data) {
     buffer += data
   })
 
-  req.on('end', function () {
+  req.on('end', function() {
     console.log('数据接收完毕')
   })
 })
 
 // 将请求数据内容进行缓存(data事件)，等到所有数据都接收完毕之后(end事件)再对数据进行处理
 ```
+
 #### 事件发射器
-再回到 events 模块上，events 模块只提供了一个对象: `events.EventEmitter`。EventEmitter 的核心就是 *事件发射与事件监听器功能的封装* 。EventEmitter 的每个事件由一个事件名和若干个参 数组成，事件名是一个字符串，通常表达一定的语义。对于每个事件，EventEmitter 支持若干个事件监听器。当事件发射时，注册到这个事件的事件监听器被依次调用，事件参数作为回调函数参数传递。
+
+再回到 events 模块上，events 模块只提供了一个对象: `events.EventEmitter`。EventEmitter 的核心就是 _事件发射与事件监听器功能的封装_ 。EventEmitter 的每个事件由一个事件名和若干个参 数组成，事件名是一个字符串，通常表达一定的语义。对于每个事件，EventEmitter 支持若干个事件监听器。当事件发射时，注册到这个事件的事件监听器被依次调用，事件参数作为回调函数参数传递。
 
 ```javascript
 var events = require('events')
 
 var emitter = new events.EventEmitter()
 
-emitter.on('someEvent', function(arg1, arg2) { 
-  console.log('listener1', arg1, arg2);
+emitter.on('someEvent', function(arg1, arg2) {
+  console.log('listener1', arg1, arg2)
 })
 
-emitter.on('someEvent', function(arg1, arg2) { 
-  console.log('listener2', arg1, arg2);
-});
+emitter.on('someEvent', function(arg1, arg2) {
+  console.log('listener2', arg1, arg2)
+})
 
-emitter.emit('someEvent', 'pdk', 1991);
+emitter.emit('someEvent', 'pdk', 1991)
 ```
+
 以上例子中，emitter 为事件 someEvent 注册了两个事件监听器，然后发射了 someEvent 事件。运行结果中可以看到两个事件监听器回调函数被先后调用。
 
-- EventEmitter.on(event, listener) 为指定事件注册一个监听器，接受一个字符串event 和一个回调函数listener。
+- EventEmitter.on(event, listener) 为指定事件注册一个监听器，接受一个字符串 event 和一个回调函数 listener。
 
 - EventEmitter.emit(event, [arg1], [arg2], [...]) 发射 event 事件，传递若干可选参数到事件监听器的参数表。
 
@@ -149,15 +158,19 @@ emitter.emit('someEvent', 'pdk', 1991);
 
 - EventEmitter.removeAllListeners([event]) 移除所有事件的所有监听器， 如果指定 event，则移除指定事件的所有监听器。
 
-#### error事件
+#### error 事件
+
 EventEmitter 定义了一个特殊的事件 error，它包含了“错误”的语义，我们在遇到异常的时候通常会发射 error 事件。当 error 被发射时，EventEmitter 规定`如果没有响应的监听器，Node.js 会把它当作异常，退出程序并打印调用栈`。我们一般要为会发射 error 事件的对象设置监听器，避免遇到错误后整个程序崩溃。
+
 ```javascript
 var events = require('events')
 var emitter = new events.EventEmitter()
 
 emitter.emit('error')
 ```
+
 运行时，就会报错，可能显示如下错误
+
 ```javascript
 node.js:201
     throw e; // process.nextTick error, or 'error' event on first tick
@@ -172,28 +185,31 @@ node.js:201
         at Array.0 (module.js:479:10)
         at EventEmitter._tickCallback (node.js:192:40)
 ```
-#### 继承EventEmitter
+
+#### 继承 EventEmitter
+
 大多数时候我们不会直接使用 EventEmitter，而是在对象中继承它。包括 fs、net、 http 在内的，只要是支持事件响应的核心模块都是 EventEmitter 的子类。
 
 为什么要这样做呢?原因有两点。首先，具有某个实体功能的对象实现事件符合语义， 事件的监听和发射应该是一个对象的方法。其次 JavaScript 的对象机制是基于原型的，支持部分多重继承，继承 EventEmitter 不会打乱对象原有的继承关系。
 
 比如这样？
+
 ```javascript
 var EventEmitter = process.EventEmitter
 
-MyClass = function () {
-  this.sayHello = function () {
+MyClass = function() {
+  this.sayHello = function() {
     console.log('hello')
-  }  
+  }
 }
 
 MyClass.prototype.__proto__ = EventEmitter.prototype
 
 // 所有 MyClass 的实例都具备了事件功能
 
-var mine = new MyClass
+var mine = new MyClass()
 
-mine.on('eat', function () {
+mine.on('eat', function() {
   console.log('eat')
 })
 ```

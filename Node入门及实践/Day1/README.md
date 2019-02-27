@@ -83,7 +83,7 @@ function serveBooks() {
 
 ```
 
-## 阻塞与非阻塞IO
+## 阻塞与非阻塞 IO
 
 ### 什么是阻塞
 
@@ -322,4 +322,5 @@ module.exports = function (x) {
 
 如果你觉得，exports与module.exports之间的区别很难分清，一个简单的处理方法，就是放弃使用exports，只使用module.exports。
 ```
+
 > 不可以通过对 exports 直接赋值代替对 module.exports 赋值。 exports 实际上只是一个和 module.exports 指向同一个对象的变量， 它本身会在模块执行结束后释放，但 module 不会，因此只能通过指定 module.exports 来改变访问接口。

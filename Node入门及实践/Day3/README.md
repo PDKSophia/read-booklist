@@ -81,7 +81,7 @@ fs.read(fd, buffer, offset, length, position, [callback(err, bytesRead, buffer)]
 
 fs.read 的功能是从指定的文件描述符 fd 中读取数据并写入 buffer 指向的缓冲区对象。offset 是 buffer 的写入偏移量。length 是要从文件中读取的字节数。position 是文件读取的起始 位置，如果 position 的值为 null，则会从当前文件指针的位置读取。回调函数传递 bytesRead 和 buffer，分别表示读取的字节数和缓冲区对象。
 
-## 发送一个简单的HTTP请求
+## 发送一个简单的 HTTP 请求
 
 ## GET 请求
 

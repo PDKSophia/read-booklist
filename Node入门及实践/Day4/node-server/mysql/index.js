@@ -1,8 +1,8 @@
 /**
  * 数据库连接
  */
-var mysql = require('mysql');
-var config = require('./default');
+var mysql = require('mysql')
+var config = require('./default')
 
 var pool = mysql.createPool({
   host: config.database.HOST, // 主机，�本地的话就填127.0.0.1
@@ -11,25 +11,25 @@ var pool = mysql.createPool({
   database: config.database.DATABASE, // 数据库
   port: config.port, // 端口
   debug: true // 是否开启debug
-});
+})
 
 var query = (sql, value) => {
   return new Promise((resolve, reject) => {
     pool.getConnection((err, connection) => {
       if (err) {
-        resolve(err);
+        resolve(err)
       } else {
         connection.query(sql, value, (err, rows) => {
           if (err) {
-            reject(err);
+            reject(err)
           } else {
-            resolve(rows);
+            resolve(rows)
           }
-          connection.release();
-        });
+          connection.release()
+        })
       }
-    });
-  });
-};
+    })
+  })
+}
 
-module.exports = { pool, query };
+module.exports = { pool, query }

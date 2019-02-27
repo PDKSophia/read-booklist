@@ -15,6 +15,6 @@ const types = {
   FETCH_COMMODITY_NO_CONTENT: 10006,
   FETCH_FIND_COMMODITY_FAIL: 10007,
   FETCH_FIND_COMMODITY_SUCCESS: 10008
-};
+}
 
-module.exports = types;
+module.exports = types
