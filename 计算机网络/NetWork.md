@@ -14,21 +14,21 @@
 - [三、数据链路层](#三数据链路层)
   - [信道分类](#信道分类)
   - [三个基本问题](#三个基本问题)
-  - [PPP 协议](#ppp协议)
+  - [PPP 协议](#ppp-协议)
   - [局域网](#局域网)
   - [适配器](#适配器)
-  - [CSMA/CD 协议](#csma/cd协议)
+  - [CSMA/CD 协议](#csma/cd-协议)
   - [以太网的 MAC 层](#以太网的mac层)
   - [扩展的以太网](#扩展的以太网)
   - [虚拟局域网](#虚拟局域网)
 - [四、网络层](#四网络层)
   - [概述](#概述)
-  - [网际协议 IP](#网际协议ip)
-  - [分类的 IP 地址](#分类的ip地址)
+  - [网际协议 IP](#网际协议-ip)
+  - [分类的 IP 地址](#分类的-ip-地址)
   - [IP 地址与硬件地址](#IP地址与硬件地址)
-  - [地址解析协议 ARP](#地址解析协议arp)
+  - [地址解析协议 ARP](#地址解析协议-arp)
   - [IP 数据报的格式](#IP数据报的格式)
-  - [网际控制报文协议 ICMP](#网际控制报文协议icmp)
+  - [网际控制报文协议 ICMP](#网际控制报文协议-icmp)
   - [路由选择协议](#路由选择协议)
   - [路由器的构成](#路由器的构成)
   - [IPv6](#ipv6)
@@ -646,21 +646,21 @@ IP 地址的编地方式经历了三个历史阶段：
 
 IP 地址 ::= {< 网络号 >, < 主机号 >}
 
- <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-35.png' width=700 />
+ <img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-35.png' width=500 />
 
 采用 `点分十进制记法` 提高可读性
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-36.png' width=700 />
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-36.png' width=500 />
 
 ## IP 地址与硬件地址
 
 > 物理地址(也叫做 MAC 地址)是数据链路层和物理层使用的地址，IP 地址是网络层和以上各层使用的地址，是一种逻辑地址
 
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-37.png' width=700 />
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-37.png' width=500 />
 
 也就是说，在发送数据时，数据从高层下到低层，然后才到通信链路上传输。使用 IP 地址的 IP 数据报一旦交付给了数据链路层，就被封装成了 MAC 帧。MAC 帧在传送时，使用的源地址和目的地址都是硬件地址，这两个硬件地址就被写在了 MAC 帧的首部中
 
-连接在通信链路上的设备（主机或者路由器）在收到 MAC 帧时，根据 MAC 帧中的硬件地址决定是手下或者丢弃。只有在剥去 MAC 帧的首部和尾部后把 MAC 层的数据上交给网络层后，网络层才能在 IP 数据报的首部找到源 IP 地址和目的 IP 地址
+连接在通信链路上的设备（主机或者路由器）在收到 MAC 帧时，根据 MAC 帧中的硬件地址决定是手下或者丢弃。只有在剥去 MAC 帧的首部和尾部后把 MAC 层的数据上交给网络层后，网络层才能在 IP 数据报的首部找到源 IP 地址和目的 IP 地址
 
 总之！！！IP 地址放在 IP 数据报的首部，而硬件地址则放在 MAC 帧的首部。在网络层和网络层以上使用的是 IP 地址，而数据链路层下使用的是硬件地址。在 IP 数据报放在数据链路层的 MAC 帧做中以后，整个的 IP 数据报就成为了 MAC 帧的数据。因而在数据链路层看不见数据报的 IP 地址
 
@@ -683,19 +683,19 @@ ARP 就是解决这种问题，**ARP 的用途就是: 为了从网络层使用�
 如果主机 A 知道主机 B 的 IP 地址，但是 ARP 高速缓存中没有该 IP 地址到 MAC 地址的映射，此时主机 A 通过广播的方式发送 ARP 请求分组，主机 B 收到该请求后会发送 ARP 响应分组给主机 A 告知其 MAC 地址，随后主机 A 向其高速缓存中写入主机 B 的 IP 地址到 MAC 地址的映射。
 
 <div align='center'>
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-38.png' width=700 />
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-38.png' width=500 />
 </div>
 
 > 如果不使用 ARP 高速缓存，那么任何一台主机在进行通信，都必须在网络上使用广播方式发送 ARP 请求分组，这会使得网络上的通信量大大增加。
 
-ARP 对保存在高速缓存中的每一个映射地址项目都设置生存时间(例如: 10 分钟 ～ 20 分钟)，凡是超过生存时间的项目就从高速缓存中删除掉。这个设置生存时间是很有用的，比如有一种情况，A 和 B 通信，A 的 ARP 高速缓存中保存有 B 的硬件地址，但是某一天，B 的网络适配器坏了，B 换了一批，因此 B 的硬件地址改变了；这时候 A 还想和 B 通信，但是 A 中保存者旧的 B 硬件地址，A 无法找到 B。但是过了一段不长的生存时间，A 的 ARP 高速缓存中删除掉了 B，重新广播得到了 B 的硬件地址，又找到了 B
+ARP 对保存在高速缓存中的每一个映射地址项目都设置生存时间(例如: 10 分钟 ～ 20 分钟)，凡是超过生存时间的项目就从高速缓存中删除掉。这个设置生存时间是很有用的，比如有一种情况，A 和 B 通信，A 的 ARP 高速缓存中保存有 B 的硬件地址，但是某一天，B 的网络适配器坏了，B 换了一批，因此 B 的硬件地址改变了；这时候 A 还想和 B 通信，但是 A 中保存者旧的 B 硬件地址，A 无法找到 B。但是过了一段不长的生存时间，A 的 ARP 高速缓存中删除掉了 B，重新广播得到了 B 的硬件地址，又找到了B
 
 > ⚠️ ARP 是解决了在同一个局域网上的主机或路由器 IP 地址和硬件地址之间的映射问题，如果不在一个局域网上，就无法解析出另一个局域网上另一主机的硬件地址
 
 ## IP 数据报的格式
 
 <div align='center'>
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-39.png' width=700 />
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-39.png' width=500 />
 </div>
 
 - 版本 : 有 4（IPv4）和 6（IPv6）两个值；
@@ -704,7 +704,7 @@ ARP 就是解决这种问题，**ARP 的用途就是: 为了从网络层使用�
 
 - 区分服务 : 用来获得更好的服务，一般情况下不使用。
 
-- 总长度 : 指首部和数据之和的长度，单位为字节。总长度字段为 16 位，因此数据报的最大长度为 2^16 -1 = 65535 字节
+- 总长度 : 指首部和数据之和的长度，单位为字节。总长度字段为 16 位，因此数据报的最大长度为 2^16 -1 = 65535 字节
 
 - 生存时间 ：TTL，它的存在是为了防止无法交付的数据报在互联网中不断兜圈子，因而白白消耗网络资源。以路由器跳数为单位，当 TTL 为 0 时就丢弃数据报。
 
@@ -717,7 +717,7 @@ ARP 就是解决这种问题，**ARP 的用途就是: 为了从网络层使用�
 - 标志
 
   - 标志字段中的最低位记为 **MF**。MF = 1，表示后面 “还有分片”的数据报，MF = 0 表示这已经是最后一个数据片
-  - 标志字段中间的一位记为 **DF**，意思是“不能分片”， 只有当 DF = 0 时才允许分片
+  - 标志字段中间的一位记为 **DF**，意思是“不能分片”，只有当 DF = 0 时才允许分片
 
 - 片偏移 : 和标识符一起，用于发生分片的情况。片偏移的单位为 8 字节。也就是说，每个分片的长度一定是 8 字节(64 位)的整数倍
 
@@ -737,7 +737,7 @@ ARP 就是解决这种问题，**ARP 的用途就是: 为了从网络层使用�
 
 **那么问题来了，待转发的数据报怎么找到下一跳路由器呢？**
 
-在路由器收到一个带转发的数据报，在从路由表得出下一跳路由器的 IP 地址后，不是把这个地址填入 IP 数据报，而是送交数据链路层的网络接口软件。网络接口软件负责把下一跳路由器的 IP 地址转成硬件地址（ 必须使用 ARP），并将此硬件地址放在链路层的 MAC 帧首部，然后根据这个硬件地址找到下一跳路由器。
+在路由器收到一个带转发的数据报，在从路由表得出下一跳路由器的 IP 地址后，不是把这个地址填入 IP 数据报，而是送交数据链路层的网络接口软件。网络接口软件负责把下一跳路由器的 IP 地址转成硬件地址（必须使用 ARP），并将此硬件地址放在链路层的 MAC 帧首部，然后根据这个硬件地址找到下一跳路由器。
 
 ## 网际控制报文协议 ICMP
 
@@ -788,7 +788,7 @@ Traceroute 发送的 IP 数据报封装的是无法交付的 UDP 用户数据报
 > 自治系统之间的路由选择也叫做`域间路由选择`，而在自治系统内部的路由选择叫做 `域内路由选择`
 
 <div align='center'>
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-44.png' width=700 />
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-44.png' width=500 />
 </div>
 
 ### 内部网关协议 RIP
@@ -826,7 +826,7 @@ RIP 协议实现简单，开销小。但是 RIP 能使用的最大距离为 15�
 
 OSPF 协议的特点:
 
-- 向本自治系统中所有路由器发送信息。这里使用的方法是`洪泛法`: 路由器通过所有输出端口向所有相邻的路由器发送信息，而每一个相邻路由器又将此信息发往其所有的相邻路由器(但  不再发给刚发来信息的哪个路由器)
+- 向本自治系统中所有路由器发送信息。这里使用的方法是`洪泛法`: 路由器通过所有输出端口向所有相邻的路由器发送信息，而每一个相邻路由器又将此信息发往其所有的相邻路由器(但不再发给刚发来信息的哪个路由器)
 
 - 发送的信息就是与本路由器相邻的所有路由器的链路状态。所谓的“链路状态”说明本路由器和哪些路由器相邻，以及该链路的度量
 
@@ -838,7 +838,7 @@ OSPF 不用 UDP 而是直接用 IP 数据报传送，OSPF 构成的数据报很�
 
 ### 外部网关协议 BGP
 
-我们知道，内部网关协议 RIP 和 OSPF 协议都是为了设法  使数据在一个 AS 自治系统中尽可能有效地从源站传送到目的站。(实际上，所有的在自治系统内部使用的路由选择协议都是要寻找一条最短的路径)
+我们知道，内部网关协议 RIP 和 OSPF 协议都是为了设法使数据在一个 AS 自治系统中尽可能有效地从源站传送到目的站。(实际上，所有的在自治系统内部使用的路由选择协议都是要寻找一条最短的路径)
 
 AS 之间的路由选择很困难，主要是由于：
 
@@ -853,13 +853,13 @@ AS 之间的路由选择很困难，主要是由于：
 **每个 AS 都必须配置 BGP 发言人，通过在两个相邻 BGP 发言人之间建立 TCP(端口号为 179) 连接来交换路由信息。**
 
 <div align='center'>
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-45.png' width=700 />
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-45.png' width=500 />
 </div>
 
 ## 路由器的构成
 
 <div align='center'>
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-46.png' width=700 />
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-46.png' width=500 />
 </div>
 
 路由器是一种具有多个输入端口和多个输出端口的专用计算机，其任务是转发分组。
@@ -870,13 +870,13 @@ AS 之间的路由选择很困难，主要是由于：
 
 分组转发部分由: 交换结构、一组输入端口、一组输出端口组成。交换结构又称为交换组织，作用就是根据转发表对分组进行处理，将某个输入端口进入的分组从一个合适的输出端口转发出去。
 
-> “转发”仅仅涉及到一个路由器，而“路由选择”涉及到多个路由器，路由表是  许多路由器共同协同工作的结果。
+> “转发”仅仅涉及到一个路由器，而“路由选择”涉及到多个路由器，路由表是许多路由器共同协同工作的结果。
 
 ## IPv6
 
 Ipv6 协议数据单元 PDU 称为分组，而 IPv4 的数据单元是数据报
 
- 主要变化是:
+主要变化是:
 
 - 更大的地址空间。IPv6 把地址增大到 128 位
 
@@ -890,16 +890,16 @@ Ipv6 协议数据单元 PDU 称为分组，而 IPv4 的数据单元是数据报
 
 ### IPv4 向 IPv6 过渡
 
-IPv4 向 IPv6 过渡采用 `双协议栈` 和 `隧道技术`
+IPv4 向 IPv6 过渡采用 `双协议栈` 和 `隧道技术`
 
 #### 双协议栈
 
-部分主机装有双协议栈: 一个 IPv4 和一个 IPv6，既能和 IPv4 系统通信也能和 IPv6 系统通信，双协议栈的主机(或路由器)同时具有两个 IP 地址: 一个 IPv4 和一个 IPv6
+部分主机装有双协议栈: 一个 IPv4 和一个 IPv6，既能和 IPv4 系统通信也能和 IPv6 系统通信，双协议栈的主机(或路由器)同时具有两个 IP 地址: 一个 IPv4 和一个 IPv6
 
 那么双协议栈的主机是如何知道使用哪一种地址呢？它是使用域名系统 DNS 来查询的。如果 DNS 返回的是 IPv4 地址，那么双协议栈的源主机就使用 IPv4 地址，如果 DNS 返回的是 IPv6 地址，那么双协议栈的源主机就使用 IPv6 地址
 
 <div align='center'>
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-47.png' width=700 />
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-47.png' width=500 />
 </div>
 
 #### 隧道技术
@@ -907,7 +907,7 @@ IPv4 向 IPv6 过渡采用 `双协议栈` 和 `隧道技术`
 这种方法就是在 IPv6 数据报要进入到 IPv4 网络时，把 IPv6 数据封装成 IPv4 数据报。当 IPv4 数据报离开 IPv4 网络中的隧道后，再把数据部分交给主机的 IPv4 协议栈。
 
 <div align='center'>
-<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-48.png' width=700 />
+<img src='https://github.com/PDKSophia/read-booklist/raw/master/book-image/network/net-48.png' width=500 />
 </div>
 
 ---
