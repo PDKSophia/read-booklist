@@ -1,6 +1,7 @@
 ## 书单
 
 ![](https://img.shields.io/badge/MarkDown-md-brightgreen.svg)
+![](https://img.shields.io/badge/Hot-orange.svg)
 ![](https://img.shields.io/badge/Author-PDK-blue.svg)
 ![](https://img.shields.io/badge/Language-CN-red.svg)
 
