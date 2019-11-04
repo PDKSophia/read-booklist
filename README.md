@@ -1,9 +1,9 @@
 ## 书单
 
-![](https://img.shields.io/badge/MarkDown-md-brightgreen.svg)
-![](https://img.shields.io/badge/Hot-orange.svg)
-![](https://img.shields.io/badge/Author-PDK-blue.svg)
-![](https://img.shields.io/badge/Language-CN-red.svg)
+![](https://img.shields.io/badge/read_book-MD-brightgreen.svg)
+![](https://img.shields.io/badge/technology-Hot-red.svg)
+![](https://img.shields.io/badge/language-CN-orange.svg)
+![](https://img.shields.io/badge/Author-彭道宽-blue.svg)
 
 ### 前言
 
@@ -11,33 +11,29 @@
 
 ### 面试
 
-客官，春招、秋招、前端面试博客？你要不看看这里？[阿宽的技术博客](https://github.com/PDKSophia/blog.io)
+如果是看博客，请点击这里 👉 [阿宽的技术博客](https://github.com/PDKSophia/blog.io)
 
-### 书单
+### 书单好文
 
-| 序号 |                    数名                     | 进度 |                                                              状态                                                               |
-| :--: | :-----------------------------------------: | :--: | :-----------------------------------------------------------------------------------------------------------------------------: |
-|  1   |     `《JavaScript高级程序设计 第3版》`      | 91%  | [跟读](https://github.com/PDKSophia/read-booklist/tree/master/JavaScript%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E8%AE%BE%E8%AE%A1) |
-|  2   |               `《图解HTTP》`                | 100% |                             [跟读](https://github.com/PDKSophia/read-booklist/blob/master/图解HTTP)                             |
-|  3   |           `《计算机网络 第七版》`           | 49%  |          [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C)           |
-|  4   | `《了不起的NodeJS》搭配《Node.js开发指南》` | 72%  |        [跟读](https://github.com/PDKSophia/read-booklist/tree/master/Node%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5)         |
-|  5   |             `《深入浅出React》`             | 10%  |            [跟读](https://github.com/PDKSophia/read-booklist/tree/master/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact)             |
-|  6   |           `《ECMAScript 6 入门》`           |  0%  |                                                              未读                                                               |
-|  7   |         `《JavaScript正则表达式》`          |  0%  |                                                              未读                                                               |
-|  8   |              `《剑指 offer》`               |  0%  |                                                              未读                                                               |
-|  9   |               `《算法图解》`                |  0%  |                                                              未读                                                               |
-|  10  |     `《数据结构与算法 JavaScript描述》`     |  0%  |                                                              未读                                                               |
-|  11  |     `《JavaScript设计模式与开发实践》`      |  0%  |                                                              未读                                                               |
-|  12  |         `《计算机是怎样跑起来的》`          |  0%  |                                                              未读                                                               |
-|  13  |       `《编程之法：面试和算法心得》`        |  0%  |                                                              未读                                                               |
-|  14  |           `《大型网站技术架构》`            |  0%  |                                                              未读                                                               |
-|  15  |               `《编程珠玑》`                |  0%  |                                                              未读                                                               |
-|  16  |               `《硅谷之火》`                |  0%  |                                                              未读                                                               |
-|  17  |            `《白帽子讲Web安全》`            |  0%  |                                                              未读                                                               |
-|  18  |             `《程序员的英语》`              |  0%  |                                                              未读                                                               |
-|  19  |            `《了不起到Node.js》`            |  0%  |                                                              未读                                                               |
-|  20  |              `《黑客与画家》`               |  0%  |                                                              未读                                                               |
-|  21  |             `《丑陋的中国人》`              |  0%  |                                                              未读                                                               |
-|  22  |     `《程序员修炼之道——从小工到专家》`      |      |                                                               0%                                                                | 未读 |
+- [Redux 的内幕（一）](./深入浅出React/Redux的内幕（一）) `[ 💥 from 《深入浅出React》]`
 
-<!-- <img src='https://github.com/PDKSophia/blog.io/raw/master/image/agree.jpeg' width=250 height=250> -->
+- [Redux 的内幕（二）](./深入浅出React/Redux的内幕（二）) `[ 💥 from 《深入浅出React》]`
+
+- [JavaScript 继承理解](./JavaScript高级编程设计/Day3.md#继承) `[ 💥 from 《JavaScript 高级程序设计 第 3 版》]`
+
+- [闭包](./JavaScript高级编程设计/Day4.md#闭包) `[ 💥 from 《JavaScript 高级程序设计 第 3 版》]`
+
+- [Web 安全](./图解HTTP/Day7.md#针对-web-的攻击技术) `[ 💥 from 《图解 HTTP》]`
+
+### 清单
+
+|                  BookName                   | Estimated StartTime | Estimated EndTime |                                                                         Sort                                                                         | Progress | Status                                     |
+| :-----------------------------------------: | :-----------------: | :---------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: | -------- | ------------------------------------------ |
+|     《JavaScript 高级程序设计 第 3 版》     |    ⏰ 2018-11-05    |   ⏰ 2019-11-26   |                         ![](https://img.shields.io/badge/JavaScript-blue.svg) ![](https://img.shields.io/badge/New-red.svg)                          | 91%      | [跟读](./JavaScript高级编程设计/README.md) |
+|                《图解 HTTP》                |    ⏰ 2018-11-12    |   ⏰ 2018-11-24   |                         ![](https://img.shields.io/badge/HTTP-blue.svg) ![](https://img.shields.io/badge/FINISH-orange.svg)                          | 100%     | [跟读](./图解HTTP/README.md)               |
+|            《计算机网络 第七版》            |    ⏰ 2018-12-02    |   ⏰ 2019-01-03   |                           ![](https://img.shields.io/badge/NetWork-blue.svg) ![](https://img.shields.io/badge/Hot-red.svg)                           | 91%      | [跟读](./计算机网络/NetWork.md)            |
+| 《了不起的 NodeJS》搭配《Node.js 开发指南》 |    ⏰ 2018-12-22    |   ⏰ 2019-03-04   |                       ![](https://img.shields.io/badge/Node.js-blue.svg) ![](https://img.shields.io/badge/Reading-yellow.svg)                        | 72%      | [跟读](./Node入门及实践/README.md)         |
+|             《深入浅出 React》              |    ⏰ 2019-01-15    |   ⏰ 2019-01-22   |                        ![](https://img.shields.io/badge/React-blue.svg) ![](https://img.shields.io/badge/Reading-yellow.svg)                         | 15%      | [跟读](./深入浅出React)                    |
+|           《JavaScript 设计模式》           |    ⏰ 2019-11-04    |   ⏰ 2019-11-11   |                         ![](https://img.shields.io/badge/JavaScript-blue.svg) ![](https://img.shields.io/badge/New-red.svg)                          | 0%       | 未读                                       |
+|                《CSS 世界》                 |     ⏳Tentative     |    ⏳Tentative    |                         ![](https://img.shields.io/badge/CSS-blue.svg) ![](https://img.shields.io/badge/Reading-yellow.svg)                          | 0%       | 未读                                       |
+|            《网络是怎样连接的》             |     ⏳Tentative     |    ⏳Tentative    | ![](https://img.shields.io/badge/NetWork-blue.svg) ![](https://img.shields.io/badge/Hot-red.svg) ![](https://img.shields.io/badge/New-important.svg) | 0%       | 未读                                       |
