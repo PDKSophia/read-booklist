@@ -19,7 +19,7 @@
 
 - [Redux 的内幕（二）](./深入浅出React/Redux的内幕（二）) `[ 💥 from 《深入浅出React》]`
 
-- [JavaScript 继承理解](./JavaScript高级编程设计/Day3.md#继承) `[ 💥 from 《JavaScript 高级程序设计 第 3 版》]`
+- [JavaScript 继承理解](./JavaScript高级编程设计/第三天.md#继承) `[ 💥 from 《JavaScript 高级程序设计 第 3 版》]`
 
 - [闭包](./JavaScript高级编程设计/Day4.md#闭包) `[ 💥 from 《JavaScript 高级程序设计 第 3 版》]`
 
@@ -29,13 +29,13 @@
 
 📢 更多书籍清单看这里 : [预计书单](./List.md)
 
-|                  BookName                   | Estimated StartTime | Estimated EndTime |                                                                         Sort                                                                         | Progress | Status                                     |
-| :-----------------------------------------: | :-----------------: | :---------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: | -------- | ------------------------------------------ |
+|                  BookName                   | Estimated StartTime | Estimated EndTime |                                                                         Sort                                                                         | Progress | Status                                       |
+| :-----------------------------------------: | :-----------------: | :---------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------: | -------- | -------------------------------------------- |
 |     《JavaScript 高级程序设计 第 3 版》     |    📆 2018-11-05    |   📆 2019-11-26   |                         ![](https://img.shields.io/badge/JavaScript-blue.svg) ![](https://img.shields.io/badge/New-red.svg)                          | 91%      | [Follow](./JavaScript高级编程设计/README.md) |
 |                《图解 HTTP》                |    📆 2018-11-12    |   📆 2018-11-24   |                         ![](https://img.shields.io/badge/HTTP-blue.svg) ![](https://img.shields.io/badge/FINISH-orange.svg)                          | 100%     | [Follow](./图解HTTP/README.md)               |
 |            《计算机网络 第七版》            |    📆 2018-12-02    |   📆 2019-01-03   |                           ![](https://img.shields.io/badge/NetWork-blue.svg) ![](https://img.shields.io/badge/Hot-red.svg)                           | 91%      | [Follow](./计算机网络/NetWork.md)            |
 | 《了不起的 NodeJS》搭配《Node.js 开发指南》 |    📆 2018-12-22    |   📆 2019-03-04   |                       ![](https://img.shields.io/badge/Node.js-blue.svg) ![](https://img.shields.io/badge/Reading-yellow.svg)                        | 72%      | [Follow](./Node入门及实践/README.md)         |
 |             《深入浅出 React》              |    📆 2019-01-15    |   📆 2019-01-22   |                        ![](https://img.shields.io/badge/React-blue.svg) ![](https://img.shields.io/badge/Reading-yellow.svg)                         | 15%      | [Follow](./深入浅出React)                    |
-|           《JavaScript 设计模式》           |    📆 2019-11-04    |   📆 2019-11-11   |                         ![](https://img.shields.io/badge/JavaScript-blue.svg) ![](https://img.shields.io/badge/New-red.svg)                          | 0%       | Unread                                       |
+|           《JavaScript 设计模式》           |    📆 2019-11-04    |   📆 2019-11-11   |                         ![](https://img.shields.io/badge/JavaScript-blue.svg) ![](https://img.shields.io/badge/New-red.svg)                          | 5%       | [Follow](./JavaScript设计模式/README.md)     |
 |                《CSS 世界》                 |     ⏳Tentative     |    ⏳Tentative    |                         ![](https://img.shields.io/badge/CSS-blue.svg) ![](https://img.shields.io/badge/Reading-yellow.svg)                          | 0%       | Unread                                       |
 |            《网络是怎样连接的》             |     ⏳Tentative     |    ⏳Tentative    | ![](https://img.shields.io/badge/NetWork-blue.svg) ![](https://img.shields.io/badge/Hot-red.svg) ![](https://img.shields.io/badge/New-important.svg) | 0%       | Unread                                       |
