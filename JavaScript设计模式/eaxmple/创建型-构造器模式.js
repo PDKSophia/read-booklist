@@ -1,4 +1,4 @@
-// 简单构造器
+/** -------------------------------简单构造器------------------------------- */
 function GirlFriend(name, age, cup, hobby) {
   this.name = name;
   this.age = age;
@@ -17,7 +17,7 @@ console.log(xieGirl.toCopyright()); // 我是被小何创造出来的对象，�
 
 
 
-// 带原型的构造器
+/** -------------------------------带原型的构造器------------------------------- */
 function GirlFriend(name, age, cup, hobby) {
   this.name = name;
   this.age = age;
